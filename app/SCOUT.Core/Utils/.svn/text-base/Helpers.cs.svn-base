@@ -1,0 +1,356 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Configuration;
+using System.IO;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
+
+namespace SCOUT.Core.Data
+{
+    /// <summary>
+    /// Helper utility functions.
+    /// </summary>
+    public class Helpers
+    {
+	static private Config s_config = null;
+
+	private Helpers()
+	{
+	    // Singleton
+	}
+
+        public static object[] ConvertToObjectArray(ICollection collection)
+        {
+            if (collection.Count <= 0)
+                return null;
+
+            object[] objects = new object[collection.Count];
+            collection.CopyTo(objects,0);
+
+            return objects;
+
+        }
+
+	static public Config Config
+	{
+	    get
+	    {
+		if (s_config == null)
+		    s_config = new Config();
+
+		return s_config;
+	    }
+	}
+
+	static public String CnnStr()
+	{
+	    return Config["DB:SCOUT"];
+	}
+
+	/*
+	 * Escape quotes for Microsoft's crazy system.
+	 */
+	static private String MSSQL_Quote(string str)
+	{
+	    str = str.Replace("'", "''"); // Replace ' with ''
+
+	    // Add single quotes to begining and end
+	    str = "'" + str.Trim() + "'";
+
+	    return str;
+	}
+
+	/// <summary>
+	/// Convert a string into a quoted safe string for databases.
+	/// </summary>
+	/// <param name="str">String to escape</param>
+	/// <returns>DB safe quoted string with quotes
+	/// escaped out with slashes.</returns>
+	static public String Quote(string str)
+	{
+	    return MSSQL_Quote(str);
+	}
+
+	/// <summary>
+	/// Splits camel caps into seperate words.
+	/// </summary>
+	/// <example>
+	/// Source:
+	/// CamelCappedName
+	/// 
+	/// Result:
+	/// Camel Capped Name
+	/// </example>
+	/// <param name="str">Source string</param>
+	/// <returns>String with split cammel caps</returns>
+	static public String SplitCamelCaps(string str)
+	{
+	    Regex regex = new Regex("([a-z])([A-Z])");
+	    return regex.Replace(str, "$1 $2").Trim();
+	}
+
+	/// <summary>
+	/// Forces a control to update its bindings.
+	/// </summary>
+	/// <param name="control"></param>
+	static public void UpdateBindings(Control control)
+	{
+	    int i;
+
+	    for (i = 0; i < control.DataBindings.Count; ++i)
+		control.DataBindings[i].BindingManagerBase.EndCurrentEdit();
+
+	    for (i = 0; i < control.Controls.Count; ++i)
+		UpdateBindings(control.Controls[i]);
+	}
+
+	static public string CamelToUnderscore(string str)
+	{
+	    Regex r = new Regex("([a-z])([A-Z])");
+
+	    return r.Replace(str, "$1_$2").ToLower();
+	}
+
+	static public string UnderscoreToCamel(string str)
+	{
+	    StringBuilder rval = new StringBuilder();
+
+	    string lstr = str.ToLower();
+	    string ustr = str.ToUpper();
+
+	    for (int i = 0; i < str.Length; ++i)
+	    {
+		if (str[i] == '_')
+		{
+		    if ((i + 1) < str.Length)
+		    {
+			rval.Append(ustr[i + 1]);
+			++i;
+		    }
+		}
+		else
+		{
+		    if (i == 0)
+			rval.Append(ustr[i]);
+		    else
+			rval.Append(lstr[i]);
+		}
+	    }
+
+	    return rval.ToString();
+	}
+
+	public static string FixNewLines(string str)
+	{
+	    str = str.Replace("\r\n", "\v");
+	    str = str.Replace("\r", "\v");
+	    str = str.Replace("\n", "\v");
+
+	    return str.Replace("\v", Environment.NewLine);
+	}
+
+	/// <summary>
+	/// Converts a dictionary to a list of KeyValuePair items.
+	/// </summary>
+	/// <typeparam name="KeyTy"></typeparam>
+	/// <typeparam name="ValueTy"></typeparam>
+	/// <param name="dic"></param>
+	/// <returns></returns>
+	public static IList<KeyValuePair<KeyTy, ValueTy>>
+	    ConvertDictionaryToList<KeyTy, ValueTy>(IDictionary<KeyTy, ValueTy> dic)
+	{
+	    List<KeyValuePair<KeyTy, ValueTy>> rval =
+		new List<KeyValuePair<KeyTy, ValueTy>>();
+
+	    foreach (KeyValuePair<KeyTy, ValueTy> kvp in dic)
+		rval.Add(kvp);
+
+	    return rval;
+	}
+
+    public static void MapDictionariesByKey<KeyTy, ValueTy>(IDictionary<KeyTy, ValueTy> source, IDictionary<KeyTy, ValueTy> destination)
+    {
+        foreach (KeyValuePair<KeyTy, ValueTy> kvp in source)
+        {
+            if (destination.ContainsKey(kvp.Key))
+                destination[kvp.Key] = kvp.Value;
+        }
+      
+    }           
+}
+
+
+
+    public class Config
+    {
+	private const string CONFIG_FILE = "scout.cfg";
+
+	private Hashtable m_values = new Hashtable();
+	private bool m_isDirty = false;
+
+	private String FullPath
+	{
+	    get
+	    {
+		string appdata =
+		    System.Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+
+		if (appdata[appdata.Length - 1] != '\\')
+		    appdata += "\\";
+
+		appdata += "STS\\SCOUT_NS";
+#if DEBUG
+		appdata += "_ALPHA";
+#endif
+
+		return appdata + "\\" + CONFIG_FILE;
+	    }
+	}
+
+	internal Config()
+	{
+	    LoadDefaultConfig();
+
+	    try
+	    {
+		FileStream fs = new FileStream(FullPath,
+		    FileMode.Open, FileAccess.Read);
+		StreamReader rdr = new StreamReader(fs);
+
+		LoadConfig(rdr);
+
+		rdr.Close();
+		fs.Close();
+
+		Console.WriteLine("Configuration settings loaded from \"" +
+		    CONFIG_FILE + "\".");
+	    }
+	    catch (Exception e)
+	    {
+		Console.WriteLine("WARNING: Unable to load configuration " +
+		    "file \"" + CONFIG_FILE + "\".\n\n\t" + e.Message);
+		Console.WriteLine("Using default configuration values.");
+
+		m_isDirty = true;
+	    }
+
+	    //NormalizeValues();
+	}
+
+	~Config()
+	{
+	    if (!m_isDirty)
+		return;
+
+	    try
+	    {
+		// Make sure the directory exists.
+		string dirPath = FullPath;
+		dirPath = Path.GetDirectoryName(dirPath);
+
+		if (!Directory.Exists(dirPath))
+		    Directory.CreateDirectory(dirPath);
+
+		// Now actually write the config file.
+		FileStream fs = new FileStream(FullPath,
+		    FileMode.Create, FileAccess.Write);
+		StreamWriter wrtr = new StreamWriter(fs);
+
+		SaveConfig(wrtr);
+
+		wrtr.Flush();
+		wrtr.Close();
+		fs.Close();
+	    }
+	    catch (Exception e)
+	    {
+		string msg = String.Format(
+		    "WARNING: Unable to write to config file:\r\n{0}",
+		    e.Message);
+
+		MessageBox.Show(
+		    msg,
+		    Application.ProductName,
+		    MessageBoxButtons.OK,
+		    MessageBoxIcon.Exclamation);
+	    }
+	}
+
+	private void LoadConfig(StreamReader file)
+	{
+	    char[] d = new char[] { '=' }; // .....
+	    string[] split;
+	    string line;
+
+	    for (; ; )
+	    {
+		line = file.ReadLine();
+
+		if ((line == "") || (line == null))
+		    break;
+
+		split = line.Split(d, 2);
+
+		if (split.Length < 2)
+		    continue;
+
+		m_values[split[0].Trim()] = split[1].Trim();
+	    }
+	}
+
+	private void SaveConfig(StreamWriter file)
+	{
+	    IDictionaryEnumerator i = m_values.GetEnumerator();
+
+	    while (i.MoveNext())
+		file.WriteLine("{0}={1}", i.Key, i.Value);
+	}
+
+	private void LoadDefaultConfig()
+	{
+	    m_isDirty = true;
+
+	    try
+	    {
+		// The printer that the user has selected for printing.
+	        m_values["PrinterName"] = ""; //STS.Util.GetDefaultPrinterName();
+
+		// Set to "true" if printing is enabled.
+		m_values["EnablePrinter"] = "true";
+
+		/*
+		 * Leave blank, so no contact information is displayed on
+		 * AutoUpdate failure.
+		 */
+		m_values["UpdateContact"] = "";
+	    }
+	    catch (Exception e)
+	    {
+		Console.WriteLine("ERROR: " + e.Message);
+	    }
+	}
+
+	public String this[string name]
+	{
+	    get
+	    {
+		if (m_values.Contains(name))
+		    return (String)m_values[name];
+		else
+		{
+		    return ConfigurationSettings.AppSettings[name];
+		}
+	    }
+	    set
+	    {
+		m_values[name] = value;
+		m_isDirty = true;
+	    }
+	}
+    }
+
+
+
+}

@@ -1,0 +1,56 @@
+using DevExpress.Xpo;
+using SCOUT.Core.Services;
+
+namespace SCOUT.Core.Data
+{
+    public class ShipmentScript : ITransactionScript
+    {
+        private ShipmentFacts m_shipmentFacts;
+        private IUnitOfWork m_uow;
+
+        public ShipmentScript(ShipmentFacts shipmentFacts)
+        {
+            m_shipmentFacts = shipmentFacts;
+        } 
+
+        #region ITransactionScript Members
+
+        public bool Run()
+        {
+            IInventoryService inventory = Scout.Core.Service<IInventoryService>();
+
+            //ICaptureService capture = Scout.Core.Service<ICaptureService>();
+            //if (capture.RunCaptureCheck(m_shipmentFacts.Item, "SALESTK"))
+            //    return false;
+
+            m_uow = m_shipmentFacts.SalesOrder.Session;
+
+            // Associate shipment with sales order
+            Shipment shipment = new FactShipmentMapper().MapFrom(m_shipmentFacts);
+
+            // Update the new lot qty after the shipment                
+            inventory.UpdateUnitQtyFromShipment(shipment);
+
+            // Update the serialized unit details after the shipment
+            // Sets STKRTNTRACKING.ENDDATE -> DateTime.Now()                
+            inventory.UpdateSerialInfoForShipment(shipment);
+
+            // Create a shipment transaction                
+            Transaction transaction = new ShipmentTransactionMapper().MapFrom(shipment);
+
+            // Ask the line item to close itself if it is completed.
+            shipment.LineItem.UpdateStatusFromShipment(shipment.Qty);
+
+            // Get Packlist
+            Packlist packlist =  m_shipmentFacts.SalesOrder.GetCurrentPacklist();
+            packlist.AddShipment(shipment);
+                       
+            //Persist                
+            Scout.Core.Data.Save(m_uow);
+            
+            return true;
+        }
+
+        #endregion
+    }
+}

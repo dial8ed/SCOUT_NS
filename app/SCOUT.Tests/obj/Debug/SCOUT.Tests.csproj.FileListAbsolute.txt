@@ -1,0 +1,103 @@
+F:\Source\SCOUT NS FRESH\app\SCOUT.Tests\bin\Debug\SCOUT.Tests.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.Tests\bin\Debug\SCOUT.Tests.pdb
+F:\Source\SCOUT NS FRESH\app\SCOUT.Tests\bin\Debug\DevExpress.Data.v10.1.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.Tests\bin\Debug\DevExpress.Xpo.v10.1.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.Tests\bin\Debug\Moq.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.Tests\bin\Debug\nunit.framework.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.Tests\bin\Debug\SCOUT.Core.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.Tests\bin\Debug\TechTalk.SpecFlow.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.Tests\bin\Debug\SCOUT.Core.pdb
+F:\Source\SCOUT NS FRESH\app\SCOUT.Tests\bin\Debug\DevExpress.Data.v10.1.xml
+F:\Source\SCOUT NS FRESH\app\SCOUT.Tests\bin\Debug\DevExpress.Xpo.v10.1.xml
+F:\Source\SCOUT NS FRESH\app\SCOUT.Tests\bin\Debug\Moq.pdb
+F:\Source\SCOUT NS FRESH\app\SCOUT.Tests\bin\Debug\Moq.xml
+F:\Source\SCOUT NS FRESH\app\SCOUT.Tests\bin\Debug\nunit.framework.xml
+F:\Source\SCOUT NS FRESH\app\SCOUT.Tests\obj\Debug\ResolveAssemblyReference.cache
+F:\Source\SCOUT NS FRESH\app\SCOUT.Tests\obj\Debug\SCOUT.Tests.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.Tests\obj\Debug\SCOUT.Tests.pdb
+F:\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\SCOUT.Tests.dll
+F:\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\SCOUT.Tests.pdb
+F:\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.Data.v10.1.dll
+F:\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.Xpo.v10.1.dll
+F:\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\Moq.dll
+F:\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\nunit.framework.dll
+F:\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\SCOUT.Core.dll
+F:\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\TechTalk.SpecFlow.dll
+F:\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\SCOUT.Core.pdb
+F:\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.Data.v10.1.xml
+F:\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.Xpo.v10.1.xml
+F:\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\Moq.pdb
+F:\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\Moq.xml
+F:\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\nunit.framework.xml
+F:\Source\SCOUT NS\app\SCOUT.Tests\obj\Debug\ResolveAssemblyReference.cache
+F:\Source\SCOUT NS\app\SCOUT.Tests\obj\Debug\SCOUT.Tests.dll
+F:\Source\SCOUT NS\app\SCOUT.Tests\obj\Debug\SCOUT.Tests.pdb
+F:\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\AutoMapper.dll
+F:\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\SCOUT.CS.UI.exe
+F:\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\Kjs.AppLife.Update.Controller.dll
+F:\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\SCOUT.CS.UI.pdb
+F:\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\StructureMap.dll
+F:\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\StructureMap.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\SCOUT.Tests.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\SCOUT.Tests.pdb
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\SCOUT.Core.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\SCOUT.CS.UI.exe
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\AutoMapper.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.Xpo.v10.1.Linq.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\StructureMap.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\Kjs.AppLife.Update.Controller.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.XtraGrid.v10.1.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.XtraLayout.v10.1.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.XtraTreeList.v10.1.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.XtraBars.v10.1.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.XtraReports.v10.1.Extensions.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.XtraPrinting.v10.1.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.XtraNavBar.v10.1.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.XtraPivotGrid.v10.1.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.XtraCharts.v10.1.UI.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.XtraCharts.v10.1.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.XtraReports.v10.1.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.XtraSpellChecker.v10.1.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.XtraGauges.v10.1.Win.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.XtraGauges.v10.1.Core.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.OfficeSkins.v10.1.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.BonusSkins.v10.1.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.XtraPivotGrid.v10.1.Core.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.XtraSpellChecker.v10.1.Core.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.XtraVerticalGrid.v10.1.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.XtraRichEdit.v10.1.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.Charts.v10.1.Core.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.RichEdit.v10.1.Core.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\SCOUT.Core.pdb
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\SCOUT.CS.UI.pdb
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.Data.v10.1.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.Utils.v10.1.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.Xpo.v10.1.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.XtraEditors.v10.1.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\Moq.pdb
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\Moq.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\nunit.framework.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.Xpo.v10.1.Linq.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\StructureMap.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.XtraGrid.v10.1.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.XtraLayout.v10.1.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.XtraTreeList.v10.1.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.XtraBars.v10.1.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.XtraReports.v10.1.Extensions.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.XtraPrinting.v10.1.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.XtraNavBar.v10.1.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.XtraPivotGrid.v10.1.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.XtraCharts.v10.1.UI.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.XtraCharts.v10.1.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.XtraReports.v10.1.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.XtraSpellChecker.v10.1.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.XtraGauges.v10.1.Win.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.XtraGauges.v10.1.Core.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.XtraPivotGrid.v10.1.Core.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.XtraSpellChecker.v10.1.Core.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.XtraVerticalGrid.v10.1.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.XtraRichEdit.v10.1.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\bin\Debug\DevExpress.RichEdit.v10.1.Core.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\obj\Debug\SCOUT.Tests.csprojResolveAssemblyReference.cache
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\obj\Debug\SCOUT.Tests.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Tests\obj\Debug\SCOUT.Tests.pdb

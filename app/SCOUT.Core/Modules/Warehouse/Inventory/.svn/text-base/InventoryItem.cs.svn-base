@@ -1,0 +1,295 @@
+using System;
+using DevExpress.Data.Filtering;
+using DevExpress.Xpo;
+
+namespace SCOUT.Core.Data
+{
+    /// <summary>
+    /// Represents a Inventory Item in the data store.
+    /// </summary>
+    [Persistent("STKLOT")]
+    public class InventoryItem : VPLiteObject
+    {
+        private UnitConfigValues m_configValues;
+        private ItemCustomFields m_customFields;
+        private Domain m_domain;
+        private ProductGrade m_grade = ProductGrade.NA;
+        private InventoryHold m_hold;
+        private string m_locatorLabel = "";
+        private string m_lotId = "";
+        private Part m_part;
+        private RouteStationProcess m_process;
+        private PurchaseOrder m_purchaseOrder;
+        private int m_qty;
+        private bool m_routingRequired;
+        private SerializedUnit m_serializedUnit;        
+        private Shopfloorline m_shopfloorline;
+        private Site m_site;
+        private Tote m_tote;
+        private string m_serialNumber = "";
+        private string m_shopfloorProgram = "";
+        private InventoryServiceProperties m_serviceProperties;
+        private string m_shopfloorConditions = "";
+
+        public InventoryItem(Session session) : base(session)
+        {
+
+        }
+
+        [Persistent("LOTID")]
+        [Key(AutoGenerate = false)]
+        [Size(16)]
+        public string LotId
+        {
+            get { return m_lotId; }
+            set { SetPropertyValue("LotId", ref m_lotId, value); }
+        }
+
+        [Persistent("QTY")]
+        public int Qty
+        {
+            get { return m_qty; }
+            set { SetPropertyValue("Qty", ref m_qty, value); }
+        }
+
+        [Persistent("part_id")]
+        public Part Part
+        {
+            get { return m_part; }
+            set { SetPropertyValue("Part", ref m_part, value); }
+        }
+
+        [Persistent("site_id")]
+        public Site Site
+        {
+            get { return m_site; }
+            set { SetPropertyValue("Site", ref m_site, value); }
+        }
+
+        [Persistent("sfl_id")]
+        public Shopfloorline Shopfloorline
+        {
+            get { return m_shopfloorline; }
+            set
+            {                
+                SetPropertyValue("Shopfloorline", ref m_shopfloorline, value);
+
+                // Reset the shopfloor program if the units changes shopfloorlines.
+                if (m_shopfloorline != null && value != null)
+                    if (!m_shopfloorline.Id.Equals(value.Id))
+                        m_shopfloorProgram = "";
+            }
+        }
+
+        [Persistent("domain_id")]
+        public Domain Domain
+        {
+            get { return m_domain; }
+            set { SetPropertyValue("Domain", ref m_domain, value); }
+        }
+
+        [Persistent("config_values_id")]
+        public UnitConfigValues ConfigValues
+        {
+            get { return m_configValues; }
+            set { SetPropertyValue("ConfigValues", ref m_configValues, value); }
+        }
+
+        [Persistent("locator_label")]
+        public string LocatorLabel
+        {
+            get { return m_locatorLabel; }
+            set
+            {
+                if (value == null)
+                {
+                    value = "";
+                }
+
+                SetPropertyValue("LocatorLabel", ref m_locatorLabel, value);
+            }
+        }
+
+        [Persistent("tote_id")]
+        [Association("tote-contents")]
+        public Tote Tote
+        {
+            get { return m_tote; }
+            set { SetPropertyValue("Tote", ref m_tote, value); }
+        }
+
+        [Persistent("current_process_id")] 
+        public RouteStationProcess CurrentProcess
+        {
+            get { return m_process; }
+            set { SetPropertyValue("CurrentProcess", ref m_process, value); }
+        }
+
+        [Persistent("grade_id")]
+        public ProductGrade Grade
+        {
+            get { return m_grade; }
+            set { SetPropertyValue("Grade", ref m_grade, value); }
+        }
+
+        [Persistent("shopfloor_program")]
+        public string ShopfloorProgram
+        {
+            get { return m_shopfloorProgram; }
+            set { SetPropertyValue("ShopfloorProgram", ref m_shopfloorProgram, value); }
+        }
+
+        [Persistent("shopfloor_conditions")]
+        public string ShopfloorConditions
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(m_shopfloorConditions))
+                    m_shopfloorConditions = "";
+
+                return m_shopfloorConditions;
+            }
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                    value = "";
+
+                SetPropertyValue("ShopfloorConditions", ref m_shopfloorConditions, value);
+            }
+        }
+
+        [Persistent("serial_number")]
+        public string SerialNumber
+        {
+            get { return !string.IsNullOrEmpty(m_serialNumber) ? m_serialNumber.ToUpper() : "NON SERIALIZED"; }
+            set
+            {
+                SetPropertyValue("SerialNumber", ref m_serialNumber, value);
+            }
+        }
+
+        [Persistent("sn_unit_id"), Aggregated]
+        [Size(16)]
+        public SerializedUnit SerializedUnit
+        {
+            get { return m_serializedUnit; }
+            set { SetPropertyValue("SerializedUnit", ref m_serializedUnit, value); }
+        }
+
+        [Persistent("hold_id")]
+        public InventoryHold Hold
+        {
+            get { return m_hold; }
+            set { SetPropertyValue("Hold", ref m_hold, value); }
+        }
+
+        [Persistent("routing_required")]
+        public bool RoutingRequired
+        {
+            get { return m_routingRequired; }
+            set { SetPropertyValue("RoutingRequired", ref m_routingRequired, value); }
+        }
+
+        [Persistent("custom_fields_id"), Aggregated]
+        public ItemCustomFields CustomFields
+        {
+            get
+            {
+                return m_customFields;
+            }
+
+            set
+            {
+                SetPropertyValue("CustomFields", ref m_customFields, value);
+            }
+        }
+
+        [Association("InventoryItem-Processes"), Aggregated]
+        public XPCollection<RouteStationProcess> Processes
+        {
+            get { return GetCollection<RouteStationProcess>("Processes"); }
+        }
+
+        [NonPersistent]
+        public string PartNumber
+        {
+            get { return m_part == null ? "" : m_part.PartNumber; }
+        }
+
+        [NonPersistent]
+        public string RMA
+        {
+            get { return PurchaseOrder.Order.RMA; }
+        }
+
+        [NonPersistent]
+        public string PO
+        {
+            get { return PurchaseOrder.Order.PO; }
+        }
+
+        [NonPersistent]
+        public string Other
+        {
+            get { return PurchaseOrder.Order.Other; }
+        }
+
+        [NonPersistent]
+        public PurchaseOrder PurchaseOrder
+        {
+            get
+            {
+                if (m_purchaseOrder == null)
+                {
+                    Receipt receipt = Session.FindObject<Receipt>(new BinaryOperator("UnitTrackingId", m_lotId));
+                    if (receipt == null)
+                        return null;
+
+                    if (receipt.PurchaseOrder != null)
+                    {
+                        m_purchaseOrder = receipt.PurchaseOrder;
+                    }
+                }
+
+                return m_purchaseOrder;
+            }
+        }
+
+        public string DisplayTextDetails
+        {
+            get
+            {
+                string displayText = "";
+
+                displayText = string.Format(
+                    "[Lot Id]={0}{1}[Qty]={2}{3}[Shopfloorline]={4}{5}[Domain]={6}{7}[Location]={8}",
+                    m_lotId,
+                    Environment.NewLine,
+                    m_qty,
+                    Environment.NewLine,
+                    m_shopfloorline.Label,
+                    Environment.NewLine,
+                    m_domain.Label,
+                    Environment.NewLine,
+                    m_locatorLabel
+                    );
+
+                return displayText;
+            }
+        }
+
+        public void ChangeDomain(Domain domain)
+        {
+            Domain = domain;
+            Shopfloorline = domain.Parent;
+            Site = Shopfloorline.Parent;
+        }
+
+        [NonPersistent]
+        public PartServiceCommodity ServiceCommodity
+        {
+            get { return m_part.ServiceCommodity; }
+        }
+
+    }
+}

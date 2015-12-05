@@ -1,0 +1,575 @@
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\SCOUT.CS.UI.exe.config
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\SCOUT.CS.UI.exe
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\SCOUT.CS.UI.pdb
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.BonusSkins.v10.1.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.Charts.v10.1.Core.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.Data.v10.1.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.OfficeSkins.v10.1.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.RichEdit.v10.1.Core.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.Utils.v10.1.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.Xpo.v10.1.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraBars.v10.1.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraCharts.v10.1.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraCharts.v10.1.UI.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraEditors.v10.1.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraGauges.v10.1.Core.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraGauges.v10.1.Win.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraGrid.v10.1.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraLayout.v10.1.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraNavBar.v10.1.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraPivotGrid.v10.1.Core.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraPivotGrid.v10.1.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraPrinting.v10.1.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraReports.v10.1.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraReports.v10.1.Extensions.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraRichEdit.v10.1.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraScheduler.v10.1.Core.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraScheduler.v10.1.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraScheduler.v10.1.Reporting.Extensions.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraSpellChecker.v10.1.Core.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraSpellChecker.v10.1.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraTreeList.v10.1.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraVerticalGrid.v10.1.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\Kjs.AppLife.Update.Controller.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\nunit.framework.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\SCOUT.Core.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\SCOUT.Core.pdb
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.Data.v10.1.xml
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.RichEdit.v10.1.Core.xml
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.Utils.v10.1.xml
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.Xpo.v10.1.xml
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraBars.v10.1.xml
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraCharts.v10.1.xml
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraCharts.v10.1.UI.xml
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraEditors.v10.1.xml
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraGauges.v10.1.Core.xml
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraGauges.v10.1.Win.xml
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraGrid.v10.1.xml
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraLayout.v10.1.xml
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraNavBar.v10.1.xml
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraPivotGrid.v10.1.xml
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraPivotGrid.v10.1.Core.xml
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraPrinting.v10.1.xml
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraReports.v10.1.xml
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraReports.v10.1.Extensions.xml
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraRichEdit.v10.1.xml
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraScheduler.v10.1.xml
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraScheduler.v10.1.Core.xml
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraScheduler.v10.1.Reporting.Extensions.xml
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraSpellChecker.v10.1.xml
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraSpellChecker.v10.1.Core.xml
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraTreeList.v10.1.xml
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraVerticalGrid.v10.1.xml
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\ResolveAssemblyReference.cache
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.SplashForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.areaManagementForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.areaStatusesForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.domainLocationManager.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Areas.RacklocationGeneratorForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Areas.ShopfloorlineCustomFieldsForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Bom.BomConfigurationView.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Bom.BomMasterView.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Controls.Line.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Controls.NameValueGrid.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Controls.PersistentBaseControl.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Controls.StarGate.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Core.CommandInputForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Core.PassiveViewBase.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.GenericLabelForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.InventoryAdjustmentView.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.InventoryProcessHoldView.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.cancelButton.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.ToteContentsPutAwayForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.HoldResolutionForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.InventoryCaptureManager.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.SerialNumberChangeForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.ToteAddContentsForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.ToteContentsSelectorForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.ToteContentsTransferForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.NSSerializationForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.ToteDetailView.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.ToteManagerForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.InventoryGradeForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.ToteTransferForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.UnitConfigurationForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Materials.MaterialsQtyAdjustmentForm2.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Materials.MaterialsConsumptionView.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Materials.MaterialsQtyAdjustmentForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Materials.MaterialsLocationTransferForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Materials.MaterialsWarehouseReturnForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Materials.MaterialsIssueOutForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Materials.MaterialsPurchaseOrderForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Materials.MaterialsPutAwayForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Materials.MaterialsReceivingForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Orders.PacklistContentsView.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Orders.PacklistsContentsTransferView.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Orders.PreAlertImportProgressForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Orders.PacklistMgrForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Parts.PartAttributesControl.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Parts.PartFamilyForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.PrinterSetupForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Orders.PreAlertImportForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.ReportDesignerForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.ChangeForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.InventoryTransactionForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.LotSplitForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.MainForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.mainOrderForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Orders.PurchaseOrderControl.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Orders.SalesOrderControl.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.CustomFieldDefForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.EditOrganizationForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.OrganizationForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.PartEditForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.PrintRibbonControllerResources.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Properties.Resources.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.receivingForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Reports.DellPacklistReport2.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Reports.DellPacklistReport.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Reports.PacklistReport.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.SalesWaybillForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Sales.shippingForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Reports.ToteTravelerReport.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Search.UserQueryForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Security.DirtyPasswordDialog.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.LoginForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.PasswordForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.RoleEditForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.UserEditForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.UserManagerForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.CodeCategoryForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.F9CommentsView.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.FailCodeByCategoryView.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.QuestionConfigGroupManager.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.CopyStepsForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.QuestionConfigGroupManager2.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.RepairComponentReplacementForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.ResultListManager.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.ResultListManager2.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.RouteBuilderForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.RouteProcessViewerForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.RouteStationListManager.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.RouteStationMaintForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.RouteStationRepairForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.ServiceCommForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.ServiceCommManager.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.ServiceCommodityManager.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.ServiceSetupForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.ServiceStationForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.ShopfloorConditionManager.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.StationFailureView.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.StationInputForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.StationInspectionTaskView.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.StationManager.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.StationManager2.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.StationOutcomeManager.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.StationOutcomeManager2.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.StationResultsViewerForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.StationSelectForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.StepLayoutForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.TokenTravelerForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.SearchForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.toteCreatorForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.TravelerLabelForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.GenericSearchDlg.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.SearchControl2.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\Inventory.UI.StubbornMessageBox.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.SuperConfirmForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.SuperConfirmForm2.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.UserInputView.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.WaitForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Views.DfileActionSearchView.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Views.Dfile.DfileActionView.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Views.DfileResolutionSearchView.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Views.ManageInventoryHoldsView.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Views.ResolveMultipleCaptureView.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Views.WipCaptureView.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Views.ResolveDfileItemView.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Views.Warehouse.Shipping.ShippingConfigurationsView.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Views.Warehouse.Shipping.ShippingSessionView.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.WebBrowserForm.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Widgets.PersistenceWidget.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.XRDesignRibbonControllerResources.resources
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\GenerateResource.read.1.tlog
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\GenerateResource.write.1.tlog
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.CS.UI.exe.licenses
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.CS.UI.exe
+F:\Source\SCOUT NS FRESH\app\SCOUT.WinForms\obj\Debug\SCOUT.CS.UI.pdb
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\SCOUT.CS.UI.exe.config
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\SCOUT.CS.UI.exe
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\SCOUT.CS.UI.pdb
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.BonusSkins.v10.1.dll
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.Charts.v10.1.Core.dll
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.Data.v10.1.dll
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.OfficeSkins.v10.1.dll
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.RichEdit.v10.1.Core.dll
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.Utils.v10.1.dll
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.Xpo.v10.1.dll
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraBars.v10.1.dll
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraCharts.v10.1.dll
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraCharts.v10.1.UI.dll
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraEditors.v10.1.dll
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraGauges.v10.1.Core.dll
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraGauges.v10.1.Win.dll
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraGrid.v10.1.dll
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraLayout.v10.1.dll
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraNavBar.v10.1.dll
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraPivotGrid.v10.1.Core.dll
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraPivotGrid.v10.1.dll
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraPrinting.v10.1.dll
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraReports.v10.1.dll
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraReports.v10.1.Extensions.dll
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraRichEdit.v10.1.dll
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraScheduler.v10.1.Core.dll
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraScheduler.v10.1.dll
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraScheduler.v10.1.Reporting.Extensions.dll
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraSpellChecker.v10.1.Core.dll
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraSpellChecker.v10.1.dll
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraTreeList.v10.1.dll
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraVerticalGrid.v10.1.dll
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\Kjs.AppLife.Update.Controller.dll
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\nunit.framework.dll
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\SCOUT.Core.dll
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\SCOUT.Core.pdb
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.Data.v10.1.xml
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.RichEdit.v10.1.Core.xml
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.Utils.v10.1.xml
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.Xpo.v10.1.xml
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraBars.v10.1.xml
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraCharts.v10.1.xml
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraCharts.v10.1.UI.xml
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraEditors.v10.1.xml
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraGauges.v10.1.Core.xml
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraGauges.v10.1.Win.xml
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraGrid.v10.1.xml
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraLayout.v10.1.xml
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraNavBar.v10.1.xml
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraPivotGrid.v10.1.xml
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraPivotGrid.v10.1.Core.xml
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraPrinting.v10.1.xml
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraReports.v10.1.xml
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraReports.v10.1.Extensions.xml
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraRichEdit.v10.1.xml
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraScheduler.v10.1.xml
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraScheduler.v10.1.Core.xml
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraScheduler.v10.1.Reporting.Extensions.xml
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraSpellChecker.v10.1.xml
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraSpellChecker.v10.1.Core.xml
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraTreeList.v10.1.xml
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraVerticalGrid.v10.1.xml
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\ResolveAssemblyReference.cache
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.SplashForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.areaManagementForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.areaStatusesForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.domainLocationManager.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Areas.RacklocationGeneratorForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Areas.ShopfloorlineCustomFieldsForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Bom.BomConfigurationView.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Bom.BomMasterView.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Controls.Line.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Controls.NameValueGrid.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Controls.PersistentBaseControl.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Controls.StarGate.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Core.CommandInputForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Core.PassiveViewBase.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.GenericLabelForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.InventoryAdjustmentView.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.InventoryProcessHoldView.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.ToteContentsPutAwayForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.HoldResolutionForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.InventoryCaptureManager.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.SerialNumberChangeForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.ToteAddContentsForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.ToteContentsSelectorForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.ToteContentsTransferForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.NSSerializationForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.ToteDetailView.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.ToteManagerForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.InventoryGradeForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.ToteTransferForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.UnitConfigurationForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Materials.MaterialsQtyAdjustmentForm2.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Materials.MaterialsQtyAdjustmentForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Materials.MaterialsLocationTransferForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Materials.MaterialsWarehouseReturnForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Materials.MaterialsIssueOutForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Materials.MaterialsPurchaseOrderForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Materials.MaterialsPutAwayForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Materials.MaterialsReceivingForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Orders.PacklistContentsView.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Orders.PacklistsContentsTransferView.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Orders.PreAlertImportProgressForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Orders.PacklistMgrForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Parts.PartAttributesControl.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Parts.PartFamilyForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.PrinterSetupForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Orders.PreAlertImportForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.ReportDesignerForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.ChangeForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.InventoryTransactionForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.LotSplitForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.MainForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.mainOrderForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Orders.PurchaseOrderControl.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Orders.SalesOrderControl.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.CustomFieldDefForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.EditOrganizationForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.OrganizationForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.PartEditForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.PrintRibbonControllerResources.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Properties.Resources.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.receivingForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Reports.DellPacklistReport.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Reports.PacklistReport.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.SalesWaybillForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Sales.shippingForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Reports.ToteTravelerReport.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Search.UserQueryForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Security.DirtyPasswordDialog.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.LoginForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.PasswordForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.RoleEditForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.UserEditForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.UserManagerForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.CodeCategoryForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.F9CommentsView.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.FailCodeByCategoryView.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.QuestionConfigGroupManager.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.CopyStepsForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.QuestionConfigGroupManager2.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.RepairComponentReplacementForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.ResultListManager.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.ResultListManager2.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.RouteBuilderForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.RouteProcessViewerForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.RouteStationListManager.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.RouteStationMaintForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.RouteStationRepairForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.ServiceCommForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.ServiceCommManager.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.ServiceCommodityManager.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.ServiceSetupForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.ServiceStationForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.ShopfloorConditionManager.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.StationFailureView.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.StationInputForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.StationInspectionTaskView.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.StationManager.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.StationManager2.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.StationOutcomeManager.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.StationOutcomeManager2.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.StationResultsViewerForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.StationSelectForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.StepLayoutForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.TokenTravelerForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.SearchForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.toteCreatorForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.TravelerLabelForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.GenericSearchDlg.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.SearchControl2.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\Inventory.UI.StubbornMessageBox.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.SuperConfirmForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.SuperConfirmForm2.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.UserInputView.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.WaitForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Views.DfileActionSearchView.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Views.Dfile.DfileActionView.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Views.DfileResolutionSearchView.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Views.ManageInventoryHoldsView.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Views.ResolveMultipleCaptureView.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Views.WipCaptureView.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Views.ResolveDfileItemView.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Views.Warehouse.Shipping.ShippingConfigurationsView.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Views.Warehouse.Shipping.ShippingSessionView.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.WebBrowserForm.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Widgets.PersistenceWidget.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.XRDesignRibbonControllerResources.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\GenerateResource.read.1.tlog
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\GenerateResource.write.1.tlog
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.CS.UI.exe.licenses
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.CS.UI.exe
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.CS.UI.pdb
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Reports.DellPoPacklistReport.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Reports.DellLpnPacklistReport.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\AutoMapper.dll
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Materials.PartsConsumptionView.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.ItemCustomFieldsEditView.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Orders.OrderTemplateSelectionView.resources
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\StructureMap.dll
+F:\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\StructureMap.xml
+F:\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Orders.ShipmentLineItemSchedulingView.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\SCOUT.CS.UI.exe.config
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\SCOUT.CS.UI.exe
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\SCOUT.CS.UI.pdb
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\Kjs.AppLife.Update.Controller.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\nunit.framework.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\SCOUT.Core.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\AutoMapper.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.Xpo.v10.1.Linq.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\StructureMap.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\SCOUT.Core.pdb
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.Data.v10.1.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.RichEdit.v10.1.Core.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.Utils.v10.1.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.Xpo.v10.1.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraBars.v10.1.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraCharts.v10.1.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraCharts.v10.1.UI.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraEditors.v10.1.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraGauges.v10.1.Core.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraGauges.v10.1.Win.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraGrid.v10.1.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraLayout.v10.1.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraNavBar.v10.1.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraPivotGrid.v10.1.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraPivotGrid.v10.1.Core.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraPrinting.v10.1.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraReports.v10.1.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraReports.v10.1.Extensions.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraRichEdit.v10.1.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraScheduler.v10.1.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraScheduler.v10.1.Core.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraScheduler.v10.1.Reporting.Extensions.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraSpellChecker.v10.1.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraSpellChecker.v10.1.Core.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraTreeList.v10.1.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.XtraVerticalGrid.v10.1.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\DevExpress.Xpo.v10.1.Linq.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\bin\Debug\StructureMap.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.csprojResolveAssemblyReference.cache
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.SplashForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.areaManagementForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.areaStatusesForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.domainLocationManager.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Areas.RacklocationGeneratorForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Areas.ShopfloorlineCustomFieldsForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Bom.BomConfigurationView.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Bom.BomMasterView.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Controls.Line.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Controls.NameValueGrid.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Controls.PersistentBaseControl.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Controls.StarGate.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Core.CommandInputForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Core.PassiveViewBase.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.GenericLabelForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.InventoryAdjustmentView.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.InventoryProcessHoldView.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.ItemCustomFieldsEditView.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.ToteContentsPutAwayForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.HoldResolutionForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.InventoryCaptureManager.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.SerialNumberChangeForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.ToteAddContentsForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.ToteContentsSelectorForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.ToteContentsTransferForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.NSSerializationForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.ToteDetailView.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.ToteManagerForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.InventoryGradeForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.ToteTransferForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.UnitConfigurationForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Materials.MaterialsQtyAdjustmentForm2.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Materials.PartsConsumptionView.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Materials.MaterialsQtyAdjustmentForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Materials.MaterialsLocationTransferForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Materials.MaterialsWarehouseReturnForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Materials.MaterialsIssueOutForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Materials.MaterialsPurchaseOrderForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Materials.MaterialsPutAwayForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Materials.MaterialsReceivingForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Orders.OrderTemplateSelectionView.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Orders.PacklistContentsView.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Orders.PacklistsContentsTransferView.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Orders.PreAlertImportProgressForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Orders.PacklistMgrForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Orders.ShipmentLineItemSchedulingView.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Parts.PartAttributesControl.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Parts.PartFamilyForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.PrinterSetupForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Orders.PreAlertImportForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.ReportDesignerForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.ChangeForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.InventoryTransactionForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Inventory.LotSplitForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.MainForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.mainOrderForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Orders.PurchaseOrderControl.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Orders.SalesOrderControl.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.CustomFieldDefForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.EditOrganizationForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.OrganizationForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.PartEditForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.PrintRibbonControllerResources.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Properties.Resources.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.receivingForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Reports.DellPoPacklistReport.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Reports.DellLpnPacklistReport.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Reports.DellPacklistReport.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Reports.PacklistReport.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.SalesWaybillForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Sales.shippingForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Reports.ToteTravelerReport.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Search.UserQueryForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Security.DirtyPasswordDialog.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.LoginForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.PasswordForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.RoleEditForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.UserEditForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.UserManagerForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.CodeCategoryForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.F9CommentsView.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.FailCodeByCategoryView.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.QuestionConfigGroupManager.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.CopyStepsForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.QuestionConfigGroupManager2.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.RepairComponentReplacementForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.ResultListManager.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.ResultListManager2.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.RouteBuilderForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.RouteProcessViewerForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.RouteStationListManager.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.RouteStationMaintForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.RouteStationRepairForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.ServiceCommForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.ServiceCommManager.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.ServiceCommodityManager.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.ServiceSetupForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.ServiceStationForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.ShopfloorConditionManager.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.StationFailureView.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.StationInputForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.StationInspectionTaskView.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.StationManager.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.StationManager2.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.StationOutcomeManager.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.StationOutcomeManager2.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.StationResultsViewerForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.StationSelectForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Service.StepLayoutForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.TokenTravelerForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.SearchForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.toteCreatorForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.TravelerLabelForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.GenericSearchDlg.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.SearchControl2.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\Inventory.UI.StubbornMessageBox.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.SuperConfirmForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.SuperConfirmForm2.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.UserInputView.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.WaitForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Views.DfileActionSearchView.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Views.Dfile.DfileActionView.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Views.DfileResolutionSearchView.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Views.ManageInventoryHoldsView.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Views.ResolveMultipleCaptureView.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Views.WipCaptureView.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Views.ResolveDfileItemView.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Views.Warehouse.Shipping.ShippingConfigurationsView.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Views.Warehouse.Shipping.ShippingSessionView.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.WebBrowserForm.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.Widgets.PersistenceWidget.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.XRDesignRibbonControllerResources.resources
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.WinForms.csproj.GenerateResource.Cache
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.CS.UI.exe.licenses
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.CS.UI.exe
+H:\Development\Source\SCOUT NS\app\SCOUT.WinForms\obj\Debug\SCOUT.CS.UI.pdb

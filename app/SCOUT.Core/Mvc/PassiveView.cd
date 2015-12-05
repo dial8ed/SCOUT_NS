@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="SCOUT.Core.Mvc.ActionRequestEventArgs" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAQQAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mvc\ActionRequestEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCOUT.Core.Mvc.ActionRequestEvents">
+    <Position X="0.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAIAAAAAAEAAAAQAAAAAAEAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Mvc\ActionRequestEvents.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCOUT.Core.Mvc.ChangeRequestEvents">
+    <Position X="8.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAEAAAAAAAAAAAEAAAAAAABAAQAAgA=</HashCode>
+      <FileName>Mvc\ChangeRequestEvents.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCOUT.Core.Mvc.EventHolder&lt;T&gt;">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAEAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mvc\EventHolder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCOUT.Core.Mvc.MvcControllerBase&lt;TModel, TView&gt;">
+    <Position X="3.5" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AiAAEAAAACAQAQAAAgIAAAAAAAABAIAAgAgAABAAAAA=</HashCode>
+      <FileName>Mvc\MvcControllerBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SCOUT.Core.Mvc.PersistentModel">
+    <Position X="8.75" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAACAAA=</HashCode>
+      <FileName>Mvc\PersistentModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Bottom" Position="0.1" />
+  </Class>
+  <Class Name="SCOUT.Core.Mvc.PersistentModelController">
+    <Position X="6.25" Y="1.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIABQAAAAAAAAAAAEAEAAAAAAAIAABUAAAAAAAA=</HashCode>
+      <FileName>Mvc\PersistentModelController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCOUT.Core.Mvc.PropertyChangeRequestEventArgs&lt;T&gt;" Collapsed="true">
+    <Position X="6.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Mvc\PropertyChangeRequestEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="SCOUT.Core.Mvc.IMvcActionEventController">
+    <Position X="3.25" Y="1.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Mvc\IMvcActionEventController.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SCOUT.Core.Mvc.IMvcPropertyChangedEventController">
+    <Position X="8.75" Y="3.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mvc\IMvcPropertyChangedViewController.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SCOUT.Core.Mvc.IPersistentModel">
+    <Position X="3.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mvc\IPersistentModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

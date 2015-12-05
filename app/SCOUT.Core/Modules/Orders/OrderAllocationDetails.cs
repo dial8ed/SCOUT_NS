@@ -1,0 +1,63 @@
+using System;
+using DevExpress.Xpo;
+
+namespace SCOUT.Core.Data
+{
+    [Persistent("vw_order_allocation_details")]
+    public class OrderAllocationDetails : XPLiteObject
+    {
+        private int m_customerId;
+
+        public OrderAllocationDetails(Session session) : base(session)
+        {
+
+        }
+
+        [Persistent("id"), Key(AutoGenerate = false)]
+        public Guid Id { get; set; }
+
+        [Persistent("allocation_method")]
+        public string AllocationMethod { get; set; }
+
+        [Persistent("shopfloorline_id")]
+        public Shopfloorline Shopfloorline { get; set; }
+
+        [Persistent("customer_id")]
+        public int CustomerId
+        {
+            get { return m_customerId; }
+            set
+            {
+                m_customerId = value;
+
+                if (m_customerId > 0 )
+                    Customer = Organization.GetOrganization(m_customerId);
+            }
+        }
+
+        [NonPersistent]
+        public Organization Customer { get; set; }
+
+        [Persistent("part_id")]
+        public Part Part { get; set; }
+
+        [Persistent("sales_order_id")]
+        public SalesOrder SalesOrder { get; set; }
+
+        [Persistent("open_quantity")]
+        public int OpenQuantity { get; set; }
+
+        [Persistent("line_item_identifier")]
+        public string LineItemIdentifier { get; set; }
+
+        [Persistent("order_identifier")]
+        public string OrderIdentifier { get; set; }
+
+        [Persistent("rank")]
+        public int Rank { get; set; }
+
+        [Persistent("aging")]
+        public int Aging { get; set; }
+        
+    }
+}

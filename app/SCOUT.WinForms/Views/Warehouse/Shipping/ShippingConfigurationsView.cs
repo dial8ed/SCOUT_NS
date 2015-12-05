@@ -1,0 +1,238 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
+using DevExpress.XtraLayout.Utils;
+using SCOUT.Core;
+using SCOUT.Core.Data;
+using SCOUT.Core.Modules.Orders;
+using SCOUT.Core.Services;
+
+namespace SCOUT.WinForms.Views.Warehouse.Shipping
+{
+    public partial class ShippingConfigurationsView : Form
+    {
+        private ICollection<ShippingConfiguration> m_configurations;
+        private ICollection<Organization> m_organizations;
+        private ICollection<Shopfloorline> m_shopfloorlines;
+        private IList<string> m_shipMethods;
+
+        private IOrderModule m_orderModule;
+        private IAreaService m_areaService;
+        private IUnitOfWork m_uow;
+        private PersistenceController m_persistence;
+
+        private List<IBindableComponent> m_detailControls;
+
+        private Shopfloorline m_currentShopfloorline;
+                   
+        public ShippingConfigurationsView()
+        {
+            InitializeComponent();
+            Initialize();
+            Bind();
+            WireEvents();
+        }
+
+        private void Initialize()
+        {
+            m_orderModule = Scout.Core.Modules.Orders;
+            m_areaService = Scout.Core.Service<IAreaService>();
+            m_uow = Scout.Core.Data.GetUnitOfWork();
+
+            m_persistence = new PersistenceController(m_uow);
+
+            m_shopfloorlines = m_areaService.GetAllShopfloorlines(m_uow);
+            m_organizations = Organization.GetActiveOrganizations();
+            m_shipMethods = OrderService.GetAllShipMethods();
+
+            m_detailControls = new List<IBindableComponent>();
+
+            CurrentShopfloorline = null;
+
+            detailsTab.Visibility = LayoutVisibility.Never;
+
+            LoadDetailsControls(m_detailControls);
+        }
+
+        private Shopfloorline CurrentShopfloorline
+        {
+            get { return m_currentShopfloorline; }
+            set
+            {
+                m_currentShopfloorline = value;
+                if(m_currentShopfloorline != null)
+                {
+                    configurationsTab.Visibility = LayoutVisibility.Always;
+                    shipDomainLookUp.Properties.DataSource = m_currentShopfloorline.ShippableDomains;
+                }                            
+                else
+                {
+                    configurationsTab.Visibility = LayoutVisibility.Never;
+                    shipDomainLookUp.Properties.DataSource = null;
+                }                                                  
+            }
+        }
+
+        private ShippingConfiguration CurrentConfiguration { get; set; }
+
+        private void LoadDetailsControls(List<IBindableComponent> detailControls)
+        {
+            detailControls.Add(sflLookUp);
+            detailControls.Add(customerLookUp);
+            detailControls.Add(shipToAddressText);
+            detailControls.Add(shipDomainLookUp);
+            detailControls.Add(shipMethodLookUp);
+            detailControls.Add(shippingAccountText);
+            detailControls.Add(packlistAllocationMethodLookUp);
+            detailControls.Add(orderAllocationMethodLookUp);  
+            detailControls.Add(configurationNameText);
+            detailControls.Add(shopfloorlineProgramText);
+        }
+
+        private void ClearDetailControlsBindings(IEnumerable<IBindableComponent> detailControls)
+        {
+            foreach (IBindableComponent bindableComponent in detailControls)
+            {
+                bindableComponent.DataBindings.Clear();
+            }            
+        }
+
+        private void Bind()
+        {
+            sflLookUp.Properties.DataSource = m_shopfloorlines;
+            customerLookUp.Properties.DataSource = m_organizations;
+            packlistAllocationMethodLookUp.Properties.DataSource = Enum.GetValues(typeof (PacklistAllocation));
+            orderAllocationMethodLookUp.Properties.DataSource = OrderService.GetShipmentAllocationMethods();
+            shipMethodLookUp.Properties.DataSource = m_shipMethods;
+           
+            orderAllocationMethodLookUp.Properties.DisplayMember = "DisplayName";
+            orderAllocationMethodLookUp.Properties.ValueMember = "TypeName";
+        }
+
+        private void WireEvents()
+        {
+            sflLookUp.EditValueChanged += sflLookUp_EditValueChanged;
+            customerLookUp.EditValueChanged += customerLookUp_EditValueChanged;
+            shipToAddressLookUp.EditValueChanged += shipToAddressLookUp_EditValueChanged;
+            newConfigurationLink.Click += newConfigurationLink_Click;
+            editConfigurationLink.Click += editConfigurationLink_Click;
+            cancelNewButton.Click += cancelNewButton_Click;
+            cancelButton.Click += m_persistence.Cancel;
+            saveButton.Click += m_persistence.Save;
+
+            m_persistence.SaveChanges += m_persistence_SaveChanges;
+        }
+
+        void m_persistence_SaveChanges(object sender, EventArgs args)
+        {
+            Close();
+        }
+
+        void cancelNewButton_Click(object sender, EventArgs e)
+        {
+            if (!CurrentConfiguration.IsNew)
+                return;
+
+            CurrentConfiguration = null;
+            ShowListView();
+        }
+
+        void editConfigurationLink_Click(object sender, EventArgs e)
+        {
+            ShippingConfiguration config = configurationsView.GetFocusedRow() as ShippingConfiguration;
+            if(config != null)
+            {
+                CurrentConfiguration = config;
+                cancelNewButton.Visible = false;
+                EditConfiguration(CurrentConfiguration);
+            }           
+        }
+              
+        void newConfigurationLink_Click(object sender, EventArgs e)
+        {
+            CurrentConfiguration = new ShippingConfiguration(m_uow as XpoUnitOfWork);
+            CurrentConfiguration.Shopfloorline = CurrentShopfloorline;
+            cancelNewButton.Visible = true;
+            EditConfiguration(CurrentConfiguration);                                  
+        }
+
+        private void EditConfiguration(ShippingConfiguration currentConfiguration)
+        {
+            configurationsTab.SelectedTabPage = detailsTab;
+            detailsTab.Visibility = LayoutVisibility.Always;
+            listTab.Visibility = LayoutVisibility.Never;
+
+            ClearDetailControlsBindings(m_detailControls);
+            
+            customerLookUp.DataBindings.Add("EditValue", currentConfiguration, "Customer");
+            shipToAddressText.DataBindings.Add("Text", currentConfiguration, "ShipToAddress");
+            shipDomainLookUp.DataBindings.Add("EditValue", currentConfiguration, "ShipDomain!");
+            shipMethodLookUp.DataBindings.Add("EditValue", currentConfiguration, "ShipMethod");
+            shippingAccountText.DataBindings.Add("Text", currentConfiguration, "ShippingAccount");
+            configurationNameText.DataBindings.Add("Text", currentConfiguration, "Name");
+            shopfloorlineProgramText.DataBindings.Add("Text", currentConfiguration, "ShopfloorlineProgram");
+            activeSelect.DataBindings.Add("Checked", currentConfiguration, "Active");
+
+            packlistAllocationMethodLookUp.DataBindings.Add("EditValue", currentConfiguration,
+                                                            "PacklistAllocationMethod");
+
+            orderAllocationMethodLookUp.DataBindings.Add("EditValue", currentConfiguration, "ShipmentAllocationType");
+
+        }
+
+        void shipToAddressLookUp_EditValueChanged(object sender, EventArgs e)
+        {
+            Address address = shipToAddressLookUp.EditValue as Address;
+            if (address != null)
+                CurrentConfiguration.ShipToAddress = address.ToString();
+
+        }
+
+        void customerLookUp_EditValueChanged(object sender, EventArgs e)
+        {
+            Organization org = customerLookUp.EditValue as Organization;
+                LoadShipToAddresses(org);
+        }
+
+        private void LoadShipToAddresses(Organization customer)
+        {
+            if (customer != null)
+                shipToAddressLookUp.Properties.DataSource = customer.Addresses;
+            else
+                shipToAddressLookUp.Properties.DataSource = null;
+        }
+
+        void sflLookUp_EditValueChanged(object sender, EventArgs e)
+        {
+            Shopfloorline sfl = sflLookUp.EditValue as Shopfloorline;
+
+            CurrentShopfloorline = sfl;
+
+            if(sfl != null)            
+                LoadConfigurations(sfl);            
+        }
+
+        private void LoadConfigurations(Shopfloorline sfl)
+        {
+            m_configurations = m_orderModule.Data.GetShippingConfigurations(m_uow, sfl);
+            configurationsGrid.DataSource = m_configurations;
+        }
+
+        private void detailsOkButton_Click(object sender, EventArgs e)
+        {
+            if(CurrentConfiguration.IsNew)
+                m_configurations.Add(CurrentConfiguration);
+
+            ShowListView();
+        }
+
+        private void ShowListView()
+        {
+            configurationsTab.SelectedTabPage = detailsTab;
+
+            ClearDetailControlsBindings(m_detailControls);
+            detailsTab.Visibility = LayoutVisibility.Never;            
+            listTab.Visibility = LayoutVisibility.Always;
+        }
+    }
+}

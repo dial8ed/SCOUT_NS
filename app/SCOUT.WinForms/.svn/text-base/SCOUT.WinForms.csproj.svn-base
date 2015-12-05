@@ -1,0 +1,1858 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FC451411-61A5-4474-96A0-D56E70A5783D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SCOUT.WinForms</RootNamespace>
+    <AssemblyName>SCOUT.CS.UI</AssemblyName>
+    <StartupObject>SCOUT.WinForms.ApplicationEntry</StartupObject>
+    <ApplicationIcon>STSLogoTrans.ico</ApplicationIcon>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Alpha|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Alpha\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v10.1, Version=10.1.12.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v10.1.Core, Version=10.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v10.1, Version=10.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.OfficeSkins.v10.1, Version=10.1.12.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v10.1.Core, Version=10.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v10.1, Version=10.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v10.1, Version=10.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v10.1, Version=10.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v10.1, Version=10.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v10.1.UI, Version=10.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v10.1, Version=10.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v10.1.Core, Version=10.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v10.1.Win, Version=10.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v10.1, Version=10.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v10.1, Version=10.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v10.1, Version=10.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v10.1, Version=10.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v10.1.Core, Version=10.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v10.1, Version=10.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v10.1, Version=10.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v10.1.Extensions, Version=10.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v10.1, Version=10.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v10.1, Version=10.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v10.1.Core, Version=10.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v10.1.Reporting.Extensions, Version=10.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraSpellChecker.v10.1, Version=10.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraSpellChecker.v10.1.Core, Version=10.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v10.1, Version=10.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v10.1, Version=10.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Kjs.AppLife.Update.Controller, Version=1.0.0.12, Culture=neutral, PublicKeyToken=28aeef7cc998407d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libraries\Kjs.AppLife.Update.Controller.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.5.2.9222, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\libraries\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationController\CommandArguments\ToteContentsTransferCommandArguments.cs" />
+    <Compile Include="ApplicationController\CommandArguments\ToteCreateCommandArguments.cs" />
+    <Compile Include="ApplicationController\CommandEnums\InventoryCommands.cs" />
+    <Compile Include="ApplicationController\CommandEnums\MaterialCommands.cs" />
+    <Compile Include="ApplicationController\CommandEnums\PartCommands.cs" />
+    <Compile Include="ApplicationController\CommandEnums\ServiceCommands.cs" />
+    <Compile Include="ApplicationController\Commands\CommandInputDomainCommand.cs" />
+    <Compile Include="ApplicationController\Commands\InventoryCaptureNewCommand.cs">
+    </Compile>
+    <Compile Include="ApplicationController\Commands\InventoryGetItemCommand.cs" />
+    <Compile Include="ApplicationController\Commands\InventoryReceiveItemsCommand.cs" />
+    <Compile Include="ApplicationController\Commands\InventoryShipFromToteCommand.cs" />
+    <Compile Include="ApplicationController\Commands\IOutputCommand.cs" />
+    <Compile Include="ApplicationController\Commands\ISecurityCommand.cs" />
+    <Compile Include="ApplicationController\Commands\MaterialsConfigurePartCommand.cs" />
+    <Compile Include="ApplicationController\Commands\MaterialsConsumeBomConfigurationCommand.cs" />
+    <Compile Include="ApplicationController\Commands\MaterialsCreatePOCommand.cs" />
+    <Compile Include="ApplicationController\Commands\MaterialsCreateSOCommmand.cs" />
+    <Compile Include="ApplicationController\Commands\MaterialsIssueOutCommand.cs" />
+    <Compile Include="ApplicationController\Commands\MaterialsLocationTransferCommand.cs" />
+    <Compile Include="ApplicationController\Commands\MaterialsPutAwayCommand.cs" />
+    <Compile Include="ApplicationController\Commands\MaterialsQtyAdjustmentCommand.cs" />
+    <Compile Include="ApplicationController\Commands\MaterialsReceivePOCommand.cs" />
+    <Compile Include="ApplicationController\Commands\MaterialsSearchAllCommand.cs" />
+    <Compile Include="ApplicationController\Commands\MaterialsSearchConsumablesCommand.cs" />
+    <Compile Include="ApplicationController\Commands\MaterialsSearchTransactionsCommand.cs" />
+    <Compile Include="ApplicationController\Commands\MaterialsSearchWarehouseCommand.cs" />
+    <Compile Include="ApplicationController\Commands\MaterialsWarehouseReturnCommand.cs" />
+    <Compile Include="ApplicationController\Commands\OrdersNewFromTemplateCommand.cs" />
+    <Compile Include="ApplicationController\Commands\OrdersNewTemplateCommand.cs" />
+    <Compile Include="ApplicationController\Commands\OrdersSearchPacklistsCommand.cs" />
+    <Compile Include="ApplicationController\Commands\PartsManageBomConfigurationCommand.cs" />
+    <Compile Include="ApplicationController\Commands\PartsManageBomMasterCommand.cs" />
+    <Compile Include="ApplicationController\Commands\SecurityAccessDeniedCommand.cs" />
+    <Compile Include="ApplicationController\Commands\ServiceViewF9CommentsCommand.cs" />
+    <Compile Include="ApplicationController\Commands\ToteAddItemsDomainCommand.cs" />
+    <Compile Include="ApplicationController\Commands\ToteContentsPutAwayCommand.cs" />
+    <Compile Include="ApplicationController\Commands\ToteContentsSelectorCommand.cs" />
+    <Compile Include="ApplicationController\Commands\ToteCreateDomainCommand.cs" />
+    <Compile Include="ApplicationController\Commands\TotePrintLabelDomainCommand.cs" />
+    <Compile Include="ApplicationController\Commands\TotesManageDomainCommand.cs" />
+    <Compile Include="ApplicationController\Commands\ToteTransferContentsDomainCommand.cs" />
+    <Compile Include="ApplicationController\Commands\UserInputCommand.cs" />
+    <Compile Include="ApplicationController\Controllers\InputController.cs" />
+    <Compile Include="ApplicationController\Commands\InventoryShipCommand.cs" />
+    <Compile Include="ApplicationController\Controllers\MaterialsController.cs" />
+    <Compile Include="ApplicationController\Controllers\PartsController.cs" />
+    <Compile Include="ApplicationController\Controllers\SecurityController.cs" />
+    <Compile Include="ApplicationController\Controllers\ServiceController.cs" />
+    <Compile Include="Application\Application.cs" />
+    <Compile Include="Application\SplashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\SplashForm.Designer.cs">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\VersionInfo.cs" />
+    <Compile Include="Areas\AreaManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Areas\AreaManagementForm.Designer.cs">
+      <DependentUpon>AreaManagementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\AreaStatusComboObserver.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Areas\AreaStatusesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Areas\AreaStatusesForm.Designer.cs">
+      <DependentUpon>AreaStatusesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\DomainLocationManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Areas\DomainLocationManager.Designer.cs">
+      <DependentUpon>DomainLocationManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\AreaUIValidators.cs" />
+    <Compile Include="Areas\RacklocationGeneratorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Areas\RacklocationGeneratorForm.Designer.cs">
+      <DependentUpon>RacklocationGeneratorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Areas\ShopfloorlineCustomFieldsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Areas\ShopfloorlineCustomFieldsForm.Designer.cs">
+      <DependentUpon>ShopfloorlineCustomFieldsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bom\BomConfigurationView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bom\BomConfigurationView.Designer.cs">
+      <DependentUpon>BomConfigurationView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bom\BomMasterView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bom\BomMasterView.Designer.cs">
+      <DependentUpon>BomMasterView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\MRUListController.cs" />
+    <Compile Include="ApplicationController\Controllers\ApplicationController.cs" />
+    <Compile Include="ApplicationController\Commands\Command.cs" />
+    <Compile Include="ApplicationController\Controllers\FrontController.cs" />
+    <Compile Include="ApplicationController\Controllers\IApplicationController.cs" />
+    <Compile Include="ApplicationController\CommandArguments\ICommandArguments.cs" />
+    <Compile Include="ApplicationController\Commands\ICommand.cs" />
+    <Compile Include="ApplicationController\Controllers\InventoryController.cs" />
+    <Compile Include="ApplicationController\Commands\InventoryTransferDomainCommand.cs" />
+    <Compile Include="ApplicationController\CommandEnums\OrdersCommands.cs" />
+    <Compile Include="ApplicationController\Controllers\OrdersController.cs" />
+    <Compile Include="ApplicationController\Commands\OrdersNewADEXDomainCommand.cs" />
+    <Compile Include="ApplicationController\Commands\OrdersNewPODomainCommand.cs" />
+    <Compile Include="ApplicationController\Commands\OrdersNewRNRDomainCommand.cs" />
+    <Compile Include="ApplicationController\Commands\OrdersNewSODomainCommand.cs" />
+    <Compile Include="ApplicationController\CommandEnums\ToteCommands.cs" />
+    <Compile Include="ApplicationController\CommandArguments\ToteRemoveItemsCommandArguments.cs" />
+    <Compile Include="ApplicationController\Commands\ToteRemoveItemDomainCommand.cs" />
+    <Compile Include="ApplicationController\Controllers\TotesController.cs" />
+    <Compile Include="ApplicationController\CommandArguments\ToteTransferCommandArguments.cs" />
+    <Compile Include="ApplicationController\Commands\ToteTransferDomainCommand.cs" />
+    <Compile Include="ApplicationController\Controllers\UnknownApplicationController.cs" />
+    <Compile Include="ApplicationController\Commands\UnknownDomainCommand.cs" />
+    <Compile Include="ApplicationController\ViewLoader.cs" />
+    <Compile Include="Controls\ControlStateController.cs" />
+    <Compile Include="Controls\DataCheckedListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Line.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\NameValueGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\PersistentBaseControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\StarGate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\SysIcon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\ViewBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\InventoryAdjustmentView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\InventoryAdjustmentView.Designer.cs">
+      <DependentUpon>InventoryAdjustmentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\ItemCustomFieldsEditView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\ItemCustomFieldsEditView.Designer.cs">
+      <DependentUpon>ItemCustomFieldsEditView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\MaterialsQtyAdjustmentForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials\MaterialsQtyAdjustmentForm2.Designer.cs">
+      <DependentUpon>MaterialsQtyAdjustmentForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Orders\OrderTemplateSelectionView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orders\OrderTemplateSelectionView.Designer.cs">
+      <DependentUpon>OrderTemplateSelectionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Orders\PacklistContentsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Orders\PacklistContentsView.Designer.cs">
+      <DependentUpon>PacklistContentsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Orders\PacklistsContentsTransferView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orders\PacklistsContentsTransferView.Designer.cs">
+      <DependentUpon>PacklistsContentsTransferView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="packlistDataset.cs">
+      <DependentUpon>PacklistDataset.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="packlistDataset.Designer.cs">
+      <DependentUpon>packlistDataset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Providers\MessageBoxOutputHost.cs" />
+    <Compile Include="Core\Signal.cs" />
+    <Compile Include="Core\CommandInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\CommandInputForm.Designer.cs">
+      <DependentUpon>CommandInputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Export.cs" />
+    <Compile Include="Core\File.cs" />
+    <Compile Include="Core\LayoutXmlFile.cs" />
+    <Compile Include="Core\PassiveViewBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\Util.cs" />
+    <Compile Include="Core\WinApi\Call.cs" />
+    <Compile Include="Core\WinApi\Constant.cs" />
+    <Compile Include="Core\WinApi\structs.cs" />
+    <Compile Include="DevExpressUI\TreeListHelper.cs" />
+    <Compile Include="dsToteContents.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsToteContents.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GenericLabelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenericLabelForm.Designer.cs">
+      <DependentUpon>GenericLabelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\InventoryProcessHoldView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\InventoryProcessHoldView.Designer.cs">
+      <DependentUpon>InventoryProcessHoldView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\PartsConsumptionView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials\PartsConsumptionView.Designer.cs">
+      <DependentUpon>PartsConsumptionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Providers\DialogService.cs" />
+    <Compile Include="Providers\PrintingService.cs" />
+    <Compile Include="Providers\StubbornMessageBoxOutputHost.cs" />
+    <Compile Include="Providers\ViewService.cs" />
+    <Compile Include="Reports\DellPoPacklistReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DellPoPacklistReport.Designer.cs">
+      <DependentUpon>DellPoPacklistReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DellLpnPacklistReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DellLpnPacklistReport.Designer.cs">
+      <DependentUpon>DellLpnPacklistReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PacklistController.cs" />
+    <Compile Include="Reports\DellPacklist.cs" />
+    <Compile Include="Reports\DellPacklistReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DellPacklistReport.Designer.cs">
+      <DependentUpon>DellPacklistReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\StsPacklistController.cs" />
+    <Compile Include="Providers\DefaultUserInteractionProvider.cs" />
+    <Compile Include="Search\ISearchButtons.cs" />
+    <Compile Include="Search\PacklistSearchButtons.cs" />
+    <Compile Include="Service\FailCodeByCategoryView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service\FailCodeByCategoryView.Designer.cs">
+      <DependentUpon>FailCodeByCategoryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\QuestionConfigGroupManager2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Service\QuestionConfigGroupManager2.Designer.cs">
+      <DependentUpon>QuestionConfigGroupManager2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\ResultListManager2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Service\ResultListManager2.Designer.cs">
+      <DependentUpon>ResultListManager2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\ServiceCommodityManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Service\ServiceCommodityManager.Designer.cs">
+      <DependentUpon>ServiceCommodityManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\ShopfloorConditionManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Service\ShopfloorConditionManager.Designer.cs">
+      <DependentUpon>ShopfloorConditionManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\StationFailureView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service\StationFailureView.Designer.cs">
+      <DependentUpon>StationFailureView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\StationInspectionTaskView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service\StationInspectionTaskView.Designer.cs">
+      <DependentUpon>StationInspectionTaskView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\StationManager2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Service\StationManager2.Designer.cs">
+      <DependentUpon>StationManager2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\StationOutcomeManager2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Service\StationOutcomeManager2.Designer.cs">
+      <DependentUpon>StationOutcomeManager2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShippingConfigurationPacklistDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShippingConfigurationPacklistDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\InventoryLocator.cs" />
+    <Compile Include="Utils\LabelPrinter.cs" />
+    <Compile Include="Utils\PacklistPrinter.cs" />
+    <Compile Include="Utils\UserInputView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utils\UserInputView.Designer.cs">
+      <DependentUpon>UserInputView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Warehouse\Dfile\DfileActionSearchView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Warehouse\Dfile\DfileActionSearchView.Designer.cs">
+      <DependentUpon>DfileActionSearchView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Warehouse\Dfile\DfileActionView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Warehouse\Dfile\DfileActionView.Designer.cs">
+      <DependentUpon>DfileActionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Warehouse\Dfile\DfileResolutionSearchView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Warehouse\Dfile\DfileResolutionSearchView.Designer.cs">
+      <DependentUpon>DfileResolutionSearchView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewHelper.cs" />
+    <Compile Include="Inventory\ToteContentsPutAwayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\ToteContentsPutAwayForm.Designer.cs">
+      <DependentUpon>ToteContentsPutAwayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\HoldResolutionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\HoldResolutionForm.Designer.cs">
+      <DependentUpon>HoldResolutionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\InventoryCaptureManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\InventoryCaptureManager.Designer.cs">
+      <DependentUpon>InventoryCaptureManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\SerialNumberChangeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\SerialNumberChangeForm.Designer.cs">
+      <DependentUpon>SerialNumberChangeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\ToteAddContentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\ToteAddContentsForm.Designer.cs">
+      <DependentUpon>ToteAddContentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\ToteContentsSelectorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\ToteContentsSelectorForm.Designer.cs">
+      <DependentUpon>ToteContentsSelectorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\ToteContentsTransferForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\ToteContentsTransferForm.Designer.cs">
+      <DependentUpon>ToteContentsTransferForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\NSSerializationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\NSSerializationForm.Designer.cs">
+      <DependentUpon>NSSerializationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\ToteDetailView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\ToteDetailView.Designer.cs">
+      <DependentUpon>ToteDetailView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\ToteManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\ToteManagerForm.Designer.cs">
+      <DependentUpon>ToteManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\InventoryGradeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\InventoryGradeForm.Designer.cs">
+      <DependentUpon>InventoryGradeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\ToteTransferForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\ToteTransferForm.Designer.cs">
+      <DependentUpon>ToteTransferForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\UnitConfigurationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\UnitConfigurationForm.Designer.cs">
+      <DependentUpon>UnitConfigurationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\MaterialsQtyAdjustmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials\MaterialsQtyAdjustmentForm.Designer.cs">
+      <DependentUpon>MaterialsQtyAdjustmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\MaterialsLocationTransferForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials\MaterialsLocationTransferForm.Designer.cs">
+      <DependentUpon>MaterialsLocationTransferForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\MaterialsWarehouseReturnForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials\MaterialsWarehouseReturnForm.Designer.cs">
+      <DependentUpon>MaterialsWarehouseReturnForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\MaterialsIssueOutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials\MaterialsIssueOutForm.Designer.cs">
+      <DependentUpon>MaterialsIssueOutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\MaterialsPurchaseOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials\MaterialsPurchaseOrderForm.Designer.cs">
+      <DependentUpon>MaterialsPurchaseOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\MaterialsPutAwayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials\MaterialsPutAwayForm.Designer.cs">
+      <DependentUpon>MaterialsPutAwayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materials\MaterialsReceivingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materials\MaterialsReceivingForm.Designer.cs">
+      <DependentUpon>MaterialsReceivingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Orders\PreAlertImportProgressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orders\PreAlertImportProgressForm.Designer.cs">
+      <DependentUpon>PreAlertImportProgressForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Orders\PacklistMgrForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orders\PacklistMgrForm.Designer.cs">
+      <DependentUpon>PacklistMgrForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PacklistDataset1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PacklistDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Parts\PartAttributesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Parts\PartAttributesControl.Designer.cs">
+      <DependentUpon>PartAttributesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parts\PartFamilyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parts\PartFamilyForm.Designer.cs">
+      <DependentUpon>PartFamilyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrinterSetupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrinterSetupForm.Designer.cs">
+      <DependentUpon>PrinterSetupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Orders\PreAlertImportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orders\PreAlertImportForm.Designer.cs">
+      <DependentUpon>PreAlertImportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDesignerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportDesignerForm.Designer.cs">
+      <DependentUpon>ReportDesignerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\ChangeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\ChangeForm.Designer.cs">
+      <DependentUpon>ChangeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\InventoryTransactionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\InventoryTransactionForm.Designer.cs">
+      <DependentUpon>InventoryTransactionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\LotSplitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\LotSplitForm.Designer.cs">
+      <DependentUpon>LotSplitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IValidationControl.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Orders\MainOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orders\MainOrderForm.Designer.cs">
+      <DependentUpon>MainOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Orders\PurchaseOrderControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Orders\PurchaseOrderControl.Designer.cs">
+      <DependentUpon>PurchaseOrderControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Orders\SalesOrderControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Orders\SalesOrderControl.Designer.cs">
+      <DependentUpon>SalesOrderControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Organizations\CustomFieldDefForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Organizations\CustomFieldDefForm.Designer.cs">
+      <DependentUpon>CustomFieldDefForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Organizations\EditOrganizationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Organizations\EditOrganizationForm.designer.cs">
+      <DependentUpon>EditOrganizationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Organizations\OrganizationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Organizations\OrganizationForm.Designer.cs">
+      <DependentUpon>OrganizationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parts\PartEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parts\PartEditForm.Designer.cs">
+      <DependentUpon>PartEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintRibbonControllerResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintRibbonControllerResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Orders\ReceivingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orders\ReceivingForm.Designer.cs">
+      <DependentUpon>ReceivingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PacklistReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PacklistReport.Designer.cs">
+      <DependentUpon>PacklistReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Orders\SalesWaybillForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orders\SalesWaybillForm.Designer.cs">
+      <DependentUpon>SalesWaybillForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Orders\ShippingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orders\ShippingForm.Designer.cs">
+      <DependentUpon>ShippingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportDirectory.cs" />
+    <Compile Include="Reports\ToteTravelerDetails1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ToteTravelerDetails.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ToteTravelerReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ToteTravelerReport.Designer.cs">
+      <DependentUpon>ToteTravelerReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="scout_ns.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>scout_ns.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Search\InventorySearchButtons.cs" />
+    <Compile Include="Search\SearchController.cs" />
+    <Compile Include="Search\SearchDetail.cs" />
+    <Compile Include="Search\SearchSettings.cs" />
+    <Compile Include="Search\UnitHistorySearchButtons.cs" />
+    <Compile Include="Search\UserQueryController.cs" />
+    <Compile Include="Search\UserQueryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search\UserQueryForm.Designer.cs">
+      <DependentUpon>UserQueryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Security\DirtyPasswordDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Security\DirtyPasswordDialog.Designer.cs">
+      <DependentUpon>DirtyPasswordDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Security\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Security\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Security\PasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Security\PasswordForm.Designer.cs">
+      <DependentUpon>PasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Security\RoleEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Security\RoleEditForm.Designer.cs">
+      <DependentUpon>RoleEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Security\Security.cs" />
+    <Compile Include="Security\UserEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Security\UserEditForm.Designer.cs">
+      <DependentUpon>UserEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Security\UserManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Security\UserManagerForm.Designer.cs">
+      <DependentUpon>UserManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\CodeCategoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service\CodeCategoryForm.Designer.cs">
+      <DependentUpon>CodeCategoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\F9CommentsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service\F9CommentsView.Designer.cs">
+      <DependentUpon>F9CommentsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\QuestionConfigGroupManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Service\QuestionConfigGroupManager.Designer.cs">
+      <DependentUpon>QuestionConfigGroupManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\CopyStepsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service\CopyStepsForm.Designer.cs">
+      <DependentUpon>CopyStepsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\LayoutXmlDirectory.cs" />
+    <Compile Include="Service\RepairComponentReplacementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service\RepairComponentReplacementForm.Designer.cs">
+      <DependentUpon>RepairComponentReplacementForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\ResultListManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Service\ResultListManager.Designer.cs">
+      <DependentUpon>ResultListManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\RouteBuilderController.cs" />
+    <Compile Include="Service\RouteBuilderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service\RouteBuilderForm.Designer.cs">
+      <DependentUpon>RouteBuilderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\RouteProcessViewerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service\RouteProcessViewerForm.Designer.cs">
+      <DependentUpon>RouteProcessViewerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\RouteStationListManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Service\RouteStationListManager.Designer.cs">
+      <DependentUpon>RouteStationListManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\RouteStationMaintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service\RouteStationMaintForm.Designer.cs">
+      <DependentUpon>RouteStationMaintForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\RouteStationMapper.cs" />
+    <Compile Include="Service\RouteStationRepairForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service\RouteStationRepairForm.Designer.cs">
+      <DependentUpon>RouteStationRepairForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\ServiceCodeUIValidators.cs" />
+    <Compile Include="Service\ServiceCommForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service\ServiceCommForm.Designer.cs">
+      <DependentUpon>ServiceCommForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\ServiceCommManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Service\ServiceCommManager.Designer.cs">
+      <DependentUpon>ServiceCommManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\ServiceSetupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service\ServiceSetupForm.Designer.cs">
+      <DependentUpon>ServiceSetupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\ServiceStationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service\ServiceStationForm.Designer.cs">
+      <DependentUpon>ServiceStationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\StationInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service\StationInputForm.Designer.cs">
+      <DependentUpon>StationInputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\StationManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Service\StationManager.Designer.cs">
+      <DependentUpon>StationManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\StationOutcomeManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Service\StationOutcomeManager.Designer.cs">
+      <DependentUpon>StationOutcomeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\StationResultsViewerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service\StationResultsViewerForm.Designer.cs">
+      <DependentUpon>StationResultsViewerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\StationSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service\StationSelectForm.Designer.cs">
+      <DependentUpon>StationSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\StationStepLookUpMapper.cs" />
+    <Compile Include="Service\StationStepTextEditMapper.cs" />
+    <Compile Include="Service\StepLayoutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service\StepLayoutForm.Designer.cs">
+      <DependentUpon>StepLayoutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\StepLayoutLookupMapper.cs" />
+    <Compile Include="Service\StepLayoutTextMapper.cs" />
+    <Compile Include="TokenTravelerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TokenTravelerForm.Designer.cs">
+      <DependentUpon>TokenTravelerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory\ToteCreatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory\ToteCreatorForm.Designer.cs">
+      <DependentUpon>ToteCreatorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TravelerLabelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TravelerLabelForm.Designer.cs">
+      <DependentUpon>TravelerLabelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\InfoBox.cs" />
+    <Compile Include="Search\SearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search\SearchForm.Designer.cs">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Search\GenericSearchDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utils\Search\GenericSearchDlg.Designer.cs">
+      <DependentUpon>GenericSearchDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Search\SearchControl2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Utils\Search\SearchControl2.Designer.cs">
+      <DependentUpon>SearchControl2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\StubbornMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utils\StubbornMessageBox.Designer.cs">
+      <DependentUpon>StubbornMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\SuperConfirmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utils\SuperConfirmForm.Designer.cs">
+      <DependentUpon>SuperConfirmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\SuperConfirmForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utils\SuperConfirmForm2.Designer.cs">
+      <DependentUpon>SuperConfirmForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Helpers.cs" />
+    <Compile Include="Utils\WaitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utils\WaitForm.Designer.cs">
+      <DependentUpon>WaitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Warehouse\Capture\ManageInventoryHoldsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Warehouse\Capture\ManageInventoryHoldsView.Designer.cs">
+      <DependentUpon>ManageInventoryHoldsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Warehouse\Capture\ResolveMultipleCaptureView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Warehouse\Capture\ResolveMultipleCaptureView.Designer.cs">
+      <DependentUpon>ResolveMultipleCaptureView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Warehouse\Capture\WipCaptureView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Warehouse\Capture\WipCaptureView.Designer.cs">
+      <DependentUpon>WipCaptureView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Warehouse\Dfile\ResolveDfileItemView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Warehouse\Dfile\ResolveDfileItemView.Designer.cs">
+      <DependentUpon>ResolveDfileItemView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Warehouse\Shipping\ShippingConfigurationsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Warehouse\Shipping\ShippingConfigurationsView.Designer.cs">
+      <DependentUpon>ShippingConfigurationsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Warehouse\Shipping\ShippingSession.cs" />
+    <Compile Include="Views\Warehouse\Shipping\ShippingSessionView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Warehouse\Shipping\ShippingSessionView.Designer.cs">
+      <DependentUpon>ShippingSessionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebBrowserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WebBrowserForm.Designer.cs">
+      <DependentUpon>WebBrowserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\PersistenceWidget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widgets\PersistenceWidget.Designer.cs">
+      <DependentUpon>PersistenceWidget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XRDesignRibbonControllerResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>XRDesignRibbonControllerResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Application\SplashForm.resx">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Areas\AreaManagementForm.resx">
+      <DependentUpon>AreaManagementForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Areas\AreaStatusesForm.resx">
+      <DependentUpon>AreaStatusesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Areas\DomainLocationManager.resx">
+      <DependentUpon>DomainLocationManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Areas\RacklocationGeneratorForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RacklocationGeneratorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Areas\ShopfloorlineCustomFieldsForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ShopfloorlineCustomFieldsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bom\BomConfigurationView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BomConfigurationView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bom\BomMasterView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BomMasterView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Line.resx">
+      <DependentUpon>Line.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\NameValueGrid.resx">
+      <DependentUpon>NameValueGrid.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PersistentBaseControl.resx">
+      <DependentUpon>PersistentBaseControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StarGate.resx">
+      <DependentUpon>StarGate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\CommandInputForm.resx">
+      <DependentUpon>CommandInputForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core\PassiveViewBase.resx">
+      <DependentUpon>PassiveViewBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenericLabelForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GenericLabelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryAdjustmentView.resx">
+      <DependentUpon>InventoryAdjustmentView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryProcessHoldView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InventoryProcessHoldView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\ItemCustomFieldsEditView.resx">
+      <DependentUpon>ItemCustomFieldsEditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\ToteContentsPutAwayForm.resx">
+      <DependentUpon>ToteContentsPutAwayForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\HoldResolutionForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HoldResolutionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryCaptureManager.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InventoryCaptureManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\SerialNumberChangeForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SerialNumberChangeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\ToteAddContentsForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToteAddContentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\ToteContentsSelectorForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToteContentsSelectorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\ToteContentsTransferForm.resx">
+      <DependentUpon>ToteContentsTransferForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\NSSerializationForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NSSerializationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\ToteDetailView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToteDetailView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\ToteManagerForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToteManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryGradeForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InventoryGradeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\ToteTransferForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToteTransferForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\UnitConfigurationForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UnitConfigurationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\MaterialsQtyAdjustmentForm2.resx">
+      <DependentUpon>MaterialsQtyAdjustmentForm2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\PartsConsumptionView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PartsConsumptionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\MaterialsQtyAdjustmentForm.resx">
+      <DependentUpon>MaterialsQtyAdjustmentForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\MaterialsLocationTransferForm.resx">
+      <DependentUpon>MaterialsLocationTransferForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\MaterialsWarehouseReturnForm.resx">
+      <DependentUpon>MaterialsWarehouseReturnForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\MaterialsIssueOutForm.resx">
+      <DependentUpon>MaterialsIssueOutForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\MaterialsPurchaseOrderForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MaterialsPurchaseOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\MaterialsPutAwayForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MaterialsPutAwayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materials\MaterialsReceivingForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MaterialsReceivingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orders\OrderTemplateSelectionView.resx">
+      <DependentUpon>OrderTemplateSelectionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orders\PacklistContentsView.resx">
+      <DependentUpon>PacklistContentsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orders\PacklistsContentsTransferView.resx">
+      <DependentUpon>PacklistsContentsTransferView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orders\PreAlertImportProgressForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PreAlertImportProgressForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orders\PacklistMgrForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PacklistMgrForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parts\PartAttributesControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PartAttributesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parts\PartFamilyForm.resx">
+      <DependentUpon>PartFamilyForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrinterSetupForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PrinterSetupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Orders\PreAlertImportForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PreAlertImportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDesignerForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReportDesignerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\ChangeForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ChangeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\InventoryTransactionForm.resx">
+      <DependentUpon>InventoryTransactionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\LotSplitForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LotSplitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orders\MainOrderForm.resx">
+      <DependentUpon>MainOrderForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orders\PurchaseOrderControl.resx">
+      <DependentUpon>PurchaseOrderControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orders\SalesOrderControl.resx">
+      <DependentUpon>SalesOrderControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Organizations\CustomFieldDefForm.resx">
+      <DependentUpon>CustomFieldDefForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Organizations\EditOrganizationForm.resx">
+      <DependentUpon>EditOrganizationForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Organizations\OrganizationForm.resx">
+      <DependentUpon>OrganizationForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parts\PartEditForm.resx">
+      <DependentUpon>PartEditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintRibbonControllerResources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PrintRibbonControllerResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orders\ReceivingForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReceivingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DellPoPacklistReport.resx">
+      <DependentUpon>DellPoPacklistReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DellLpnPacklistReport.resx">
+      <DependentUpon>DellLpnPacklistReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DellPacklistReport.resx">
+      <DependentUpon>DellPacklistReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PacklistReport.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PacklistReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orders\SalesWaybillForm.resx">
+      <DependentUpon>SalesWaybillForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orders\ShippingForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ShippingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ToteTravelerReport.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ToteTravelerReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\UserQueryForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserQueryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Security\DirtyPasswordDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DirtyPasswordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Security\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Security\PasswordForm.resx">
+      <DependentUpon>PasswordForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Security\RoleEditForm.resx">
+      <DependentUpon>RoleEditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Security\UserEditForm.resx">
+      <DependentUpon>UserEditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Security\UserManagerForm.resx">
+      <DependentUpon>UserManagerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service\CodeCategoryForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CodeCategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service\F9CommentsView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>F9CommentsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service\FailCodeByCategoryView.resx">
+      <DependentUpon>FailCodeByCategoryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service\QuestionConfigGroupManager.resx">
+      <DependentUpon>QuestionConfigGroupManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service\CopyStepsForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CopyStepsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service\QuestionConfigGroupManager2.resx">
+      <DependentUpon>QuestionConfigGroupManager2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service\RepairComponentReplacementForm.resx">
+      <DependentUpon>RepairComponentReplacementForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service\ResultListManager.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ResultListManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service\ResultListManager2.resx">
+      <DependentUpon>ResultListManager2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service\RouteBuilderForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RouteBuilderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service\RouteProcessViewerForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RouteProcessViewerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service\RouteStationListManager.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RouteStationListManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service\RouteStationMaintForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RouteStationMaintForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service\RouteStationRepairForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RouteStationRepairForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service\ServiceCommForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ServiceCommForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service\ServiceCommManager.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ServiceCommManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service\ServiceCommodityManager.resx">
+      <DependentUpon>ServiceCommodityManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service\ServiceSetupForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ServiceSetupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service\ServiceStationForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ServiceStationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service\ShopfloorConditionManager.resx">
+      <DependentUpon>ShopfloorConditionManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service\StationFailureView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StationFailureView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service\StationInputForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StationInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service\StationInspectionTaskView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StationInspectionTaskView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service\StationManager.resx">
+      <DependentUpon>StationManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service\StationManager2.resx">
+      <DependentUpon>StationManager2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service\StationOutcomeManager.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StationOutcomeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service\StationOutcomeManager2.resx">
+      <DependentUpon>StationOutcomeManager2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service\StationResultsViewerForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StationResultsViewerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service\StationSelectForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StationSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service\StepLayoutForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StepLayoutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TokenTravelerForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TokenTravelerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\SearchForm.resx">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory\ToteCreatorForm.resx">
+      <DependentUpon>ToteCreatorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TravelerLabelForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TravelerLabelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utils\Search\GenericSearchDlg.resx">
+      <DependentUpon>GenericSearchDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utils\Search\SearchControl2.resx">
+      <DependentUpon>SearchControl2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utils\StubbornMessageBox.resx">
+      <DependentUpon>StubbornMessageBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utils\SuperConfirmForm.resx">
+      <DependentUpon>SuperConfirmForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utils\SuperConfirmForm2.resx">
+      <DependentUpon>SuperConfirmForm2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utils\UserInputView.resx">
+      <DependentUpon>UserInputView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utils\WaitForm.resx">
+      <DependentUpon>WaitForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Warehouse\Dfile\DfileActionSearchView.resx">
+      <DependentUpon>DfileActionSearchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Warehouse\Dfile\DfileActionView.resx">
+      <DependentUpon>DfileActionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Warehouse\Dfile\DfileResolutionSearchView.resx">
+      <DependentUpon>DfileResolutionSearchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Warehouse\Capture\ManageInventoryHoldsView.resx">
+      <DependentUpon>ManageInventoryHoldsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Warehouse\Capture\ResolveMultipleCaptureView.resx">
+      <DependentUpon>ResolveMultipleCaptureView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Warehouse\Capture\WipCaptureView.resx">
+      <DependentUpon>WipCaptureView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Warehouse\Dfile\ResolveDfileItemView.resx">
+      <DependentUpon>ResolveDfileItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Warehouse\Shipping\ShippingConfigurationsView.resx">
+      <DependentUpon>ShippingConfigurationsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Warehouse\Shipping\ShippingSessionView.resx">
+      <DependentUpon>ShippingSessionView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebBrowserForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WebBrowserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widgets\PersistenceWidget.resx">
+      <DependentUpon>PersistenceWidget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRDesignRibbonControllerResources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XRDesignRibbonControllerResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SCOUT.Core\SCOUT.Core.csproj">
+      <Project>{544F72BF-44E9-4147-B208-852813387E3B}</Project>
+      <Name>SCOUT.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram2.cd" />
+    <None Include="Resources\disk.png" />
+    <None Include="ShippingConfigurationPacklistDataset.xsc">
+      <DependentUpon>ShippingConfigurationPacklistDataset.xsd</DependentUpon>
+    </None>
+    <None Include="ShippingConfigurationPacklistDataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShippingConfigurationPacklistDataset.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShippingConfigurationPacklistDataset.xss">
+      <DependentUpon>ShippingConfigurationPacklistDataset.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disk_multiple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CartAdd.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note_go.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basket_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application_go.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SCOUT_ICOSMALL.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CharterAmg.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Application\App.config" />
+    <None Include="Application\scout.cfg" />
+    <None Include="dsToteContents.xsc">
+      <DependentUpon>dsToteContents.xsd</DependentUpon>
+    </None>
+    <None Include="dsToteContents.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsToteContents.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsToteContents.xss">
+      <DependentUpon>dsToteContents.xsd</DependentUpon>
+    </None>
+    <None Include="PacklistDataset.xsc">
+      <DependentUpon>PacklistDataset.xsd</DependentUpon>
+    </None>
+    <None Include="PacklistDataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PacklistDataset1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PacklistDataset.xss">
+      <DependentUpon>PacklistDataset.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\SCOUT.Entities.CS.Orders.ShipmentDelta.datasource" />
+    <None Include="Properties\DataSources\SCOUT.Entities.CS.Parts.PartServiceCommodity.datasource" />
+    <None Include="Properties\DataSources\SCOUT.Entities.CS.Service.stations.ServiceStation.datasource" />
+    <None Include="Properties\DataSources\SCOUT.Entities.CS.Service.TestPlan.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\ToteTravelerDetails.xsc">
+      <DependentUpon>ToteTravelerDetails.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\ToteTravelerDetails.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ToteTravelerDetails1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\ToteTravelerDetails.xss">
+      <DependentUpon>ToteTravelerDetails.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\500px-Crystal_Clear_action_exit_svg.png" />
+    <None Include="Resources\page_excel.png" />
+    <None Include="Resources\page_white_acrobat.png" />
+    <None Include="Resources\page_word.png" />
+    <None Include="Resources\page_code.png" />
+    <None Include="Resources\find.png" />
+    <None Include="Resources\sitemap_color.png" />
+    <None Include="Resources\report_user.png" />
+    <None Include="Resources\cog_go.png" />
+    <None Include="Resources\cog_add.png" />
+    <None Include="Resources\arrow_switch.png" />
+    <None Include="Resources\arrow_divide.png" />
+    <None Include="Resources\arrow_in.png" />
+    <None Include="Resources\cog_edit.png" />
+    <None Include="Resources\group.png" />
+    <None Include="Resources\report_edit.png" />
+    <None Include="Resources\page_copy.png" />
+    <None Include="Resources\configure_1174_48.png" />
+    <None Include="Resources\exit_1191_48.png" />
+    <None Include="Resources\GridControl.bmp" />
+    <None Include="Resources\PivotGridControl.bmp" />
+    <None Include="Resources\computer.png" />
+    <None Include="Resources\ChartControl.bmp" />
+    <None Include="Resources\camera.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\package.png" />
+    <None Include="Resources\box.png" />
+    <None Include="Resources\report.png" />
+    <None Include="Resources\database_refresh.png" />
+    <None Include="Resources\database_error.png" />
+    <None Include="Resources\cog_error.png" />
+    <None Include="Resources\cog_edit1.png" />
+    <None Include="Resources\help.png" />
+    <Content Include="Application\build.txt" />
+    <Content Include="Application\SCOUT.ico" />
+    <None Include="Resources\camera_add.png" />
+    <None Include="Resources\camera_go.png" />
+    <None Include="Resources\camera_edit.png" />
+    <None Include="Resources\camera_link.png" />
+    <None Include="Resources\camera_delete.png" />
+    <None Include="Resources\camera_edit1.png" />
+    <None Include="Resources\basket_put.png" />
+    <None Include="Resources\basket_delete.png" />
+    <None Include="Resources\basket_add.png" />
+    <None Include="Resources\script_gear.png" />
+    <None Include="Resources\folder.png" />
+    <None Include="Resources\arrow_undo.png" />
+    <None Include="Resources\arrow_out.png" />
+    <None Include="Resources\box1.png" />
+    <None Include="Resources\book_open.png" />
+    <None Include="Resources\page_copy1.png" />
+    <None Include="Resources\page.png" />
+    <None Include="Resources\arrow_right.png" />
+    <None Include="Resources\arrow_left.png" />
+    <None Include="Resources\bug.png" />
+    <None Include="Resources\application_form_add.png" />
+    <None Include="Resources\application_link.png" />
+    <None Include="Resources\application_form_edit.png" />
+    <None Include="Resources\application_form_delete.png" />
+    <Content Include="Resources\STSLogoTrans.png" />
+    <None Include="Resources\table_refresh.png" />
+    <None Include="Resources\table.png" />
+    <None Include="Resources\wrench_orange.png" />
+    <None Include="Resources\transmit.png" />
+    <None Include="Resources\wand.png" />
+    <None Include="Resources\table_sort.png" />
+    <Content Include="STSLogoTrans.ico" />
+    <None Include="Resources\table_lightning.png" />
+    <None Include="Resources\table_go.png" />
+    <None Include="Resources\tag_blue.png" />
+    <None Include="Resources\tag_yellow.png" />
+    <None Include="Resources\tag_orange.png" />
+    <None Include="Resources\tag_green.png" />
+    <None Include="Resources\tag_blue_add.png" />
+    <None Include="Resources\STSLogoTrans1.png" />
+    <None Include="Resources\book_next.png" />
+    <None Include="scout_ns.xsc">
+      <DependentUpon>scout_ns.xsd</DependentUpon>
+    </None>
+    <None Include="scout_ns.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>scout_ns.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="scout_ns.xss">
+      <DependentUpon>scout_ns.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ApplicationController\Templates\" />
+    <Folder Include="Inventory\obj\" />
+    <Folder Include="Presenters\" />
+    <Folder Include="Views\Bom\" />
+    <Folder Include="Views\Materials\" />
+    <Folder Include="Views\Organizations\" />
+    <Folder Include="Views\Parts\" />
+    <Folder Include="Views\Security\" />
+    <Folder Include="Views\Shopfloor\" />
+    <Folder Include="Views\Transactions\" />
+    <Folder Include="Views\Warehouse\Areas\" />
+    <Folder Include="Views\Warehouse\Inventory\" />
+    <Folder Include="Views\Warehouse\Receiving\" />
+    <Folder Include="Views\Warehouse\Totes\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

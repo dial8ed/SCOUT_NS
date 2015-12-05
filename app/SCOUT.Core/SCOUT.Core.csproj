@@ -1,0 +1,726 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{544F72BF-44E9-4147-B208-852813387E3B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SCOUT.Core</RootNamespace>
+    <AssemblyName>SCOUT.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Alpha|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Alpha\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\..\..\Tools\AutoMapper\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v10.1, Version=10.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v10.1, Version=10.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v10.1.Linq, Version=10.1.12.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StructureMap">
+      <HintPath>..\..\..\Tools\StructureMap\deploy\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bus\EventBus.cs" />
+    <Compile Include="Bus\IListener.cs" />
+    <Compile Include="Bus\IEventBus.cs" />
+    <Compile Include="IOC\BootstrapContainer.cs" />
+    <Compile Include="IOC\Registries\MapperRegistry.cs" />
+    <Compile Include="IOC\Registries\ScriptRegistry.cs" />
+    <Compile Include="Messaging\IUserMessageBuilder.cs" />
+    <Compile Include="Messaging\MessageHandler.cs" />
+    <Compile Include="Messaging\MessagePresenter.cs" />
+    <Compile Include="Models\Domain.cs" />
+    <Compile Include="Models\MaterialWarehouseItem.cs" />
+    <Compile Include="Models\Part.cs" />
+    <Compile Include="Models\Shopfloorline.cs" />
+    <Compile Include="Modules\Document.cs" />
+    <Compile Include="Modules\Fact.cs" />
+    <Compile Include="Modules\IModule.cs" />
+    <Compile Include="Modules\Materials\IMaterialsService.cs" />
+    <Compile Include="Modules\Materials\IMaterialsWarehouseInventoryService.cs" />
+    <Compile Include="Modules\Materials\IPartsConsumptionView.cs" />
+    <Compile Include="Modules\Materials\MaterialConsumableItem.cs" />
+    <Compile Include="Modules\Materials\MaterialsConsumableInventory.cs" />
+    <Compile Include="Modules\Materials\MaterialsConsumableInventoryQueries.cs" />
+    <Compile Include="Modules\Materials\MaterialsConsumptionTracker.cs" />
+    <Compile Include="Modules\Materials\MaterialsModule.cs" />
+    <Compile Include="Modules\Materials\MaterialsWarehouseInventory.cs" />
+    <Compile Include="Modules\Materials\MaterialWarehouseItem.cs" />
+    <Compile Include="Modules\Materials\Messages\MaterialsAdjustmentRequest.cs" />
+    <Compile Include="Modules\Materials\Messages\MaterialsPartConsumed.cs" />
+    <Compile Include="Modules\Materials\PartToConsume.cs" />
+    <Compile Include="Modules\Materials\RepairPartConsumed.cs" />
+    <Compile Include="Modules\Materials\Repository\IMaterialsRepository.cs" />
+    <Compile Include="Modules\Materials\Repository\MaterialsRepository.cs" />
+    <Compile Include="Modules\Materials\StationMaterialsConsumptionTracker.cs" />
+    <Compile Include="Modules\ModuleBase.cs" />
+    <Compile Include="Modules\ModuleProvider.cs" />
+    <Compile Include="Modules\ModuleService.cs" />
+    <Compile Include="Modules\Orders\DellReceiptLpnItem.cs" />
+    <Compile Include="Modules\Orders\ILineItemScheduler.cs" />
+    <Compile Include="Modules\Orders\IOrderModule.cs" />
+    <Compile Include="Modules\Orders\IShipmentAllocation.cs" />
+    <Compile Include="Modules\Orders\IShippingLineStatusManager.cs" />
+    <Compile Include="Modules\Orders\IShippingOpenQtyManager.cs" />
+    <Compile Include="Modules\Orders\OrderAllocationDetails.cs" />
+    <Compile Include="Modules\Orders\OrderData.cs" />
+    <Compile Include="Modules\Orders\OrderModule.cs" />
+    <Compile Include="Modules\Orders\SalesLineItemSchedule.cs" />
+    <Compile Include="Modules\Orders\ScheduledLineStatusUpdater.cs" />
+    <Compile Include="Modules\Orders\ScheduledShippingOpenQtyManager.cs" />
+    <Compile Include="Modules\Orders\ShippingConfiguration.cs" />
+    <Compile Include="Modules\ServiceRegistry.cs" />
+    <Compile Include="Modules\Shopfloor\AttributeValidator.cs" />
+    <Compile Include="Modules\Shopfloor\ServiceMaterialsInventoryController.cs" />
+    <Compile Include="Modules\Shopfloor\ShopfloorCondition.cs" />
+    <Compile Include="Modules\Shopfloor\ShopfloorConditionController.cs" />
+    <Compile Include="Modules\Shopfloor\ShopfloorItem.cs" />
+    <Compile Include="Modules\Warehouse\DFile\DfileAction.cs" />
+    <Compile Include="Modules\Warehouse\DFile\DfileActionDataAdapter.cs" />
+    <Compile Include="Modules\Warehouse\DFile\DfileRepository.cs" />
+    <Compile Include="Modules\Warehouse\DFile\DfileCondition.cs" />
+    <Compile Include="Modules\Warehouse\DFile\DfileResolutionValidator.cs" />
+    <Compile Include="Modules\Warehouse\DFile\IDfileAction.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\AdjustmentTransactionType.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\DellLPNIdentifier.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\InventoryCommands.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\InventoryData.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\InventoryExtensions.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\ReturnType.cs" />
+    <Compile Include="Modules\Warehouse\Shipping\IShipmentScript.cs" />
+    <Compile Include="Modules\Warehouse\Shipping\IShippingRule.cs" />
+    <Compile Include="Modules\Warehouse\Shipping\Rules\UnitHasCorrectShopfloorProgram.cs" />
+    <Compile Include="Modules\Warehouse\Shipping\Rules\UnitHasFinishedProcessing.cs" />
+    <Compile Include="Modules\Warehouse\Shipping\Rules\UnitIsOnHold.cs" />
+    <Compile Include="Modules\Warehouse\Shipping\Rules\DomainIsShippable.cs" />
+    <Compile Include="Modules\Warehouse\Shipping\Rules\ExceedsExpectedQty.cs" />
+    <Compile Include="Modules\Warehouse\Shipping\Rules\ExceedsLotQty.cs" />
+    <Compile Include="Modules\Warehouse\Shipping\Rules\LineItemIsShippable.cs" />
+    <Compile Include="Modules\Warehouse\Shipping\Rules\PartIsExpected.cs" />
+    <Compile Include="Modules\Warehouse\Shipping\Rules\UnitCompletedRequiredServiceRoute.cs" />
+    <Compile Include="Modules\Warehouse\Shipping\Rules\UnitIsInTheCorrectShippingDomain.cs" />
+    <Compile Include="Modules\Warehouse\Shipping\Rules\UnitIsOnTheCorrectShopfloorline.cs" />
+    <Compile Include="Modules\Warehouse\Shipping\SalesOrderShipTo.cs" />
+    <Compile Include="Modules\Warehouse\Shipping\ShipmentCommand.cs" />
+    <Compile Include="Modules\Warehouse\Shipping\ShippingRules.cs" />
+    <Compile Include="Modules\Warehouse\Shipping\UndoShipmentCoordinator.cs" />
+    <Compile Include="Modules\ZPLLabels\DellAslLpnLabel.cs" />
+    <Compile Include="Providers\Container\ContainerProvider.cs" />
+    <Compile Include="Providers\Data\IQuery.cs" />
+    <Compile Include="Providers\Data\IRepository.cs" />
+    <Compile Include="Providers\Data\IRepositoryOld.cs" />
+    <Compile Include="Providers\Data\ISession.cs" />
+    <Compile Include="Providers\Data\QueryFactory.cs" />
+    <Compile Include="Providers\Data\UnitOfWorkExtensions.cs" />
+    <Compile Include="Providers\Data\XpoQuery.cs" />
+    <Compile Include="Providers\Data\PersistenceController.cs" />
+    <Compile Include="Providers\Data\VPLiteObject.cs" />
+    <Compile Include="Providers\Data\XpoDataProvider.cs" />
+    <Compile Include="Providers\Data\XpoRepository.cs" />
+    <Compile Include="Providers\Data\XpoSessionWrapper.cs" />
+    <Compile Include="Providers\Data\XpoUnitOfWork.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Providers\IContainerProvider.cs" />
+    <Compile Include="Providers\ILoggingProvider.cs" />
+    <Compile Include="Providers\IMappingProvider.cs" />
+    <Compile Include="Providers\IWorkflowProvider.cs" />
+    <Compile Include="Providers\Logging\DatabaseLogEntry.cs" />
+    <Compile Include="Providers\Logging\DatabaseLoggingProvider.cs" />
+    <Compile Include="Providers\Mapping\AutoMapperMappingProvider.cs" />
+    <Compile Include="Providers\UserInteraction\IEmailService.cs" />
+    <Compile Include="Providers\Workflow\ChainCommand.cs" />
+    <Compile Include="Providers\Workflow\IChain.cs" />
+    <Compile Include="Providers\Workflow\IChainCommand.cs" />
+    <Compile Include="Providers\Workflow\ICommand.cs" />
+    <Compile Include="Providers\Workflow\IMessageChain.cs" />
+    <Compile Include="Scout.cs" />
+    <Compile Include="Providers\IDataProvider.cs" />
+    <Compile Include="Modules\Warehouse\Capture\CaptureRepository.cs" />
+    <Compile Include="Modules\Warehouse\Capture\InventoryHoldDetail.cs" />
+    <Compile Include="Modules\Warehouse\DFile\DfileItem.cs" />
+    <Compile Include="Modules\Warehouse\DFile\DfileService.cs" />
+    <Compile Include="Modules\Warehouse\IDfileService.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\InventoryCondition.cs" />
+    <Compile Include="Modules\Warehouse\IToteService.cs" />
+    <Compile Include="Modules\Warehouse\ICaptureService.cs" />
+    <Compile Include="Providers\UserInteraction\IDialogService.cs" />
+    <Compile Include="Modules\Shopfloor\IShopfloorService.cs" />
+    <Compile Include="Modules\Warehouse\IAreaService.cs" />
+    <Compile Include="Modules\Warehouse\IInventoryService.cs" />
+    <Compile Include="Modules\Warehouse\Capture\CapturePriority.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\TransactionFactory.cs" />
+    <Compile Include="Providers\IUserInteractionProvider.cs" />
+    <Compile Include="Providers\UserInteraction\IPrintingService.cs" />
+    <Compile Include="Providers\UserInteraction\IViewService.cs" />
+    <Compile Include="Messaging\IUserMessageGenerator.cs" />
+    <Compile Include="Mvc\IView.cs" />
+    <Compile Include="Modules\Warehouse\IReceivingService.cs" />
+    <Compile Include="Modules\Warehouse\IShippingService.cs" />
+    <Compile Include="Modules\Security\Client.cs" />
+    <Compile Include="Modules\Security\ClientModule.cs" />
+    <Compile Include="Modules\Security\IClientModule.cs" />
+    <Compile Include="Modules\Orders\GenericPreAlert.cs" />
+    <Compile Include="Modules\Orders\GenericPreAlertData.cs">
+      <DependentUpon>GenericPreAlertData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Orders\GenericPreAlertData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GenericPreAlertData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Shopfloor\ExceedsPageCountCondition.cs" />
+    <Compile Include="Modules\Shopfloor\IShopfloorServiceMethod.cs" />
+    <Compile Include="Modules\Shopfloor\IShopfloorModule.cs" />
+    <Compile Include="Modules\Shopfloor\ShopfloorProgramConversion.cs" />
+    <Compile Include="Modules\Shopfloor\ShopfloorProgramConversionRecord.cs" />
+    <Compile Include="Modules\Shopfloor\ShopfloorRepository.cs" />
+    <Compile Include="Modules\Shopfloor\MethodResult.cs" />
+    <Compile Include="Modules\Shopfloor\ShopfloorModule.cs" />
+    <Compile Include="Modules\Shopfloor\StationStepResultDTO.cs" />
+    <Compile Include="Modules\Shopfloor\ServiceRouteDisposition.cs" />
+    <Compile Include="Modules\Warehouse\Areas\Area.cs" />
+    <Compile Include="Modules\Warehouse\Areas\AreaStatus.cs" />
+    <Compile Include="Modules\Warehouse\Areas\AreaStatusList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modules\Warehouse\Areas\Bay.cs" />
+    <Compile Include="Modules\Warehouse\Areas\CustomField.cs" />
+    <Compile Include="Modules\Warehouse\Areas\Domain.cs" />
+    <Compile Include="Providers\Data\RequiredPropertyMissingValue.cs" />
+    <Compile Include="Modules\Warehouse\Areas\IArea.cs" />
+    <Compile Include="Modules\Warehouse\Areas\ILocation.cs" />
+    <Compile Include="Utils\Collections.cs" />
+    <Compile Include="Utils\ExecutionHelpers.cs" />
+    <Compile Include="Utils\ExecutionLoop.cs" />
+    <Compile Include="Utils\IDs.cs" />
+    <Compile Include="Utils\IObserver.cs" />
+    <Compile Include="Utils\ISubject.cs" />
+    <Compile Include="Modules\Warehouse\IWarehouseModule.cs" />
+    <Compile Include="Modules\Warehouse\Areas\RackLocation.cs" />
+    <Compile Include="Modules\Warehouse\Areas\RackLocationType.cs" />
+    <Compile Include="Modules\Warehouse\Areas\Section.cs" />
+    <Compile Include="Modules\Warehouse\Areas\Shelf.cs" />
+    <Compile Include="Modules\Warehouse\Areas\Shopfloorline.cs" />
+    <Compile Include="Modules\Warehouse\Areas\Site.cs" />
+    <Compile Include="Modules\Warehouse\Totes\Tote.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Modules\Bom\BomConfiguration.cs" />
+    <Compile Include="Modules\Bom\BomConfigurationController.cs" />
+    <Compile Include="Modules\Bom\BomConfigurationItem.cs" />
+    <Compile Include="Modules\Bom\BomConfigurationModel.cs" />
+    <Compile Include="Modules\Bom\BomConfigurationValidator.cs" />
+    <Compile Include="Modules\Bom\BomMasterComponent.cs" />
+    <Compile Include="Modules\Bom\BomComponentCategory.cs" />
+    <Compile Include="Modules\Bom\BomMaster.cs" />
+    <Compile Include="Modules\Bom\BomMasterController.cs" />
+    <Compile Include="Modules\Bom\BomMasterModel.cs" />
+    <Compile Include="Modules\Bom\BomUsageAction.cs" />
+    <Compile Include="Modules\Bom\IBomConfigurationView.cs" />
+    <Compile Include="Modules\Bom\IBomMasterView.cs" />
+    <Compile Include="Modules\Bom\BomMasterValidators.cs" />
+    <Compile Include="Providers\Data\BrokenRule.cs" />
+    <Compile Include="Providers\Data\ModelValidator.cs" />
+    <Compile Include="Providers\Workflow\ActionService.cs" />
+    <Compile Include="Utils\ISpecification.cs" />
+    <Compile Include="Mvc\PersistentViewControllerBase.cs" />
+    <Compile Include="Mvc\ViewControllerBase.cs" />
+    <Compile Include="Providers\Data\ConnectionFactory.cs" />
+    <Compile Include="Providers\Data\DBAttributes.cs" />
+    <Compile Include="Providers\Data\ExternalDataReader.cs" />
+    <Compile Include="Providers\Data\Fetch.cs" />
+    <Compile Include="Providers\Data\IDictionaryRepository.cs" />
+    <Compile Include="Providers\Data\ILoadable.cs" />
+    <Compile Include="Providers\Data\OleDbConnectionBuilder.cs" />
+    <Compile Include="Providers\Data\OleDbConnections.cs" />
+    <Compile Include="Providers\Data\OleDbHelper.cs" />
+    <Compile Include="Providers\Data\ProcSearch.cs" />
+    <Compile Include="Providers\Data\Query.cs" />
+    <Compile Include="Providers\Data\SafeDataReader.cs" />
+    <Compile Include="Providers\Data\Select.cs" />
+    <Compile Include="Providers\Data\StoredProc.cs" />
+    <Compile Include="Providers\Data\Tasks.cs" />
+    <Compile Include="Modules\Warehouse\Receiving\ReceiptFacts.cs" />
+    <Compile Include="Modules\Shopfloor\ReplacementComponentFacts.cs" />
+    <Compile Include="Modules\Shopfloor\StationStepFacts.cs" />
+    <Compile Include="Utils\Helpers.cs" />
+    <Compile Include="Utils\ImageService.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\InventoryServiceProperties.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\PPIDPNOnlyIdentifier.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\ServiceTagIdentifier.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\ServiceTagValidator.cs" />
+    <Compile Include="Modules\Warehouse\Capture\CaptureTransactionMapper.cs" />
+    <Compile Include="Modules\Orders\DellPreAlertItemMapper.cs" />
+    <Compile Include="Modules\Warehouse\Receiving\FactsReceiptMapper.cs" />
+    <Compile Include="Modules\Orders\XipGencoPreAlertItemMapper.cs" />
+    <Compile Include="Modules\Orders\XipPreAlertItemMapper.cs" />
+    <Compile Include="Modules\Materials\IMaterialItem.cs" />
+    <Compile Include="Modules\Materials\IBomConsumptionTaskView.cs" />
+    <Compile Include="Modules\Materials\Data\MaterialConsumableItemData.cs" />
+    <Compile Include="Modules\Materials\MaterialPurchaseLineItem.cs" />
+    <Compile Include="Modules\Materials\MaterialPurchaseOrder.cs" />
+    <Compile Include="Modules\Materials\MaterialPurchaseOrderFacts.cs" />
+    <Compile Include="Modules\Materials\MaterialReceiptPartSummary.cs" />
+    <Compile Include="Modules\Materials\MaterialsConsumptionController.cs" />
+    <Compile Include="Modules\Materials\MaterialsConsumptionModel.cs" />
+    <Compile Include="Modules\Materials\Data\MaterialWarehouseItemData.cs" />
+    <Compile Include="Modules\Materials\StationMaterialsTaskController.cs" />
+    <Compile Include="Modules\Materials\StationMaterialsTaskModel.cs" />
+    <Compile Include="Messaging\BlackHoleOutputHost.cs" />
+    <Compile Include="Messaging\ConsoleOutputHost.cs" />
+    <Compile Include="Messaging\EmailOutputHost.cs" />
+    <Compile Include="Messaging\IMapper.cs" />
+    <Compile Include="Messaging\IUserMessageOutputHost.cs" />
+    <Compile Include="Messaging\IUserQuestionEnabledView.cs" />
+    <Compile Include="Messaging\UserQuestionEventArgs.cs" />
+    <Compile Include="Messaging\MessageEventArgsMapper.cs" />
+    <Compile Include="Messaging\MessageListener.cs" />
+    <Compile Include="Messaging\QuestionResult.cs" />
+    <Compile Include="Messaging\UserMessage.cs" />
+    <Compile Include="Messaging\UserMessageBuilder.cs" />
+    <Compile Include="Messaging\UserMessageEventArgs.cs" />
+    <Compile Include="Messaging\UserMessageType.cs" />
+    <Compile Include="Mvc\ActionRequestEventArgs.cs" />
+    <Compile Include="Mvc\ActionRequestEvents.cs" />
+    <Compile Include="Mvc\ChangeRequestEvents.cs" />
+    <Compile Include="Mvc\EventHolder.cs" />
+    <Compile Include="Mvc\IMvcActionEventController.cs" />
+    <Compile Include="Mvc\IMvcPropertyChangedViewController.cs" />
+    <Compile Include="Mvc\IPassiveView.cs" />
+    <Compile Include="Mvc\IPersistentModel.cs" />
+    <Compile Include="Mvc\IUserMessageEnabledView.cs" />
+    <Compile Include="Mvc\LockingExceptionEventArgs.cs" />
+    <Compile Include="Mvc\MvcControllerBase.cs" />
+    <Compile Include="Mvc\MvcEventsController.cs" />
+    <Compile Include="Mvc\PersistentModel.cs" />
+    <Compile Include="Mvc\PersistentModelController.cs" />
+    <Compile Include="Mvc\PropertyChangeRequestEventArgs.cs" />
+    <Compile Include="Providers\Data\NotSavedAttribute.cs" />
+    <Compile Include="Providers\Data\NotUndoableAttribute.cs" />
+    <Compile Include="Modules\Orders\DellPreAlert.cs" />
+    <Compile Include="Modules\Orders\DellPreAlertItem.cs" />
+    <Compile Include="Modules\Orders\DellPreAlertRev1.cs">
+      <DependentUpon>DellPreAlertRev1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Orders\IPreAlert.cs" />
+    <Compile Include="Modules\Orders\IPreAlertItem.cs" />
+    <Compile Include="Modules\Orders\LineItemImporter.cs" />
+    <Compile Include="Modules\Orders\PartToImport.cs" />
+    <Compile Include="Modules\Orders\PreAlert.cs" />
+    <Compile Include="Modules\Orders\ProcessingItemEventArgs.cs" />
+    <Compile Include="Modules\Orders\ReceivingLineSummary.cs" />
+    <Compile Include="Modules\Orders\LineItemCancelled.cs" />
+    <Compile Include="Modules\Orders\LineItemClosed .cs" />
+    <Compile Include="Modules\Orders\ILineItemState.cs" />
+    <Compile Include="Modules\Orders\LineItemClosedShort.cs" />
+    <Compile Include="Modules\Orders\LineItemState.cs" />
+    <Compile Include="Modules\Orders\LineItemOpen.cs" />
+    <Compile Include="Modules\Orders\LineItemStatuses.cs" />
+    <Compile Include="Modules\Orders\ShippingLineSummary.cs" />
+    <Compile Include="Modules\Orders\XipGencoPreAlert.cs" />
+    <Compile Include="Modules\Orders\XipGencoPreAlertSchemaRev1.cs">
+      <DependentUpon>XipGencoPreAlertSchemaRev1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Orders\XipD1PreAlert.cs" />
+    <Compile Include="Modules\Orders\XipPreAlertItem.cs" />
+    <Compile Include="Modules\Orders\XIPPreAlertRev1.cs">
+      <DependentUpon>XIPPreAlertRev1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Parts\AddFamilyMemberValidator.cs" />
+    <Compile Include="Modules\Parts\IPart.cs" />
+    <Compile Include="Modules\Parts\IPartAttributesHeader.cs" />
+    <Compile Include="Modules\Parts\IPartAttributeValues.cs" />
+    <Compile Include="Modules\Parts\MaterialsPart.cs" />
+    <Compile Include="Modules\Parts\MaterialsPartSupplier.cs" />
+    <Compile Include="Modules\Parts\MaterialsPartXref.cs" />
+    <Compile Include="Modules\Parts\PartFamily.cs" />
+    <Compile Include="Modules\Parts\PartFamilyMember.cs" />
+    <Compile Include="Modules\Parts\PartModel.cs" />
+    <Compile Include="Modules\Parts\PartRevision.cs" />
+    <Compile Include="Utils\ObjectExtensions.cs" />
+    <Compile Include="Utils\Reflection.cs" />
+    <Compile Include="Modules\Materials\MaterialRepository.cs" />
+    <Compile Include="Modules\Shopfloor\StepResultValidationType.cs" />
+    <Compile Include="Modules\Shopfloor\StepResultValidatorFactory.cs" />
+    <Compile Include="Providers\Data\Robot.cs" />
+    <Compile Include="Providers\Data\RobotAction.cs" />
+    <Compile Include="Providers\Data\RobotBase.cs" />
+    <Compile Include="Providers\Data\RobotList.cs" />
+    <Compile Include="Modules\Security\Action.cs" />
+    <Compile Include="Modules\Security\Password.cs" />
+    <Compile Include="Modules\Security\Role.cs" />
+    <Compile Include="Modules\Security\UserSecurity.cs" />
+    <Compile Include="Modules\Security\User.cs" />
+    <Compile Include="Utils\Strings.cs" />
+    <Compile Include="Modules\Security\UserTracking.cs" />
+    <Compile Include="Modules\Shopfloor\EndProcessValidator.cs" />
+    <Compile Include="Modules\Materials\MaterialService.cs" />
+    <Compile Include="Modules\Parts\PartReplacementService.cs" />
+    <Compile Include="Modules\Parts\PartReplacementValidator.cs" />
+    <Compile Include="Modules\Shopfloor\IRouteStationProcessView.cs" />
+    <Compile Include="Modules\Shopfloor\IStationInspectionTaskView.cs" />
+    <Compile Include="Modules\Shopfloor\IStationMaterialsTaskView.cs" />
+    <Compile Include="Modules\Shopfloor\IStationTask.cs" />
+    <Compile Include="Modules\Shopfloor\IStationTaskView.cs" />
+    <Compile Include="Modules\Shopfloor\ItemStationMaterialsTask.cs" />
+    <Compile Include="Modules\Shopfloor\RepairComponent.cs" />
+    <Compile Include="Modules\Shopfloor\StationInspectionTask.cs" />
+    <Compile Include="Modules\Shopfloor\StationInspectionTaskResult.cs" />
+    <Compile Include="Modules\Shopfloor\StationInspectionTaskController.cs" />
+    <Compile Include="Modules\Shopfloor\StationInspectionTaskModel.cs" />
+    <Compile Include="Modules\Shopfloor\StationMaterialsTaskResult.cs" />
+    <Compile Include="Modules\Shopfloor\StationTaskBase.cs" />
+    <Compile Include="Modules\Shopfloor\StationTaskFequency.cs" />
+    <Compile Include="Modules\Shopfloor\StationTaskOutcome.cs" />
+    <Compile Include="Modules\Shopfloor\StationMaterialsTask.cs" />
+    <Compile Include="Modules\Shopfloor\StationTaskController.cs" />
+    <Compile Include="Modules\Shopfloor\StationTaskModel.cs" />
+    <Compile Include="Modules\Shopfloor\StationTaskResult.cs" />
+    <Compile Include="Modules\Transactions\ITransactionScript.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\PartNumberChangeScript.cs" />
+    <Compile Include="Modules\Warehouse\Shipping\ShipmentScript.cs" />
+    <Compile Include="Providers\Data\DuplicateCollectionValueValidator.cs" />
+    <Compile Include="Modules\Orders\LineItemAllowMembersChange.cs" />
+    <Compile Include="Modules\Orders\LineItemImportValidator.cs" />
+    <Compile Include="Modules\Materials\Validators\MaterialIssueOutValidator.cs" />
+    <Compile Include="Modules\Materials\Validators\MaterialLocationTransferValidator.cs" />
+    <Compile Include="Modules\Materials\Validators\MaterialPOValidator.cs" />
+    <Compile Include="Modules\Materials\Validators\MaterialReceiptValidator.cs" />
+    <Compile Include="Modules\Materials\Validators\MaterialsConsumptionValidator.cs" />
+    <Compile Include="Modules\Materials\Validators\MaterialWarehouseReturnValidator.cs" />
+    <Compile Include="Providers\Data\NoValidationNeededValidator.cs" />
+    <Compile Include="Modules\Orders\OutgoingPartAssignment.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\PartNumberChangeValidator.cs" />
+    <Compile Include="Modules\Orders\PurchaseLineItemReceiptValidator.cs" />
+    <Compile Include="Modules\Orders\ReceivingPartSummary.cs" />
+    <Compile Include="Modules\Materials\Validators\PutAwayMaterialValidator.cs" />
+    <Compile Include="Modules\Warehouse\Areas\RackLocationGenerationValidator.cs" />
+    <Compile Include="Modules\Shopfloor\RouteStationProcessValidator.cs" />
+    <Compile Include="Modules\Orders\SalesLineItemShipmentValidator.cs" />
+    <Compile Include="Modules\Orders\ShippingPartSummary.cs" />
+    <Compile Include="Messaging\MessageService.cs" />
+    <Compile Include="Modules\Warehouse\Areas\AreaService.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\InventoryService.cs" />
+    <Compile Include="Modules\Orders\OrderService.cs" />
+    <Compile Include="Modules\Parts\PartService.cs" />
+    <Compile Include="Modules\Shopfloor\ShopfloorService.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\SerializedHistoryService.cs" />
+    <Compile Include="Modules.cs" />
+    <Compile Include="Modules\Warehouse\Shipping\IShippingData.cs" />
+    <Compile Include="Modules\Warehouse\Shipping\ShippingService.cs" />
+    <Compile Include="Modules\Warehouse\Totes\ToteService.cs" />
+    <Compile Include="Modules\Warehouse\ITransactionService.cs" />
+    <Compile Include="Modules\Transactions\TransactionService.cs" />
+    <Compile Include="Providers\Data\CloneIXPSimpleObjectHelper.cs" />
+    <Compile Include="Providers\Data\IMappingEnumerable.cs" />
+    <Compile Include="Providers\Data\MappingEnumerable.cs" />
+    <Compile Include="Providers\Data\Repository.cs" />
+    <Compile Include="Providers\Data\RepositoryItem.cs" />
+    <Compile Include="Providers\Data\RepositoryList.cs" />
+    <Compile Include="Providers\UserInteraction\Email.cs" />
+    <Compile Include="Providers\Data\IFactProvider.cs" />
+    <Compile Include="Modules\Warehouse\Receiving\ReceiptTransactionFacts.cs" />
+    <Compile Include="Modules\Warehouse\Shipping\ShipmentFacts.cs" />
+    <Compile Include="Modules\Warehouse\Totes\ToteNumbers.cs" />
+    <Compile Include="Modules\Warehouse\Capture\HoldStatus.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\InventoryCapture.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\InventoryCaptureProperties.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\InventoryHold.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\ISerialIdentifier.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\NSLotIdSerial.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\PPID2D.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\PPID2DParser.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\PPID2DValidator.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\PPIDLast12Identifier.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\PPIDParser.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\PPIDValidator.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\ProductGrade.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\SerialIdentifier.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\SerializedUnit.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\ItemCustomFields.cs" />
+    <Compile Include="Modules\Transactions\Tote2ToteTransaction.cs" />
+    <Compile Include="Modules\Transactions\TotePutAwayTransaction.cs" />
+    <Compile Include="Modules\Transactions\DomainTransactionSpecification.cs" />
+    <Compile Include="Modules\Warehouse\Shipping\UndoShipmentTransactionMapper.cs" />
+    <Compile Include="Modules\Warehouse\Receiving\DeleteReceiptTransactionMapper.cs" />
+    <Compile Include="Modules\Warehouse\Shipping\FactShipmentMapper.cs" />
+    <Compile Include="Providers\Data\GroupOperatorMapper.cs" />
+    <Compile Include="Modules\Warehouse\Receiving\ReceiptInventoryItemDetailMapper.cs" />
+    <Compile Include="Modules\Warehouse\Receiving\ReceiptSerializedUnitMapper.cs" />
+    <Compile Include="Modules\Shopfloor\RouteConfigPartMapper.cs" />
+    <Compile Include="Modules\Shopfloor\RoutePartConfigMapper.cs" />
+    <Compile Include="Modules\Warehouse\Receiving\ReceiptTransactionMapper.cs" />
+    <Compile Include="Modules\Warehouse\Shipping\ShipmentTransactionMapper.cs" />
+    <Compile Include="Modules\Orders\OrderFactory.cs" />
+    <Compile Include="Modules\Orders\Packlist.cs" />
+    <Compile Include="Modules\Orders\PurchaseItemMapper.cs" />
+    <Compile Include="Modules\Orders\ReceiptCondition.cs" />
+    <Compile Include="Modules\Orders\ReceiptDelta.cs" />
+    <Compile Include="Modules\Orders\SalesItemMapper.cs" />
+    <Compile Include="Modules\Orders\ShipmentDelta.cs" />
+    <Compile Include="Modules\Orders\OrderRepository.cs" />
+    <Compile Include="Modules\Transactions\ITransaction.cs" />
+    <Compile Include="Modules\Transactions\PutAwayTransactionSpecification.cs" />
+    <Compile Include="Modules\Transactions\ShopfloorlineTransactionSpecification.cs" />
+    <Compile Include="Modules\Transactions\TransactionSpecification.cs" />
+    <Compile Include="Modules\Orders\LineItemPartChange.cs" />
+    <Compile Include="Modules\Orders\LineItemQtyChange.cs" />
+    <Compile Include="Modules\Parts\PartValidator.cs" />
+    <Compile Include="Modules\Parts\UnitConfigHeader.cs" />
+    <Compile Include="Modules\Parts\UnitConfigValues.cs" />
+    <Compile Include="Modules\Parts\Part.cs" />
+    <Compile Include="Modules\Parts\PartAttributesHeader.cs" />
+    <Compile Include="Modules\Parts\PartAttributeValue.cs" />
+    <Compile Include="Modules\Parts\PartDefaultRoute.cs" />
+    <Compile Include="Modules\Parts\PartDocument.cs" />
+    <Compile Include="Modules\Parts\PartFactory.cs" />
+    <Compile Include="Modules\Parts\PartIdentType.cs" />
+    <Compile Include="Modules\Parts\PartManufacturer.cs" />
+    <Compile Include="Modules\Parts\PartServiceCommodity.cs" />
+    <Compile Include="Modules\Parts\PartType.cs" />
+    <Compile Include="Modules\Parts\ServiceCode.cs" />
+    <Compile Include="Modules\Parts\ServiceCodeCategory.cs" />
+    <Compile Include="Modules\Parts\ServiceCommodityComponent.cs" />
+    <Compile Include="Modules\RawReportQuery.cs" />
+    <Compile Include="Modules\Warehouse\Areas\AreaRepository.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\InventoryRepository.cs" />
+    <Compile Include="Modules\Parts\PartRepository.cs" />
+    <Compile Include="Modules\Shopfloor\RoutingRepository.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\SerializedHistoryRepository.cs" />
+    <Compile Include="Modules\Transactions\TransactionRepository.cs" />
+    <Compile Include="Providers\Data\ParameterList.cs" />
+    <Compile Include="Providers\Data\ParameterListItem.cs" />
+    <Compile Include="Providers\Data\UserQuery.cs" />
+    <Compile Include="Modules\Shopfloor\FailCodeCategoryMapper.cs" />
+    <Compile Include="Modules\Shopfloor\RouteAllStationMapper.cs" />
+    <Compile Include="Modules\Shopfloor\RouteStationMapper.cs" />
+    <Compile Include="Modules\Shopfloor\RouteStationStepMapper.cs" />
+    <Compile Include="Modules\Shopfloor\RepairAction.cs" />
+    <Compile Include="Modules\Shopfloor\RouteConfiguration.cs" />
+    <Compile Include="Modules\Shopfloor\RouteStation.cs" />
+    <Compile Include="Modules\Shopfloor\RouteStationConfigPart.cs" />
+    <Compile Include="Modules\Shopfloor\RouteStationFailCategory.cs" />
+    <Compile Include="Modules\Shopfloor\RouteStationFailure.cs" />
+    <Compile Include="Modules\Shopfloor\RouteStationDocument.cs" />
+    <Compile Include="Modules\Shopfloor\RouteStationConfiguration.cs" />
+    <Compile Include="Modules\Shopfloor\RouteStationProcess.cs" />
+    <Compile Include="Modules\Shopfloor\RouteStationRepair.cs" />
+    <Compile Include="Modules\Shopfloor\RouteStationResult.cs" />
+    <Compile Include="Modules\Shopfloor\RouteStationResultMapper.cs" />
+    <Compile Include="Modules\Shopfloor\ServiceRoute.cs" />
+    <Compile Include="Modules\Shopfloor\StationOutcome.cs" />
+    <Compile Include="Modules\Shopfloor\StationOutcomeTransition.cs" />
+    <Compile Include="Modules\Shopfloor\ServiceStationType.cs" />
+    <Compile Include="Modules\Shopfloor\StationTransitionMapper.cs" />
+    <Compile Include="Modules\Warehouse\Capture\CaptureService.cs" />
+    <Compile Include="Modules\Warehouse\Capture\HoldResolutionValidator.cs" />
+    <Compile Include="Modules\Warehouse\Capture\InventoryCaptureValidator.cs" />
+    <Compile Include="Providers\Data\IValidator.cs" />
+    <Compile Include="Modules\Warehouse\Receiving\ReceiptValidator.cs" />
+    <Compile Include="Modules\Parts\ServiceCommodityChangeValidator.cs" />
+    <Compile Include="Modules\Warehouse\Shipping\ShipmentValidator.cs" />
+    <Compile Include="Modules\Shopfloor\StationInspectionTaskValidator.cs" />
+    <Compile Include="Modules\Shopfloor\StationOutcomeTransitionValidator.cs" />
+    <Compile Include="Modules\Parts\TopLevelChangeValidator.cs" />
+    <Compile Include="Modules\Warehouse\Totes\ToteCanBePutAwayValidator.cs" />
+    <Compile Include="Providers\Data\ValidatorBase.cs" />
+    <Compile Include="Providers\Data\VPObject.cs" />
+    <Compile Include="Modules\Warehouse\WarehouseModule.cs" />
+    <Compile Include="Providers\Data\XPOFactory.cs" />
+    <Compile Include="Modules\ZPLLabels\GenericLabel.cs" />
+    <Compile Include="Modules\ZPLLabels\ZPLLabel.cs" />
+    <Compile Include="Modules\ZPLLabels\ReceivingLabel.cs" />
+    <Compile Include="Modules\Warehouse\Receiving\ReceivingService.cs" />
+    <Compile Include="Providers\Data\IMapper.cs" />
+    <Compile Include="Modules\Organizations\Country.cs" />
+    <Compile Include="Modules\Orders\ILineItem.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\IMultiPartIdentifier.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\InventoryItem.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\PPIDIdentifier.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\TransactionType.cs" />
+    <Compile Include="Modules\Orders\Receipt.cs" />
+    <Compile Include="Modules\Orders\Contract.cs" />
+    <Compile Include="Modules\Orders\ContractBase.cs" />
+    <Compile Include="Modules\Orders\IContract.cs" />
+    <Compile Include="Modules\Orders\Order.cs" />
+    <Compile Include="Modules\Orders\OrderType.cs" />
+    <Compile Include="Modules\Orders\PurchaseLineItem.cs" />
+    <Compile Include="Modules\Orders\PurchaseOrder.cs" />
+    <Compile Include="Modules\Orders\SalesLineItem.cs" />
+    <Compile Include="Modules\Orders\SalesOrder.cs" />
+    <Compile Include="Modules\Organizations\Address.cs" />
+    <Compile Include="Modules\Organizations\Contact.cs" />
+    <Compile Include="Modules\Organizations\OrgCustomField.cs" />
+    <Compile Include="Modules\Organizations\CustomFieldDef.cs" />
+    <Compile Include="Modules\Organizations\Organization.cs" />
+    <Compile Include="Modules\Parts\IPartHierarchyItem.cs" />
+    <Compile Include="Modules\Orders\ReceivingResults.cs" />
+    <Compile Include="Modules\ZPLLabels\ReceivingLabelDetail.cs" />
+    <Compile Include="Providers\Data\RobotRepository.cs" />
+    <Compile Include="Modules\Warehouse\Shipping\ShippingDetailStatus.cs" />
+    <Compile Include="Modules\Warehouse\Shipping\ShippingUtils.cs" />
+    <Compile Include="Modules\Security\SecurityUserGetter.cs" />
+    <Compile Include="Modules\Orders\ShippingResults.cs" />
+    <Compile Include="Modules\Shopfloor\FailureType.cs" />
+    <Compile Include="Modules\Shopfloor\ServiceStation.cs" />
+    <Compile Include="Modules\Shopfloor\ResultList.cs" />
+    <Compile Include="Modules\Shopfloor\RouteStationStep.cs" />
+    <Compile Include="Modules\Shopfloor\ServiceTaskResult.cs" />
+    <Compile Include="Modules\Shopfloor\ServiceTaskType.cs" />
+    <Compile Include="Modules\Shopfloor\ResultListValue.cs" />
+    <Compile Include="Modules\Shopfloor\TestPlan.cs" />
+    <Compile Include="Modules\Shopfloor\UnitFailure.cs" />
+    <Compile Include="Modules\Shopfloor\UnitRepair.cs" />
+    <Compile Include="Modules\Orders\Shipment.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\ChangePartNumberAction.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\LotID.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\LotSplitAction.cs">
+    </Compile>
+    <Compile Include="Modules\Warehouse\Inventory\StockLot.cs" />
+    <Compile Include="Modules\Warehouse\Inventory\TokenType.cs" />
+    <Compile Include="Modules\Transactions\Transaction.cs" />
+    <Compile Include="Modules\Organizations\USState.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Modules\Warehouse\Inventory\Inventory.cd" />
+    <None Include="Mvc\PassiveView.cd" />
+    <None Include="Scout.cd" />
+    <None Include="Modules\Orders\DellPreAlertRev1.xsc">
+      <DependentUpon>DellPreAlertRev1.xsd</DependentUpon>
+    </None>
+    <None Include="Modules\Orders\DellPreAlertRev1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Modules\Orders\DellPreAlertRev1.xsx">
+      <DependentUpon>DellPreAlertRev1.xsd</DependentUpon>
+    </None>
+    <None Include="Modules\Orders\GenericPreAlertData.xsc">
+      <DependentUpon>GenericPreAlertData.xsd</DependentUpon>
+    </None>
+    <None Include="Modules\Orders\GenericPreAlertData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GenericPreAlertData.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Modules\Orders\GenericPreAlertData.xss">
+      <DependentUpon>GenericPreAlertData.xsd</DependentUpon>
+    </None>
+    <None Include="Modules\Orders\XipGencoPreAlertSchemaRev1.xsc">
+      <DependentUpon>XipGencoPreAlertSchemaRev1.xsd</DependentUpon>
+    </None>
+    <None Include="Modules\Orders\XipGencoPreAlertSchemaRev1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Modules\Orders\XipGencoPreAlertSchemaRev1.xsx">
+      <DependentUpon>XipGencoPreAlertSchemaRev1.xsd</DependentUpon>
+    </None>
+    <None Include="Modules\Orders\XIPPreAlertRev1.xsc">
+      <DependentUpon>XIPPreAlertRev1.xsd</DependentUpon>
+    </None>
+    <None Include="Modules\Orders\XIPPreAlertRev1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Modules\Orders\XIPPreAlertRev1.xsx">
+      <DependentUpon>XIPPreAlertRev1.xsd</DependentUpon>
+    </None>
+    <None Include="Modules\Warehouse\Warehouse.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="Modules\Materials\Domain\" />
+    <Folder Include="Modules\Materials\Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

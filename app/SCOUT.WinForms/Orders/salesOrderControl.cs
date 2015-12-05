@@ -1,0 +1,410 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Windows.Forms;
+using DevExpress.XtraEditors.Controls;
+using DevExpress.XtraLayout.Utils;
+using SCOUT.Core.Data;
+using SCOUT.Core.Services;
+
+namespace SCOUT.WinForms.Orders
+{
+    public partial class SalesOrderControl : DevExpress.XtraEditors.XtraUserControl, IValidationControl
+    {
+        #region fields
+
+        private AutoCompleteStringCollection m_billToSuggestions;
+        private BindingList<Organization> m_organizations;
+        private AutoCompleteStringCollection m_payTermsSuggestions;
+        private SalesOrder m_salesOrder;
+        private AutoCompleteStringCollection m_shipMethSuggestions;
+
+        #endregion
+
+        #region .ctor
+
+        public SalesOrderControl(SalesOrder salesOrder)
+        {
+            InitializeComponent();
+            InitAutoComplete();
+            m_salesOrder = salesOrder;
+            LoadOrganizations();
+            Bind();
+            WireEvents();
+            SetupTemplateMode(m_salesOrder);
+        }
+
+        private void SetupTemplateMode(SalesOrder salesOrder)
+        {
+            if (!salesOrder.Order.IsTemplate)
+                return;
+
+            soTabs.TabPages[0].Visibility = LayoutVisibility.Never;
+            soTabs.TabPages[1].Visibility = LayoutVisibility.Never;
+            soTabs.TabPages[2].Visibility = LayoutVisibility.Never;
+            soTabs.TabPages[3].Visibility = LayoutVisibility.Never;
+            soTabs.TabPages[4].Visibility = LayoutVisibility.Never;
+
+        }
+
+        private void WireEvents()
+        {
+            customerEdit.ButtonClick += customerEdit_ButtonClick;
+            shopfloorlineLookup.EditValueChanged += shopfloorlineLookup_EditValueChanged;
+            requiredRouteLookUp.ButtonClick += requiredRouteLookUp_ButtonClick;
+            multiShipToSelect.EditValueChanged += multiShipToSelect_EditValueChanged;
+            multiShipToTabContainer.SelectedPageChanging += multiShipToTabContainer_SelectedPageChanging;
+            deleteMultiShipToLink.Click += deleteMultiShipToLink_Click;
+            useConfigurationCheck.CheckedChanged += useConfigurationCheck_CheckedChanged;
+            lineItemsGridView.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(lineItemsGridView_InitNewRow);
+        }
+
+        void lineItemsGridView_InitNewRow(object sender, DevExpress.XtraGrid.Views.Grid.InitNewRowEventArgs e)
+        {
+            m_salesOrder.CartItems[e.RowHandle].CreateDefaults();
+        }
+
+        void useConfigurationCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            switch(useConfigurationCheck.Checked)
+            {
+                case(true):                    
+                    shipToSelList.Enabled = false;
+                    shipToText.Properties.ReadOnly = true;
+                    break;
+
+                case(false):                    
+                    shipToSelList.Enabled = true;
+                    shipToText.Properties.ReadOnly = false;
+                    break;
+            }            
+        }
+
+        void deleteMultiShipToLink_Click(object sender, EventArgs e)
+        {
+            SalesOrderShipTo shipTo = multiShipToView.GetFocusedRow() as SalesOrderShipTo;
+            if (shipTo == null)
+                return;
+
+            string msg = "Do you really want to delete this ship to?";
+            if(Scout.Core.UserInteraction.Dialog.AskQuestion(msg) ==  DialogResult.Yes)
+            {
+                m_salesOrder.ShipTos.DeleteObjectOnRemove = true;
+                m_salesOrder.ShipTos.Remove(shipTo);
+            }            
+        }
+
+        void multiShipToTabContainer_SelectedPageChanging(object sender, DevExpress.XtraLayout.LayoutTabPageChangingEventArgs e)
+        {
+            string question ="";
+            if(multiShipToTabContainer.SelectedTabPage == singleShipToTab)
+            {
+                if(!string.IsNullOrEmpty(m_salesOrder.ShipToAddress))
+                    question = "This will clear the Single Ship To. Are you sure you want to do this?";   
+            }                                      
+            else
+            {
+                if(m_salesOrder.ShipTos.Count > 0 )
+                    question = "This will clear the Multiple Ship Tos. Are you sure you want to do this?";   
+            }           
+                
+            
+            if(!string.IsNullOrEmpty(question))
+            {
+                if (Scout.Core.UserInteraction.Dialog.AskQuestion(question) == DialogResult.No)
+                    e.Cancel = true;
+                else
+                {
+                    if (multiShipToTabContainer.SelectedTabPage == singleShipToTab)
+                        m_salesOrder.ShipToAddress = "";
+                    else
+                        m_salesOrder.DeleteMultipleShipToAddresses();
+                    
+                }
+            }            
+        }
+
+        void multiShipToSelect_EditValueChanged(object sender, EventArgs e)
+        {
+            SalesOrderShipTo shipTo = multiShipToView.GetFocusedRow() as SalesOrderShipTo;
+            Address address = multiShipToSelect.EditValue as Address;
+                                   
+            if(shipTo != null && address != null)
+            {
+                shipTo.ShipToAddress = address.ToString();
+                multiShipToSelect.EditValue = null;
+            }            
+        }
+
+        void requiredRouteLookUp_ButtonClick(object sender, ButtonPressedEventArgs e)
+        {
+            if (e.Button.Kind == ButtonPredefines.Delete)
+            {
+                RemoveServiceRouteRule();
+            }
+        }
+
+        private void RemoveServiceRouteRule()
+        {
+            if(requiredRouteLookUp.EditValue != null)
+            {
+                // Verify
+                if(MessageBox.Show("Are you sure that you want to remove this rule?", 
+                    "Remove Rule", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    m_salesOrder.RequiredServiceRoute = null;
+                    requiredRouteLookUp.EditValue = null;
+                }
+            }
+        }
+
+        void shopfloorlineLookup_EditValueChanged(object sender, EventArgs e)
+        {
+            Shopfloorline sfl = shopfloorlineLookup.EditValue as Shopfloorline;
+            if(sfl != null)
+            {
+                requiredRouteLookUp.Properties.DataSource = sfl.ActiveServiceRoutes;
+                requiredProgramLookUp.Properties.DataSource = sfl.ProgramList;
+                multiShipToDomainLookUp.DataSource = sfl.ShippableDomains;
+            }
+            else
+            {
+                requiredRouteLookUp.Properties.DataSource = null;
+            }
+        }
+
+        #endregion
+
+        #region methods
+
+        private void Bind()
+        {
+            soBinding.DataSource = m_salesOrder;
+            soErrors.DataSource = soBinding;
+
+            shipToText.DataBindings.Add("Text", soBinding, "ShipToAddress");
+            billToText.DataBindings.Add("Text", soBinding, "BillToAddress");
+            turnAroundEdit.DataBindings.Add("Value", soBinding, "TurnAroundTime");
+            payTermsSelList.DataBindings.Add("SelectedItem", soBinding, "PaymentTerms");
+            shipMethodSelList.DataBindings.Add("SelectedItem", soBinding, "ShipMethod");
+            billToAccountSelList.DataBindings.Add("SelectedItem", soBinding, "BillToAccount");
+            lineItemsGrid.DataBindings.Add("DataSource", soBinding, "CartItems");
+            salesRepSelList.DataBindings.Add("SelectedItem", soBinding, "SalesRep");
+            notesText.DataBindings.Add("Text", soBinding, "Notes");
+            customerEdit.DataBindings.Add("EditValue", soBinding, "OrgId");
+            contactSelList.DataBindings.Add("EditValue", soBinding, "ContactId");
+            deltasGrid.DataBindings.Add("DataSource", soBinding, "ShipmentDeltas");
+            packlistsGrid.DataBindings.Add("DataSource", soBinding, "Packlists");
+            activityText.DataBindings.Add("Text", soBinding, "Activity");
+            taxText.DataBindings.Add("EditValue", soBinding, "SalesTax");
+            useConfigurationCheck.DataBindings.Add("Checked", soBinding, "UseConfiguration");
+
+            multiShipToGrid.DataSource = m_salesOrder.ShipTos;
+                       
+            deltaBinding.DataSource = m_salesOrder.ShipmentDeltas;
+
+            m_salesOrder.CartItems.DeleteObjectOnRemove = true;
+
+            customerEdit.Properties.DisplayMember = "Name";
+            customerEdit.Properties.ValueMember = "Id";
+
+            contactSelList.Properties.DisplayMember = "Name";
+            contactSelList.Properties.ValueMember = "Id";
+
+            statusLookup.Properties.DataSource =
+                Scout.Core.Service<IAreaService>().GetAllAreaStatuses(m_salesOrder.Session);
+
+            statusLookup.Properties.DisplayMember = "Status";
+            statusLookup.Properties.ValueMember = "This";
+            statusLookup.DataBindings.Add("EditValue", m_salesOrder, "ShipmentDomainStatus!");
+
+            lineStatusesLookup.DataSource = Enum.GetValues(typeof (LineItemStatus));
+
+            shopfloorlineLookup.Properties.DataSource =
+                Scout.Core.Service<IAreaService>().GetAllShopfloorlines(m_salesOrder.Session);
+
+            shopfloorlineLookup.Properties.DisplayMember = "Label";
+            shopfloorlineLookup.Properties.ValueMember = "This";
+            shopfloorlineLookup.DataBindings.Add("EditValue", m_salesOrder, "Shopfloorline!");
+
+            requiredRouteLookUp.Properties.DisplayMember = "Name";
+            requiredRouteLookUp.Properties.ValueMember = "This";
+            requiredRouteLookUp.DataBindings.Add("EditValue", m_salesOrder, "RequiredServiceRoute!");
+
+            requiredProgramLookUp.DataBindings.Add("EditValue", m_salesOrder, "RequiredProgram");
+            
+            useConfigurationCheck_CheckedChanged(null,null);
+                            
+        }
+
+        private void InitAutoComplete()
+        {
+            IList<string> strlist;
+            Select query;
+
+            // Query gets most frequently used items first.
+            query = new Select("payment_terms")
+                .From("sales_orders")
+                .Where("payment_terms IS NOT NULL")
+                .AndWhere("payment_terms <> ''")
+                .GroupBy("payment_terms")
+                .OrderBy("payment_terms, COUNT(payment_terms) DESC");
+
+            strlist = query.ExecuteList<string>();
+
+            m_payTermsSuggestions = new AutoCompleteStringCollection();
+            foreach (string s in strlist)
+                m_payTermsSuggestions.Add(s);
+
+            // Query gets most frequently used items first.
+            query = new Select("ship_method")
+                .From("sales_orders")
+                .Where("ship_method IS NOT NULL")
+                .AndWhere("ship_method <> ''")
+                .GroupBy("ship_method")
+                .OrderBy("ship_method, COUNT(ship_method) DESC");
+
+            strlist = query.ExecuteList<string>();
+            m_shipMethSuggestions = new AutoCompleteStringCollection();
+            foreach (string s in strlist)
+                m_shipMethSuggestions.Add(s);
+
+            query = new Select("bill_to_acct")
+                .From("sales_orders")
+                .Where("bill_to_acct IS NOT NULL")
+                .AndWhere("bill_to_acct <> ''")
+                .GroupBy("bill_to_acct")
+                .OrderBy("bill_to_acct, COUNT(bill_to_acct) DESC");
+
+            strlist = query.ExecuteList<string>();
+            m_billToSuggestions = new AutoCompleteStringCollection();
+            foreach (string s in strlist)
+                m_billToSuggestions.Add(s);
+
+            payTermsSelList.Properties.Items.AddRange(m_payTermsSuggestions);
+            shipMethodSelList.Properties.Items.AddRange(m_shipMethSuggestions);
+            billToAccountSelList.Properties.Items.AddRange(m_billToSuggestions);
+            salesRepSelList.Properties.Items.AddRange(Helpers.GetSalesRepList());
+        }
+
+        private void LoadOrganizations()
+        {
+            m_organizations = Organization.GetActiveOrganizations();
+            customerEdit.Properties.DataSource = m_organizations;
+            customerEdit.Properties.DisplayMember = "Name";
+        }
+
+        private void UpdateAddressLists(Organization o)
+        {
+            billToSelList.Properties.DataSource = null;
+            shipToSelList.Properties.DataSource = null;
+            multiShipToSelect.Properties.DataSource = null;
+
+            billToSelList.Properties.DataSource = o.Addresses;
+            shipToSelList.Properties.DataSource = o.Addresses;
+            multiShipToSelect.Properties.DataSource = o.Addresses;
+        }
+
+        private void UpdateContactList(Organization organization)
+        {
+            contactSelList.Properties.DataSource = organization.Contacts;
+            contactSelList.EditValue = null;
+        }
+
+        private void EditSelectedOrg()
+        {
+            if (customerEdit.EditValue == null)
+                return;
+
+            Organization o =
+                Organization.GetOrganization((int) customerEdit.EditValue);
+
+            if (o != null)
+            {
+                EditOrganizationForm dlg =
+                    new EditOrganizationForm(o);
+
+                if (dlg.ShowDialog(Parent) == DialogResult.OK)
+                    LoadOrganizations();
+            }
+        }
+
+        private void CreateNewOrg()
+        {
+            EditOrganizationForm dlg = new EditOrganizationForm(null);
+
+            if (dlg.ShowDialog(this) == DialogResult.OK)
+            {
+                RobotList<Organization> orgs = (RobotList<Organization>)
+                                               customerEdit.Properties.DataSource;
+
+                orgs.Add(dlg.Organization);
+                customerEdit.EditValue = dlg.Organization.Id;
+            }
+        }
+
+        #endregion
+
+        #region event handlers
+
+        private void customerEdit_EditValueChanged(object sender, EventArgs e)
+        {
+            int orgId = (int) customerEdit.EditValue;
+            m_salesOrder.OrgId = orgId;
+            if (m_salesOrder.Organization != null)
+            {
+                UpdateAddressLists(m_salesOrder.Organization);
+                UpdateContactList(m_salesOrder.Organization);
+            }
+        }
+
+        private void billToSelList_SelectedValueChanged(object sender, EventArgs e)
+        {
+            Address address = billToSelList.EditValue as Address;
+            if (address != null)
+            {
+                m_salesOrder.BillToAddress = address.ToString();
+            }
+        }
+
+        private void shipToSelList_SelectedValueChanged(object sender, EventArgs e)
+        {
+            Address address = shipToSelList.EditValue as Address;
+            if (address != null)
+            {
+                m_salesOrder.ShipToAddress = address.ToString();
+            }
+        }
+
+        private void customerEdit_ButtonClick(object sender, ButtonPressedEventArgs e)
+        {
+            switch (e.Button.Kind)
+            {
+                case ButtonPredefines.Ellipsis:
+                    EditSelectedOrg();
+                    break;
+
+                case ButtonPredefines.Plus:
+                    CreateNewOrg();
+                    break;
+            }
+        }
+
+        #endregion
+
+        #region IValidationControl implementations
+
+        public bool IsValid()
+        {
+            customerEdit.Focus();
+            return m_salesOrder.Error.Length <= 0;
+        }
+
+        public string Error()
+        {
+            return m_salesOrder.Error;
+        }
+
+        #endregion
+    }
+}

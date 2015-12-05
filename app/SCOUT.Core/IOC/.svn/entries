@@ -1,0 +1,42 @@
+10
+
+dir
+0
+svn://sts-srv2/repository/SCOUT/trunk/app/SCOUT.Core/IOC
+svn://sts-srv2/repository
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2a31e9eb-b62d-7f4c-b1e0-338eb6ace5f4
+
+Registries
+dir
+
+
+
+add
+
+BootstrapContainer.cs
+file
+
+
+
+add
+

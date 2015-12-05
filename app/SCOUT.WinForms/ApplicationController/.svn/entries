@@ -1,0 +1,80 @@
+10
+
+dir
+1501
+svn://sts-srv2/repository/SCOUT/trunk/app/SCOUT.WinForms/ApplicationController
+svn://sts-srv2/repository
+
+
+
+2011-03-14T20:30:32.851562Z
+1480
+jdial
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2a31e9eb-b62d-7f4c-b1e0-338eb6ace5f4
+
+Commands
+dir
+
+Application
+dir
+
+CommandArguments
+dir
+
+ViewLoader.cs
+file
+
+
+
+
+2011-04-05T17:46:58.705375Z
+20869d3dcc1739959d330ff76363bc47
+2010-10-04T15:38:08.789375Z
+1400
+jdial
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1459
+
+CommandEnums
+dir
+
+Controllers
+dir
+
+Templates
+dir
+

@@ -1,0 +1,387 @@
+using System;
+using System.Text;
+using DevExpress.Xpo;
+using SCOUT.Core.Messaging;
+using SCOUT.Core.Services;
+
+namespace SCOUT.Core.Data
+{
+    [Persistent("purchase_line_items")]
+    public class PurchaseLineItem : VPObject, ILineItem
+    {
+        #region .ctor
+
+        public PurchaseLineItem(Session session) : base(session)
+        {
+        }
+
+        #endregion
+
+        #region fields
+
+        private bool m_allowDownlevels;
+        private string m_description;
+        private bool m_forceSerialFormat;
+        private int m_id;
+        private PartIdentType m_identType;
+        private Part m_outgoingPart;
+        private string m_outgoingPartNumber;
+        private ILineItem m_parentLineItem;
+        private Part m_part;
+        private int m_partId;
+        private string m_partNumber = "";
+        private PurchaseOrder m_purchaseOrder;
+        private int m_quantity;
+        private Domain m_recDomain;
+        private ServiceRoute m_serviceRoute;
+        private LineItemStatus m_status = LineItemStatus.Open;
+        private decimal m_unitCost;
+
+        #endregion
+
+        #region properties
+
+        [Association("PO-LineItems"), Aggregated]
+        [Persistent("po_id")]
+        public PurchaseOrder PurchaseOrder
+        {
+            get { return m_purchaseOrder; }
+            set { SetPropertyValue("PurchaseOrder", ref m_purchaseOrder, value); }
+        }
+
+        [Persistent("id")]
+        [Key(AutoGenerate = true)]
+        public int Id
+        {
+            get { return m_id; }
+            set { SetPropertyValue("Id", ref m_id, value); }
+        }
+
+        [Persistent("unit_cost")]
+        public decimal UnitCost
+        {
+            get { return m_unitCost; }
+            set { SetPropertyValue("UnitCost", ref m_unitCost, value); }
+        }
+
+        [Persistent("service_route_id")]
+        public ServiceRoute ServiceRoute
+        {
+            get { return m_serviceRoute; }
+            set { SetPropertyValue("ServiceRoute", ref m_serviceRoute, value); }
+        }
+
+        [Persistent("force_serial_format")]
+        public bool ForceSerialFormat
+        {
+            get { return m_forceSerialFormat; }
+            set { SetPropertyValue("ForceSerialFormat", ref m_forceSerialFormat, value); }
+        }
+
+        [NonPersistent]
+        public string PartNumber
+        {
+            get { return (m_part != null) ? m_part.PartNumber : ""; }
+            set
+            {
+                if (IsLoading)
+                    return;
+
+                Part part = Part.GetPartByPartNumber(Session, value);
+
+                if (part == null)
+                {
+                    m_partNumber = value;
+                    m_description = "[Invalid Part Number]";
+                    return;
+                }
+
+                LoadPartDetails(part);
+            }
+        }
+
+
+        [NonPersistent]
+        public string OutgoingPartNumber
+        {
+            get { return (m_outgoingPart != null) ? m_outgoingPart.PartNumber : ""; }
+
+            set
+            {
+                if (IsLoading) return;
+
+                Part part = Part.GetPartByPartNumber(Session, value);
+                if (part != null)
+                {
+                    if (new OutgoingPartAssignment(this, part).Validated())
+                    {
+                        m_outgoingPartNumber = value.ToUpper();
+                        OutgoingPart = part;
+                    }
+                }
+            }
+        }
+
+        [Persistent("outgoing_part_id")]
+        public Part OutgoingPart
+        {
+            get { return m_outgoingPart; }
+            set { SetPropertyValue("OutgoingPart", ref m_outgoingPart, value); }
+        }
+
+
+        [NonPersistent]
+        public string Description
+        {
+            get { return (m_part != null) ? m_part.Description : ""; }
+        }
+
+        [Persistent("ident_type")]
+        public PartIdentType IdentType
+        {
+            get { return m_identType; }
+            set
+            {
+                SetPropertyValue("IdentType", ref m_identType, value);
+                if (m_identType.Name == "Nonserialized" && m_serviceRoute != null)
+                    ServiceRoute = null;
+            }
+        }
+
+        [Persistent("rec_domain_id")]
+        public Domain ReceiveDomain
+        {
+            get { return m_recDomain; }
+            set { SetPropertyValue("ReceiveDomain", ref m_recDomain, value); }
+        }
+
+        [Persistent("line_status_id")]
+        public LineItemStatus Status
+        {
+            get { return m_status; }
+            set
+            {
+                if (IsLoading)
+                {
+                    SetPropertyValue("Status", ref m_status, value);
+                    return;
+                }
+
+                if (State.CanChangeStatusTo(value))
+                    SetPropertyValue("Status", ref m_status, value);
+            }
+        }
+
+        [NonPersistent]
+        private ILineItemState State
+        {
+            get { return LineItemState.GetStateForStatus(m_status); }
+        }
+
+        [NonPersistent]
+        public bool AllowOutgoingOverride
+        {
+            get
+            {
+                if (m_part == null || m_part.PartFamily == null)
+                    return false;
+
+                return m_part.PartFamily.AllowOutgoingOverride;
+            }
+        }
+
+        public string OptionsText
+        {
+            get
+            {
+                var builder = new StringBuilder();
+                builder.AppendFormat("Domain: {0} | Route: {1} | Identity: {2}", m_recDomain, m_serviceRoute,
+                                     m_identType);
+
+                return builder.ToString();
+            }
+        }
+
+
+        [Persistent("quantity")]
+        public int Quantity
+        {
+            get { return m_quantity; }
+            set
+            {
+                if (IsLoading)
+                {
+                    SetPropertyValue("Quantity", ref m_quantity, value);
+                    return;
+                }
+
+                if (State.CanChangeQty(this, value))
+                    SetPropertyValue("Quantity", ref m_quantity, value);
+            }
+        }
+
+        [Persistent("part_id")]
+        public Part Part
+        {
+            get { return m_part; }
+            set
+            {
+                if (IsLoading)
+                {
+                    SetPropertyValue("Part", ref m_part, value);
+                    return;
+                }
+
+                if (State.CanChangePart(this, value))
+                    SetPropertyValue("Part", ref m_part, value);
+            }
+        }
+
+        [NonPersistent]
+        public int ProcessedQty
+        {
+            get
+            {
+                if (!IsLoading)
+                    return OrderService.GetReceiveQtyForLine(this);
+
+                return 0;
+            }
+        }
+
+        [NonPersistent]
+        public int OpenQty
+        {
+            get { return Quantity - ProcessedQty; }
+        }
+
+        [Persistent("allow_family_member_fulfillment")]
+        public bool AllowDownlevels
+        {
+            get { return m_allowDownlevels; }
+            set
+            {
+                if (!IsLoading)
+                {
+                    if (!new LineItemAllowMembersChange(this, value).Validated())
+                        return;
+                }
+
+                SetPropertyValue("AllowDownlevels",
+                                 ref m_allowDownlevels, value);
+            }
+        }
+
+        internal void LoadPartDetails(Part part)
+        {
+            // Verify the current line item state will allow a part change.
+            if (!State.CanChangePart(this, part))
+                return;
+
+            // Check if the part being added already exists.
+            if (m_purchaseOrder.IsDuplicate(part))
+            {
+                Scout.Core.UserInteraction.Dialog.ShowMessage(
+                    part.PartNumber + " already exists and cannot be added.", UserMessageType.Error);
+                return;
+            }
+
+            if (part != null)
+            {
+                m_partNumber = part.PartNumber.ToUpper();
+                m_part = part;
+                m_partId = part.Id;
+                m_description = part.Description;
+                IdentType = part.IdentType;
+                ServiceRoute = part.DefaultRouteFor(m_purchaseOrder.Shopfloorline);
+                ReceiveDomain = PurchaseOrder.RecDomain;
+
+                if (m_purchaseOrder.Order.OrderType == OrderType.ReturnNReplace)
+                {
+                    if (part.PartFamily != null)
+                        OutgoingPart = part.PartFamily.TopLevelPart;
+                    else
+                        OutgoingPart = part;
+                }
+            }
+
+            else
+            {
+            }
+        }
+
+        //[Persistent("parent_line_item_id")]
+        //public ILineItem ParentLineItem
+        //{
+        //    get { return m_parentLineItem; }
+        //    set { SetPropertyValue("ParentLineItem", ref m_parentLineItem, value); }
+        //}
+
+        public void UpdateStatusFromReceipt(int qty)
+        {
+            if (Quantity == (ProcessedQty + qty))
+                Status = LineItemStatus.Closed;
+        }
+
+        public void UpdateStatusFromUnReceipt(int qty)
+        {
+            if (Quantity > (ProcessedQty - qty))
+                Status = LineItemStatus.Open;
+        }
+
+        #endregion
+
+        #region interface implementations
+
+        protected override void ValidateRules(BrokenRules Verify)
+        {
+            if (IsDeleted)
+                return;
+
+            Verify.IsNotNull(m_part,
+                             "INVALIDLINEITEM",
+                             "Invalid Part Number " + m_partNumber,
+                             "PartId");
+
+            Verify.IsNotNull(m_identType,
+                             "IdentTypeReq",
+                             "Ident Type is required.",
+                             "IdentType");
+
+            if(m_identType != null)
+            {
+                Verify.IsFalse(m_identType.Name == "Nonserialized" & m_serviceRoute != null,
+               "serializedRouteReq",
+               "Service routes are not valid for non-serialized product",
+               "IdentType");
+
+                Verify.IsFalse(m_purchaseOrder.ReturnType == ReturnType.Service
+                               && m_identType.Name == "Serialized"
+                               && m_serviceRoute == null,
+                               "ServiceRouteRequired",
+                               "Service Route is required for part number: " + m_part.PartNumber,
+                               "ServiceRoute");
+
+            }
+        }
+
+        #endregion
+
+        #region base overrides
+
+        // Cancels the automatic saving when editing in a grid
+        protected override void BeginEdit()
+        {
+        }
+
+        protected override void EndEdit()
+        {
+        }
+
+        protected override void CancelEdit()
+        {
+        }
+
+        #endregion
+    }
+}

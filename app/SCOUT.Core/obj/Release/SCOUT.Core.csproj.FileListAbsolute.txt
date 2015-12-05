@@ -1,0 +1,15 @@
+F:\Source\SCOUT NS\app\SCOUT.Core\bin\Release\SCOUT.Core.dll
+F:\Source\SCOUT NS\app\SCOUT.Core\bin\Release\SCOUT.Core.pdb
+F:\Source\SCOUT NS\app\SCOUT.Core\bin\Release\DevExpress.Data.v10.1.dll
+F:\Source\SCOUT NS\app\SCOUT.Core\bin\Release\DevExpress.Xpo.v10.1.dll
+F:\Source\SCOUT NS\app\SCOUT.Core\bin\Release\DevExpress.Data.v10.1.xml
+F:\Source\SCOUT NS\app\SCOUT.Core\bin\Release\DevExpress.Xpo.v10.1.xml
+F:\Source\SCOUT NS\app\SCOUT.Core\obj\Release\ResolveAssemblyReference.cache
+F:\Source\SCOUT NS\app\SCOUT.Core\obj\Release\SCOUT.Core.dll.licenses
+F:\Source\SCOUT NS\app\SCOUT.Core\obj\Release\SCOUT.Core.dll
+F:\Source\SCOUT NS\app\SCOUT.Core\obj\Release\SCOUT.Core.pdb
+F:\Source\SCOUT NS\app\SCOUT.Core\bin\Release\DevExpress.Xpo.v10.1.Linq.dll
+F:\Source\SCOUT NS\app\SCOUT.Core\bin\Release\DevExpress.Xpo.v10.1.Linq.xml
+F:\Source\SCOUT NS\app\SCOUT.Core\bin\Release\AutoMapper.dll
+F:\Source\SCOUT NS\app\SCOUT.Core\bin\Release\StructureMap.dll
+F:\Source\SCOUT NS\app\SCOUT.Core\bin\Release\StructureMap.xml

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SCOUT.Core.Data.InventoryItem">
+    <Position X="0.5" Y="0.5" Width="3.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>BAgCgEAIIGKAkACE5CAAoEgQpgkAApABJAAAJIEAIAo=</HashCode>
+      <FileName>Modules\Warehouse\Inventory\InventoryItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCOUT.Core.Data.SerializedUnit">
+    <Position X="4.25" Y="0.5" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>jQAAIAAAAABAAAAABAAMAAAEhEIBAEHhAAKAEAAEAgA=</HashCode>
+      <FileName>Modules\Warehouse\Inventory\SerializedUnit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SCOUT.Core.Data.ItemCustomFields">
+    <Position X="7.25" Y="1" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>CAIKAAAAAAAAAAAAAACgDAAEAEAAAgRAAAIAAAAAAAQ=</HashCode>
+      <FileName>Modules\Warehouse\Inventory\ItemCustomFields.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

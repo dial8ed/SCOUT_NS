@@ -1,0 +1,1392 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="544F72BF-44E9-4147-B208-852813387E3B/d:Modules/d:Orders/f:LineItemState.cs" caret="1451" fromTop="41" />
+      <File id="544F72BF-44E9-4147-B208-852813387E3B/d:Modules/d:Orders/f:IShippingLineStatusManager.cs" caret="167" fromTop="4" />
+      <File id="544F72BF-44E9-4147-B208-852813387E3B/d:Modules/d:Orders/f:OrderService.cs" caret="2833" fromTop="14" />
+      <File id="544F72BF-44E9-4147-B208-852813387E3B/d:Modules/d:Orders/f:SalesLineItem.cs" caret="3445" fromTop="21" />
+      <File id="6A3859D0-FC3B-4912-BFFC-D29F2B98E5EB/d:UI/f:ButtonStateControllerTests.cs" caret="217" fromTop="9" />
+      <File id="6A3859D0-FC3B-4912-BFFC-D29F2B98E5EB/d:Core/f:WhenInitializingTheContainer.cs" caret="579" fromTop="22" />
+      <File id="544F72BF-44E9-4147-B208-852813387E3B/d:Modules/d:Orders/f:XIPPreAlertRev1.xsd" caret="2215" fromTop="27" />
+      <File id="544F72BF-44E9-4147-B208-852813387E3B/d:Modules/d:Orders/f:XipGencoPreAlertSchemaRev1.xsd" caret="1161" fromTop="15" />
+      <File id="544F72BF-44E9-4147-B208-852813387E3B/d:Modules/d:Orders/f:XipPreAlertItem.cs" caret="588" fromTop="7" />
+      <File id="544F72BF-44E9-4147-B208-852813387E3B/d:Modules/d:Orders/f:XipGencoPreAlertItemMapper.cs" caret="0" fromTop="0" />
+      <File id="544F72BF-44E9-4147-B208-852813387E3B/d:Modules/d:Orders/f:XipGencoPreAlert.cs" caret="1349" fromTop="38" />
+      <File id="FC451411-61A5-4474-96A0-D56E70A5783D/d:Orders/f:PreAlertImportForm.cs" caret="3946" fromTop="21" />
+      <File id="544F72BF-44E9-4147-B208-852813387E3B/d:Modules/d:Orders/f:IPreAlert.cs" caret="390" fromTop="13" />
+      <File id="544F72BF-44E9-4147-B208-852813387E3B/d:Modules/d:Orders/f:PreAlert.cs" caret="2803" fromTop="20" />
+      <File id="544F72BF-44E9-4147-B208-852813387E3B/d:Modules/d:Orders/f:XipD1PreAlert.cs" caret="684" fromTop="22" />
+      <File id="544F72BF-44E9-4147-B208-852813387E3B/d:Modules/d:Orders/f:XIPPreAlertRev1.cs" caret="1314" fromTop="0" />
+      <File id="544F72BF-44E9-4147-B208-852813387E3B/d:Providers/d:Data/f:OleDbHelper.cs" caret="1008" fromTop="18" />
+      <File id="544F72BF-44E9-4147-B208-852813387E3B/d:Modules/d:Orders/f:XipPreAlertItemMapper.cs" caret="314" fromTop="12" />
+      <File id="FC451411-61A5-4474-96A0-D56E70A5783D/d:Application/f:Application.cs" caret="8125" fromTop="0" />
+      <File id="FC451411-61A5-4474-96A0-D56E70A5783D/d:Properties/f:AssemblyInfo.cs" caret="592" fromTop="3" />
+      <File id="FC451411-61A5-4474-96A0-D56E70A5783D/d:Orders/f:ShipmentLineItemSchedulingView.cs" caret="659" fromTop="15" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="544F72BF-44E9-4147-B208-852813387E3B/d:Modules/d:Orders/f:SalesLineItem.cs" caret="5196" fromTop="21" />
+      <File id="544F72BF-44E9-4147-B208-852813387E3B/d:Modules/d:Orders/f:SalesLineItem.cs" caret="6959" fromTop="31" />
+      <File id="544F72BF-44E9-4147-B208-852813387E3B/d:Modules/d:Orders/f:SalesLineItem.cs" caret="6959" fromTop="22" />
+      <File id="544F72BF-44E9-4147-B208-852813387E3B/d:Modules/d:Orders/f:SalesLineItem.cs" caret="6959" fromTop="32" />
+      <File id="544F72BF-44E9-4147-B208-852813387E3B/d:Modules/d:Orders/f:SalesLineItem.cs" caret="6959" fromTop="31" />
+      <File id="544F72BF-44E9-4147-B208-852813387E3B/d:Modules/d:Orders/f:SalesLineItem.cs" caret="4177" fromTop="31" />
+      <File id="544F72BF-44E9-4147-B208-852813387E3B/d:Modules/d:Orders/f:SalesLineItem.cs" caret="6959" fromTop="19" />
+      <File id="544F72BF-44E9-4147-B208-852813387E3B/d:Modules/d:Orders/f:SalesLineItem.cs" caret="6959" fromTop="19" />
+      <File id="544F72BF-44E9-4147-B208-852813387E3B/d:Modules/d:Orders/f:SalesLineItem.cs" caret="6961" fromTop="19" />
+      <File id="544F72BF-44E9-4147-B208-852813387E3B/d:Modules/d:Orders/f:SalesLineItem.cs" caret="6961" fromTop="18" />
+      <File id="544F72BF-44E9-4147-B208-852813387E3B/d:Modules/d:Orders/f:SalesLineItem.cs" caret="851" fromTop="21" />
+      <File id="544F72BF-44E9-4147-B208-852813387E3B/d:Modules/d:Orders/f:SalesLineItem.cs" caret="3620" fromTop="24" />
+      <File id="544F72BF-44E9-4147-B208-852813387E3B/d:Modules/d:Orders/f:SalesLineItem.cs" caret="3445" fromTop="21" />
+      <File id="544F72BF-44E9-4147-B208-852813387E3B/d:Modules/d:Orders/f:SalesLineItem.cs" caret="3312" fromTop="17" />
+      <File id="544F72BF-44E9-4147-B208-852813387E3B/d:Modules/d:Orders/f:SalesLineItem.cs" caret="3819" fromTop="20" />
+      <File id="544F72BF-44E9-4147-B208-852813387E3B/d:Modules/d:Orders/f:IShippingOpenQtyManager.cs" caret="101" fromTop="4" />
+      <File id="544F72BF-44E9-4147-B208-852813387E3B/d:Modules/d:Orders/f:SalesOrder.cs" caret="9160" fromTop="20" />
+      <File id="544F72BF-44E9-4147-B208-852813387E3B/d:Modules/d:Orders/f:SalesOrder.cs" caret="11482" fromTop="20" />
+      <File id="544F72BF-44E9-4147-B208-852813387E3B/d:Modules/d:Warehouse/d:Shipping/f:FactShipmentMapper.cs" caret="593" fromTop="14" />
+      <File id="544F72BF-44E9-4147-B208-852813387E3B/d:Modules/d:Orders/f:SalesOrder.cs" caret="16804" fromTop="27" />
+      <File id="6A3859D0-FC3B-4912-BFFC-D29F2B98E5EB/d:Core/f:WhenInitializingTheContainer.cs" caret="1331" fromTop="22" />
+      <File id="544F72BF-44E9-4147-B208-852813387E3B/d:Modules/d:Orders/f:XipPreAlertItemMapper.cs" caret="1975" fromTop="23" />
+      <File id="FC451411-61A5-4474-96A0-D56E70A5783D/d:Application/f:Application.cs" caret="5167" fromTop="1" />
+      <File id="FC451411-61A5-4474-96A0-D56E70A5783D/d:Orders/f:ShipmentLineItemSchedulingView.cs" caret="743" fromTop="15" />
+      <File id="FC451411-61A5-4474-96A0-D56E70A5783D/d:Orders/f:ShipmentLineItemSchedulingView.cs" caret="550" fromTop="10" />
+      <File id="FC451411-61A5-4474-96A0-D56E70A5783D/d:Orders/f:ShipmentLineItemSchedulingView.cs" caret="947" fromTop="15" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir>C:\Program Files (x86)\NUnit 2.5.9\bin\net-2.0\</NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="int" priority="37" />
+      <Item value="item" priority="18" />
+      <Item value="preAdjustQty" priority="0" />
+      <Item value="postAdjustQty" priority="0" />
+      <Item value="private" priority="82" />
+      <Item value="bool" priority="27" />
+      <Item value="public" priority="112" />
+      <Item value="return" priority="115" />
+      <Item value="m_useConfiguration" priority="3" />
+      <Item value="SetPropertyValue`1" priority="7" />
+      <Item value="ref" priority="6" />
+      <Item value="PersistentAttribute`0" priority="13" />
+      <Item value="useConfigurationCheck" priority="0" />
+      <Item value="soBinding" priority="0" />
+      <Item value="if" priority="88" />
+      <Item value="ShipToAddress" priority="2" />
+      <Item value="shipToText" priority="1" />
+      <Item value="true" priority="14" />
+      <Item value="false" priority="29" />
+      <Item value="packlist" priority="0" />
+      <Item value="else" priority="2" />
+      <Item value="DellPoPacklistReport`0" priority="0" />
+      <Item value="holdDetails" priority="0" />
+      <Item value="Scout`0" priority="35" />
+      <Item value="Error" priority="8" />
+      <Item value="void" priority="45" />
+      <Item value="object" priority="6" />
+      <Item value="Object`0" priority="0" />
+      <Item value="new" priority="95" />
+      <Item value="lock" priority="0" />
+      <Item value="thisLock" priority="0" />
+      <Item value="AdjustInventory`0" priority="0" />
+      <Item value="partText" priority="0" />
+      <Item value="override" priority="4" />
+      <Item value="FakePart`0" priority="2" />
+      <Item value="base" priority="12" />
+      <Item value="Xpo`0" priority="16" />
+      <Item value="XpoDefault`0" priority="2" />
+      <Item value="domain" priority="0" />
+      <Item value="Domain" priority="0" />
+      <Item value="Label" priority="0" />
+      <Item value="PartNumber" priority="0" />
+      <Item value="this" priority="11" />
+      <Item value="Domain`0" priority="1" />
+      <Item value="partNumberText" priority="0" />
+      <Item value="string" priority="40" />
+      <Item value="commentsText" priority="0" />
+      <Item value="trans" priority="9" />
+      <Item value="comments" priority="2" />
+      <Item value="CreateFacts`0" priority="0" />
+      <Item value="UnitOfWork`0" priority="3" />
+      <Item value="UnitOfWork" priority="0" />
+      <Item value="repair" priority="13" />
+      <Item value="as" priority="16" />
+      <Item value="facts" priority="38" />
+      <Item value="UserInteraction" priority="0" />
+      <Item value="Logging" priority="0" />
+      <Item value="IInventoryService`0" priority="0" />
+      <Item value="T`0" priority="7" />
+      <Item value="IPassiveView`0" priority="9" />
+      <Item value="Dictionary" priority="0" />
+      <Item value="Part`0" priority="9" />
+      <Item value="foreach" priority="10" />
+      <Item value="Model" priority="3" />
+      <Item value="AddConsumptionRequest`0" priority="0" />
+      <Item value="p" priority="15" />
+      <Item value="PrinterSetupForm`0" priority="0" />
+      <Item value="PartToConsume`0" priority="6" />
+      <Item value="BomUsageAction`0" priority="0" />
+      <Item value="IUserInfoGetter`0" priority="0" />
+      <Item value="ServiceTagIdentifier`0" priority="0" />
+      <Item value="descriptionText" priority="0" />
+      <Item value="consumptionDescription" priority="0" />
+      <Item value="configurationItemsGrid" priority="0" />
+      <Item value="partsToConsume" priority="4" />
+      <Item value="IPartsConsumptionView`0" priority="4" />
+      <Item value="task" priority="3" />
+      <Item value="null" priority="11" />
+      <Item value="BomConfiguration`0" priority="0" />
+      <Item value="configuration" priority="4" />
+      <Item value="Config`0" priority="1" />
+      <Item value="m_consumptionRequests" priority="0" />
+      <Item value="Dictionary&lt;MaterialConsumableItem,int&gt;" priority="0" />
+      <Item value="ConsumptionDescription" priority="0" />
+      <Item value="PartsToConsume" priority="3" />
+      <Item value="List" priority="12" />
+      <Item value="BomConfigurationItem`0" priority="1" />
+      <Item value="Shopfloorline" priority="1" />
+      <Item value="m_view" priority="0" />
+      <Item value="m_viewEventsController" priority="0" />
+      <Item value="View_RefreshMaterials`0" priority="0" />
+      <Item value="Mapper`0" priority="2" />
+      <Item value="PartToConsume" priority="3" />
+      <Item value="dest" priority="9" />
+      <Item value="MRUListController`0" priority="0" />
+      <Item value="m_repairParts" priority="1" />
+      <Item value="RepairComponent`0" priority="20" />
+      <Item value="var" priority="103" />
+      <Item value="partToConsumes" priority="0" />
+      <Item value="List&lt;PartToConsume&gt;" priority="2" />
+      <Item value="Shopfloorline`0" priority="8" />
+      <Item value="m_shopfloorline" priority="1" />
+      <Item value="input" priority="16" />
+      <Item value="IOutputCommand" priority="1" />
+      <Item value="src" priority="1" />
+      <Item value="Install" priority="1" />
+      <Item value="outcomeSelList" priority="0" />
+      <Item value="StationOutcome`0" priority="0" />
+      <Item value="outcome" priority="0" />
+      <Item value="m_process" priority="10" />
+      <Item value="m_taskModel" priority="1" />
+      <Item value="Failures" priority="8" />
+      <Item value="failure" priority="4" />
+      <Item value="repairs" priority="3" />
+      <Item value="LineItemState`0" priority="5" />
+      <Item value="yield return" priority="2" />
+      <Item value="IEnumerable" priority="0" />
+      <Item value="Components" priority="7" />
+      <Item value="char" priority="3" />
+      <Item value="Repair" priority="4" />
+      <Item value="Installed" priority="1" />
+      <Item value="list" priority="1" />
+      <Item value="f" priority="12" />
+      <Item value="components" priority="6" />
+      <Item value="c" priority="22" />
+      <Item value="FrontController`0" priority="1" />
+      <Item value="MaterialCommands`0" priority="1" />
+      <Item value="static" priority="17" />
+      <Item value="AddCommand`0" priority="2" />
+      <Item value="typeof" priority="3" />
+      <Item value="MaterialsConsumeRepairPartsCommand`0" priority="0" />
+      <Item value="Replaced" priority="0" />
+      <Item value="repairParts" priority="1" />
+      <Item value="partial" priority="0" />
+      <Item value="IListener" priority="2" />
+      <Item value="MaterialsPartConsumed`0" priority="3" />
+      <Item value="m_partsConsumed" priority="1" />
+      <Item value="message" priority="6" />
+      <Item value="IEventBus`0" priority="0" />
+      <Item value="Delegate`0" priority="1" />
+      <Item value="m_actions" priority="2" />
+      <Item value="List&lt;Delegate&gt;" priority="0" />
+      <Item value="m_listeners" priority="0" />
+      <Item value="handler" priority="1" />
+      <Item value="m_handlers" priority="0" />
+      <Item value="is" priority="2" />
+      <Item value="Action`0" priority="7" />
+      <Item value="EventBus`0" priority="1" />
+      <Item value="partConsumed" priority="2" />
+      <Item value="Raise`1" priority="0" />
+      <Item value="m_bus" priority="3" />
+      <Item value="EventBus" priority="0" />
+      <Item value="m_materialsTracker" priority="4" />
+      <Item value="MaterialsConsumptionTracker" priority="0" />
+      <Item value="bus" priority="0" />
+      <Item value="event" priority="3" />
+      <Item value="internal" priority="3" />
+      <Item value="component" priority="17" />
+      <Item value="RepairComponentAdded" priority="1" />
+      <Item value="e" priority="10" />
+      <Item value="AfterAdd" priority="0" />
+      <Item value="m_failure" priority="4" />
+      <Item value="Part" priority="3" />
+      <Item value="obj" priority="1" />
+      <Item value="Qty" priority="1" />
+      <Item value="MaterialsConsumptionTracker`0" priority="0" />
+      <Item value="RouteStationProcess`0" priority="5" />
+      <Item value="process" priority="4" />
+      <Item value="process_RepairComponentAdded`0" priority="0" />
+      <Item value="MaterialsPartConsumed" priority="0" />
+      <Item value="StationMaterialsConsumptionTracker" priority="0" />
+      <Item value="m_item" priority="3" />
+      <Item value="m_partsToConsume" priority="0" />
+      <Item value="PairwiseAttribute`0" priority="0" />
+      <Item value="tracker" priority="1" />
+      <Item value="rsp" priority="2" />
+      <Item value="ServiceCode" priority="0" />
+      <Item value="RouteStationRepair" priority="0" />
+      <Item value="RepairComponent" priority="0" />
+      <Item value="repairComponent" priority="2" />
+      <Item value="Assert`0" priority="9" />
+      <Item value="InventoryItem`0" priority="11" />
+      <Item value="View" priority="0" />
+      <Item value="partReplacementService" priority="0" />
+      <Item value="IPartReplacementService`0" priority="1" />
+      <Item value="m_useMaterialsInventory" priority="0" />
+      <Item value="PartReplacementService`0" priority="3" />
+      <Item value="m_partReplacementService" priority="2" />
+      <Item value="ActionService`0" priority="0" />
+      <Item value="AdjustmentTransactionType" priority="2" />
+      <Item value="s" priority="9" />
+      <Item value="shop" priority="0" />
+      <Item value="shopfloorlineId" priority="9" />
+      <Item value="repo" priority="17" />
+      <Item value="MaterialConsumableItem`0" priority="14" />
+      <Item value="mci" priority="7" />
+      <Item value="part" priority="8" />
+      <Item value="sfl" priority="5" />
+      <Item value="qty" priority="4" />
+      <Item value="MaterialsConsumableInventory" priority="0" />
+      <Item value="inventory" priority="5" />
+      <Item value="Guid`0" priority="0" />
+      <Item value="IMaterialsService`0" priority="1" />
+      <Item value="partId" priority="5" />
+      <Item value="IUnitOfWork`0" priority="10" />
+      <Item value="m_uow" priority="14" />
+      <Item value="uow" priority="7" />
+      <Item value="GetUnitOfWork`0" priority="0" />
+      <Item value="inventoryItem" priority="1" />
+      <Item value="throw" priority="6" />
+      <Item value="NullReferenceException" priority="0" />
+      <Item value="IRepository`0" priority="3" />
+      <Item value="sflId" priority="0" />
+      <Item value="Func" priority="6" />
+      <Item value="func" priority="2" />
+      <Item value="NoNullAllowedException" priority="3" />
+      <Item value="try" priority="11" />
+      <Item value="action" priority="3" />
+      <Item value="ex" priority="8" />
+      <Item value="TException`0" priority="3" />
+      <Item value="m_attempts" priority="3" />
+      <Item value="TryLoopOn`1" priority="0" />
+      <Item value="attempts" priority="3" />
+      <Item value="ExecutionLoop" priority="0" />
+      <Item value="loop" priority="0" />
+      <Item value="Throws`0" priority="0" />
+      <Item value="while" priority="1" />
+      <Item value="counter" priority="1" />
+      <Item value="Guid" priority="0" />
+      <Item value="CommitChanges`0" priority="0" />
+      <Item value="OnLockingException" priority="3" />
+      <Item value="LockingExceptionEventArgs" priority="1" />
+      <Item value="Commit`0" priority="0" />
+      <Item value="m_session" priority="2" />
+      <Item value="ExecutionLoop`0" priority="0" />
+      <Item value="looper" priority="0" />
+      <Item value="ReplacementComponentFacts`0" priority="3" />
+      <Item value="MaterialsConsumableInventory`0" priority="1" />
+      <Item value="EnvironmentVariableTarget`0" priority="1" />
+      <Item value="RepositoryItem" priority="0" />
+      <Item value="catch" priority="0" />
+      <Item value="lockingException" priority="0" />
+      <Item value="ExecutionHelpers`0" priority="2" />
+      <Item value="LockingException`0" priority="0" />
+      <Item value="MaterialService`0" priority="8" />
+      <Item value="m_facts" priority="3" />
+      <Item value="m_repair" priority="5" />
+      <Item value="Transaction`0" priority="19" />
+      <Item value="m" priority="1" />
+      <Item value="ConsumeMaterial`0" priority="0" />
+      <Item value="GetConsumableItemsByPart`0" priority="0" />
+      <Item value="RouteStationRepair`0" priority="4" />
+      <Item value="value" priority="7" />
+      <Item value="m_repo" priority="5" />
+      <Item value="MaterialRepository`0" priority="1" />
+      <Item value="instance" priority="1" />
+      <Item value="partNumber" priority="4" />
+      <Item value="shopfloorline" priority="0" />
+      <Item value="source" priority="1" />
+      <Item value="Consume`0" priority="1" />
+      <Item value="log" priority="0" />
+      <Item value="inventoryController" priority="0" />
+      <Item value="PartIdentType`0" priority="0" />
+      <Item value="out" priority="3" />
+      <Item value="transactionId" priority="0" />
+      <Item value="transaction" priority="14" />
+      <Item value="warehouse" priority="0" />
+      <Item value="AdjustmentTransactionType`0" priority="0" />
+      <Item value="transType" priority="0" />
+      <Item value="transId" priority="2" />
+      <Item value="m_consumedInLotId" priority="3" />
+      <Item value="lotId" priority="4" />
+      <Item value="consumedInLotId" priority="0" />
+      <Item value="DataRowAction`0" priority="1" />
+      <Item value="messageHandler" priority="0" />
+      <Item value="UserMessageType`0" priority="0" />
+      <Item value="type" priority="0" />
+      <Item value="Exception" priority="1" />
+      <Item value="ReturnType`0" priority="3" />
+      <Item value="default" priority="11" />
+      <Item value="rval" priority="6" />
+      <Item value="opt" priority="3" />
+      <Item value="using" priority="0" />
+      <Item value="m_unitOfWork" priority="11" />
+      <Item value="SetUpAttribute`0" priority="0" />
+      <Item value="TearDownAttribute`0" priority="3" />
+      <Item value="MaterialsWarehouseInventory`0" priority="0" />
+      <Item value="i" priority="1" />
+      <Item value="m_repository" priority="5" />
+      <Item value="Mock`0" priority="0" />
+      <Item value="uowMock" priority="0" />
+      <Item value="repoMock" priority="1" />
+      <Item value="Expression`0" priority="0" />
+      <Item value="XpoQuery" priority="0" />
+      <Item value="op" priority="0" />
+      <Item value="IQueryable" priority="0" />
+      <Item value="Data" priority="2" />
+      <Item value="TestDelegate" priority="0" />
+      <Item value="AssertionException`0" priority="0" />
+      <Item value="Fakes" priority="0" />
+      <Item value="consumableItem" priority="2" />
+      <Item value="ServiceCodeType`0" priority="0" />
+      <Item value="ServiceMaterialsInventoryController`0" priority="2" />
+      <Item value="ICollection" priority="1" />
+      <Item value="protected" priority="2" />
+      <Item value="virtual" priority="2" />
+      <Item value="CriteriaOperator`0" priority="0" />
+      <Item value="GetAllocationCriteria`0" priority="0" />
+      <Item value="criteria" priority="1" />
+      <Item value="BinaryOperator`0" priority="1" />
+      <Item value="GroupOperator`0" priority="0" />
+      <Item value="op1" priority="0" />
+      <Item value="t" priority="3" />
+      <Item value="r" priority="19" />
+      <Item value="from" priority="14" />
+      <Item value="join" priority="2" />
+      <Item value="on" priority="2" />
+      <Item value="equals" priority="3" />
+      <Item value="where" priority="8" />
+      <Item value="into" priority="1" />
+      <Item value="tc" priority="1" />
+      <Item value="select" priority="6" />
+      <Item value="query" priority="4" />
+      <Item value="repairsGrid" priority="0" />
+      <Item value="repairsView" priority="0" />
+      <Item value="NonPersistentAttribute`0" priority="7" />
+      <Item value="RepairPartConsumed`0" priority="0" />
+      <Item value="Transaction" priority="0" />
+      <Item value="partsUsedGrid" priority="0" />
+      <Item value="partsUsedView" priority="0" />
+      <Item value="controller" priority="2" />
+      <Item value="LoadPartsUsed`0" priority="0" />
+      <Item value="rc" priority="5" />
+      <Item value="failuresView" priority="0" />
+      <Item value="FunctionOperator`0" priority="0" />
+      <Item value="datasource" priority="0" />
+      <Item value="inspectionsView" priority="0" />
+      <Item value="ItemActivation`0" priority="0" />
+      <Item value="LotID`0" priority="0" />
+      <Item value="ListBoxControl`0" priority="0" />
+      <Item value="TModel`0" priority="3" />
+      <Item value="m_disableConditions" priority="2" />
+      <Item value="List&lt;Func&lt;TModel,bool&gt;&gt;" priority="0" />
+      <Item value="condition" priority="0" />
+      <Item value="m_button" priority="1" />
+      <Item value="model" priority="3" />
+      <Item value="disableWhen" priority="0" />
+      <Item value="SetState`0" priority="0" />
+      <Item value="m_model" priority="0" />
+      <Item value="button" priority="0" />
+      <Item value="class" priority="3" />
+      <Item value="INavigatableControl`0" priority="0" />
+      <Item value="PropertyChanged" priority="1" />
+      <Item value="PropertyChangedEventArgs" priority="0" />
+      <Item value="m_name" priority="0" />
+      <Item value="CancelButton" priority="0" />
+      <Item value="cancelButton" priority="1" />
+      <Item value="SimpleButton`0" priority="1" />
+      <Item value="SetupCancelButtonStateController`0" priority="0" />
+      <Item value="CaptureRepository`0" priority="0" />
+      <Item value="FormatException`0" priority="0" />
+      <Item value="rta" priority="1" />
+      <Item value="orderby" priority="0" />
+      <Item value="RaiseChangeEvent`0" priority="1" />
+      <Item value="ObjectChangeEventArgs" priority="1" />
+      <Item value="RaisePropertyChangedEvent`0" priority="6" />
+      <Item value="Changed" priority="2" />
+      <Item value="INotifyPropertyChanged`0" priority="0" />
+      <Item value="float" priority="0" />
+      <Item value="Repairs" priority="3" />
+      <Item value="let" priority="2" />
+      <Item value="rsr" priority="0" />
+      <Item value="GetInterfaceObject`1" priority="0" />
+      <Item value="group" priority="0" />
+      <Item value="m_stationProcess" priority="1" />
+      <Item value="m_cancelControlStateController" priority="1" />
+      <Item value="m_consumptionReversed" priority="2" />
+      <Item value="m_consumptionId" priority="0" />
+      <Item value="ConsumptionReversed" priority="0" />
+      <Item value="Session" priority="2" />
+      <Item value="IsLoading" priority="0" />
+      <Item value="sender" priority="0" />
+      <Item value="searchForm" priority="1" />
+      <Item value="Search" priority="0" />
+      <Item value="SearchForm" priority="0" />
+      <Item value="m_disableMaterialsConsumption" priority="0" />
+      <Item value="m_disableMaterialsTracking" priority="0" />
+      <Item value="disableRealTimeConsumptionCheck" priority="0" />
+      <Item value="result" priority="0" />
+      <Item value="searchDetail" priority="2" />
+      <Item value="Command`0" priority="0" />
+      <Item value="m_orderType" priority="1" />
+      <Item value="OrderType`0" priority="5" />
+      <Item value="switch" priority="0" />
+      <Item value="Order`0" priority="14" />
+      <Item value="orderType" priority="2" />
+      <Item value="CaptureService`0" priority="0" />
+      <Item value="case" priority="4" />
+      <Item value="PurchaseOrder" priority="0" />
+      <Item value="order" priority="9" />
+      <Item value="ViewLoader`0" priority="3" />
+      <Item value="mainOrderForm`0" priority="1" />
+      <Item value="m_isTemplate" priority="0" />
+      <Item value="routeSearchButton" priority="0" />
+      <Item value="BarListItem`0" priority="0" />
+      <Item value="barList" priority="0" />
+      <Item value="m_frontController" priority="0" />
+      <Item value="OrdersCommands`0" priority="3" />
+      <Item value="OrdersNewTemplateCommand`0" priority="0" />
+      <Item value="m_shipMethSuggestions" priority="0" />
+      <Item value="soTabs" priority="2" />
+      <Item value="Never" priority="7" />
+      <Item value="purchaseOrder" priority="1" />
+      <Item value="sourceTypeLookup" priority="0" />
+      <Item value="poTabs" priority="0" />
+      <Item value="Setup`0" priority="0" />
+      <Item value="poText" priority="0" />
+      <Item value="saveAndNewButton" priority="0" />
+      <Item value="Always" priority="0" />
+      <Item value="copyDetailsButton" priority="0" />
+      <Item value="copyTopLevelRollup" priority="0" />
+      <Item value="poLayout" priority="0" />
+      <Item value="rmaLayout" priority="0" />
+      <Item value="otherText" priority="0" />
+      <Item value="Verify" priority="1" />
+      <Item value="IsTemplate" priority="0" />
+      <Item value="String`0" priority="3" />
+      <Item value="stringBuilder" priority="0" />
+      <Item value="m_order" priority="5" />
+      <Item value="TemplateSavedMessage`0" priority="0" />
+      <Item value="ans" priority="0" />
+      <Item value="ib" priority="0" />
+      <Item value="OrderSavedMessage`0" priority="0" />
+      <Item value="MainForm`0" priority="3" />
+      <Item value="m_instance" priority="5" />
+      <Item value="MainForm" priority="0" />
+      <Item value="m_searchDetail" priority="0" />
+      <Item value="o" priority="2" />
+      <Item value="Orders" priority="0" />
+      <Item value="OrderTemplateSelectionView`0" priority="2" />
+      <Item value="view" priority="2" />
+      <Item value="template" priority="8" />
+      <Item value="ot" priority="1" />
+      <Item value="EventHandler`0" priority="0" />
+      <Item value="templatesGrid" priority="0" />
+      <Item value="templatesView" priority="3" />
+      <Item value="OnItemSelected" priority="1" />
+      <Item value="Close`0" priority="2" />
+      <Item value="selectButton" priority="2" />
+      <Item value="GetAndReturnTemplate`0" priority="2" />
+      <Item value="ordersCreateFromTemplateButton" priority="0" />
+      <Item value="BarItem`0" priority="0" />
+      <Item value="barItem_ItemClick`0" priority="0" />
+      <Item value="CreateOrder`0" priority="0" />
+      <Item value="PurchaseOrder`0" priority="3" />
+      <Item value="po" priority="14" />
+      <Item value="templatePo" priority="11" />
+      <Item value="SalesOrder`0" priority="3" />
+      <Item value="so" priority="21" />
+      <Item value="templateSo" priority="18" />
+      <Item value="OrderFactory`0" priority="0" />
+      <Item value="Order" priority="2" />
+      <Item value="OnEditTemplateSelected" priority="0" />
+      <Item value="UseConfiguration" priority="0" />
+      <Item value="m_createdFromTemplate" priority="0" />
+      <Item value="OldestOrderAllocation`0" priority="0" />
+      <Item value="allocationMethods" priority="0" />
+      <Item value="OldestOrderAutoAllocation`0" priority="0" />
+      <Item value="m_spec" priority="1" />
+      <Item value="ShowMessage`0" priority="0" />
+      <Item value="Item" priority="0" />
+      <Item value="DestinationArea" priority="1" />
+      <Item value="_AppDomain`0" priority="0" />
+      <Item value="CartItems" priority="4" />
+      <Item value="ReturnNReplace" priority="0" />
+      <Item value="LineItems" priority="0" />
+      <Item value="m_isGlobal" priority="1" />
+      <Item value="StepResultValidationType`0" priority="1" />
+      <Item value="IComparable`0" priority="0" />
+      <Item value="PartAttributeValues`0" priority="2" />
+      <Item value="m_listener" priority="0" />
+      <Item value="m_partAttributeValues" priority="0" />
+      <Item value="values" priority="0" />
+      <Item value="AttributeSpecification`0" priority="1" />
+      <Item value="m_specification" priority="2" />
+      <Item value="m_specifications" priority="1" />
+      <Item value="List&lt;AttributeSpecification&gt;" priority="0" />
+      <Item value="AttributeSpecification" priority="0" />
+      <Item value="Bootloader" priority="0" />
+      <Item value="ShipmentFacts`0" priority="12" />
+      <Item value="messageListener" priority="1" />
+      <Item value="IShippingRule`0" priority="11" />
+      <Item value="m_rules" priority="13" />
+      <Item value="List&lt;IShippingRule&gt;" priority="0" />
+      <Item value="lineItem" priority="6" />
+      <Item value="UserMessageBuilder`0" priority="3" />
+      <Item value="messageBuilder" priority="16" />
+      <Item value="Validation" priority="11" />
+      <Item value="error" priority="8" />
+      <Item value="m_shipQty" priority="0" />
+      <Item value="m_messageBuilder" priority="2" />
+      <Item value="ExceedsExpectedQty`0" priority="1" />
+      <Item value="ExceedsLotQty`0" priority="0" />
+      <Item value="LineItemIsShippable`0" priority="0" />
+      <Item value="PartIsExpected`0" priority="0" />
+      <Item value="UnitCompletedRequiredServiceRoute`0" priority="0" />
+      <Item value="UnitHasFinishedProcessing`0" priority="0" />
+      <Item value="UnitIsInTheCorrectShippingDomain`0" priority="0" />
+      <Item value="UnitIsOnHold`0" priority="0" />
+      <Item value="UnitHasCorrectShopfloorProgram`0" priority="0" />
+      <Item value="ICommand`0" priority="3" />
+      <Item value="shipment" priority="8" />
+      <Item value="Shipment`0" priority="14" />
+      <Item value="m_shipment" priority="3" />
+      <Item value="itemShipped" priority="0" />
+      <Item value="ItemShipped`0" priority="1" />
+      <Item value="m_itemShipped" priority="1" />
+      <Item value="m_qty" priority="0" />
+      <Item value="m_shipmentHandler" priority="0" />
+      <Item value="shipmentHandler" priority="0" />
+      <Item value="OnShipInventoryRecords`0" priority="0" />
+      <Item value="UpdateSerialInfoForShipment`0" priority="0" />
+      <Item value="UpdateUnitQtyFromShipment`0" priority="0" />
+      <Item value="RemoveItemFromInventory`0" priority="0" />
+      <Item value="m_inventoryRemover" priority="0" />
+      <Item value="m_transactionWriter" priority="0" />
+      <Item value="m_transaction" priority="1" />
+      <Item value="m_shipmentRecordWriter" priority="0" />
+      <Item value="SerializedUnit" priority="4" />
+      <Item value="SerialNumber" priority="0" />
+      <Item value="TMessage`0" priority="1" />
+      <Item value="m_message" priority="0" />
+      <Item value="IChain`0" priority="1" />
+      <Item value="ChainCommand`0" priority="1" />
+      <Item value="m_successor" priority="0" />
+      <Item value="IChainCommand`0" priority="2" />
+      <Item value="successor" priority="0" />
+      <Item value="command" priority="1" />
+      <Item value="m_next" priority="1" />
+      <Item value="abstract" priority="0" />
+      <Item value="NotSupportedException" priority="0" />
+      <Item value="ShipmentScript`0" priority="5" />
+      <Item value="IMapper" priority="8" />
+      <Item value="Packlist`0" priority="1" />
+      <Item value="ShipmentMapper" priority="1" />
+      <Item value="ShipmentFacts" priority="1" />
+      <Item value="TransactionMapper" priority="0" />
+      <Item value="AddFamilyMemberValidator`0" priority="0" />
+      <Item value="DfileActionDataAdapter`0" priority="0" />
+      <Item value="IInitializationExpression`0" priority="1" />
+      <Item value="ContainerProvider`0" priority="2" />
+      <Item value="MemoryInstanceMemento`0" priority="0" />
+      <Item value="ContainerProvider" priority="0" />
+      <Item value="IContainer`0" priority="0" />
+      <Item value="ThreadStaticAttribute`0" priority="1" />
+      <Item value="ObjectFactory`0" priority="2" />
+      <Item value="Container`0" priority="0" />
+      <Item value="KeyAttribute`0" priority="0" />
+      <Item value="AutoGenerate" priority="0" />
+      <Item value="VPLiteObject`0" priority="0" />
+      <Item value="SalesLineItemSchedule`0" priority="4" />
+      <Item value="SalesLineItemSchedule" priority="1" />
+      <Item value="Session`0" priority="1" />
+      <Item value="m_schedule" priority="0" />
+      <Item value="session" priority="0" />
+      <Item value="DateTime`0" priority="2" />
+      <Item value="m_scheduledDate" priority="1" />
+      <Item value="ScheduledDate" priority="0" />
+      <Item value="DateTimeConverter`0" priority="0" />
+      <Item value="GetCollection`1" priority="1" />
+      <Item value="AssociationAttribute`0" priority="0" />
+      <Item value="AggregatedAttribute`0" priority="0" />
+      <Item value="Schedules" priority="1" />
+      <Item value="Status" priority="3" />
+      <Item value="Closed" priority="0" />
+      <Item value="Open" priority="0" />
+      <Item value="QtyDue`0" priority="1" />
+      <Item value="Scheduled" priority="0" />
+      <Item value="openScheduled" priority="2" />
+      <Item value="ci" priority="0" />
+      <Item value="ILineItem`0" priority="4" />
+      <Item value="lineItems" priority="0" />
+      <Item value="IList" priority="0" />
+      <Item value="ProcessedQty" priority="3" />
+      <Item value="Quantity" priority="2" />
+      <Item value="XPCollection`0" priority="0" />
+      <Item value="ScheduledSalesLineItem`0" priority="3" />
+      <Item value="ScheduledLineItems" priority="1" />
+      <Item value="sli" priority="0" />
+      <Item value="ITransactionScript`0" priority="0" />
+      <Item value="For`0" priority="3" />
+      <Item value="FactShipmentMapper`0" priority="8" />
+      <Item value="ShipmentTransactionMapper`0" priority="2" />
+      <Item value="Container" priority="0" />
+      <Item value="Shipment" priority="0" />
+      <Item value="IXPReceiveOnChangedFromXPPropertyDescriptor`0" priority="0" />
+      <Item value="mo" priority="1" />
+      <Item value="MemberDesignTimeVisibilityAttribute`0" priority="0" />
+      <Item value="sf" priority="5" />
+      <Item value="SafeDataReader`0" priority="0" />
+      <Item value="TSource`0" priority="0" />
+      <Item value="MapperRegistry`0" priority="0" />
+      <Item value="Fact`0" priority="2" />
+      <Item value="mapper" priority="0" />
+      <Item value="shipmentMapper" priority="1" />
+      <Item value="transactionMapper" priority="0" />
+      <Item value="IShipmentScript`0" priority="2" />
+      <Item value="LogType`0" priority="0" />
+      <Item value="IContainerProvider`0" priority="1" />
+      <Item value="m_containerProvider" priority="1" />
+      <Item value="script" priority="2" />
+      <Item value="shipper" priority="0" />
+      <Item value="CurrentOrder" priority="0" />
+      <Item value="CurrentInventoryItem" priority="0" />
+      <Item value="ShipInventoryItem`0" priority="2" />
+      <Item value="Void`0" priority="1" />
+      <Item value="SalesLineItem`0" priority="4" />
+      <Item value="ILineItemOpenQtyManager`0" priority="0" />
+      <Item value="m_lineStatusManager" priority="1" />
+      <Item value="LineItemStatus`0" priority="4" />
+      <Item value="IShippingLineStatusManager`0" priority="1" />
+      <Item value="ICustomFunctionOperatorQueryable`0" priority="0" />
+      <Item value="OrderService`0" priority="0" />
+      <Item value="m_processedQtyLocator" priority="1" />
+      <Item value="ProcessedQtyLocator" priority="0" />
+      <Item value="TextEditor" priority="2" />
+      <Item value="SalesItemMapper`0" priority="0" />
+      <Item value="PartReplacementInput`0" priority="0" />
+      <Item value="binder" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.IMaterialItem">
+      <Item value="Qty" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DevExpress.XtraEditors.CheckEdit">
+      <Item value="AccessibleDescription" priority="0" />
+      <Item value="DataBindings" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ControlBindingsCollection">
+      <Item value="Add`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DevExpress.XtraEditors.MemoEdit">
+      <Item value="Properties" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DevExpress.XtraEditors.Repository.RepositoryItemMemoEdit">
+      <Item value="ReadOnly" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.Packlist">
+      <Item value="ShippingConfiguration" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.ShippingConfiguration">
+      <Item value="ShopfloorlineProgram" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SCOUT.Scout">
+      <Item value="Core" priority="35" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Scout">
+      <Item value="UserInteraction" priority="8" />
+      <Item value="Service`1" priority="0" />
+      <Item value="Mapping" priority="2" />
+      <Item value="Data" priority="19" />
+      <Item value="Container" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.IUserInteractionProvider">
+      <Item value="Dialog" priority="9" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Services.IDialogService">
+      <Item value="ShowMessage`0" priority="9" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DevExpress.XtraEditors.TextEdit">
+      <Item value="Focus`0" priority="0" />
+      <Item value="Text" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.MaterialWarehouseItem">
+      <Item value="RackLocation" priority="0" />
+      <Item value="Part" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@DevExpress.Xpo.XpoDefault">
+      <Item value="Session" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.Domain">
+      <Item value="Label" priority="0" />
+      <Item value="IsShippable" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Tests.Domain.Fakes.FakePart">
+      <Item value="Session" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.Transaction">
+      <Item value="Comments" priority="2" />
+      <Item value="TransId" priority="7" />
+      <Item value="Part" priority="1" />
+      <Item value="DepartLocation" priority="0" />
+      <Item value="Qty" priority="0" />
+      <Item value="ConsumedInLotId" priority="2" />
+      <Item value="Item" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.RouteStationRepair">
+      <Item value="Session" priority="0" />
+      <Item value="Components" priority="11" />
+      <Item value="Repair" priority="0" />
+      <Item value="Failure" priority="1" />
+      <Item value="Item" priority="2" />
+      <Item value="HasConsumedRepairParts" priority="0" />
+      <Item value="IsNew" priority="2" />
+      <Item value="IsDirty" priority="0" />
+      <Item value="RaiseComponentsChanged`0" priority="1" />
+      <Item value="HasChanges`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Exception">
+      <Item value="Message" priority="5" />
+      <Item value="GetBaseException`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.ReceiptFacts">
+      <Item value="SerialNumber" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Providers.ILoggingProvider">
+      <Item value="Log`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Services.IInventoryService">
+      <Item value="DuplicateSNItemExists`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Mvc.MaterialsConsumptionModel">
+      <Item value="PartsToConsume" priority="1" />
+      <Item value="ConsumptionDescription" priority="1" />
+      <Item value="ConsumptionRequests" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.KeyValuePair`2">
+      <Item value="Key" priority="0" />
+      <Item value="Value" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DevExpress.XtraGrid.GridControl">
+      <Item value="DataSource" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.ItemStationMaterialsTask">
+      <Item value="Task" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.StationMaterialsTask">
+      <Item value="Configuration" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.BomConfiguration">
+      <Item value="Session" priority="1" />
+      <Item value="Description" priority="1" />
+      <Item value="ConfigurationItems" priority="0" />
+      <Item value="Shopfloorline" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Providers.IMappingProvider">
+      <Item value="DynamicMap`2" priority="1" />
+      <Item value="GetMapper`2" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Modules.Materials.PartToConsume">
+      <Item value="Part" priority="0" />
+      <Item value="Qty" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Mvc.MvcEventsController">
+      <Item value="RegisterActionRequestHandler`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@AutoMapper.Mapper">
+      <Item value="CreateMap`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AutoMapper.IMappingExpression`2">
+      <Item value="ConstructUsing`0" priority="2" />
+      <Item value="ForMember`0" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.BomConfigurationItem">
+      <Item value="BomComponent" priority="1" />
+      <Item value="Qty" priority="1" />
+      <Item value="UsageAction" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.BomMasterComponent">
+      <Item value="Part" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.IDataProvider">
+      <Item value="GetUnitOfWork`0" priority="8" />
+      <Item value="GetRepository`0" priority="8" />
+      <Item value="Get`1" priority="0" />
+      <Item value="Save`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.RepairComponent">
+      <Item value="PartIn" priority="3" />
+      <Item value="Repair" priority="5" />
+      <Item value="IsNew" priority="3" />
+      <Item value="ConsumptionId" priority="11" />
+      <Item value="ConsumptionReversed" priority="1" />
+      <Item value="HasChanges`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DevExpress.XtraEditors.LookUpEdit">
+      <Item value="EditValue" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="AddRange`0" priority="13" />
+      <Item value="Add`0" priority="8" />
+      <Item value="Count" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.RouteStationFailure">
+      <Item value="Repairs" priority="10" />
+      <Item value="IsNew" priority="3" />
+      <Item value="GetRepairPartsUsed`0" priority="0" />
+      <Item value="StationProcess" priority="0" />
+      <Item value="Item" priority="3" />
+      <Item value="HasConsumedRepairParts" priority="1" />
+      <Item value="Id" priority="1" />
+      <Item value="RaiseRepairChanged`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.RouteStationProcess">
+      <Item value="GetNewRepairPartsUsed`0" priority="0" />
+      <Item value="Item" priority="1" />
+      <Item value="NotifyRepairComponentAdded`0" priority="0" />
+      <Item value="RepairComponentAdded" priority="2" />
+      <Item value="AddFailure`0" priority="0" />
+      <Item value="Failures" priority="1" />
+      <Item value="AllProcessFailures" priority="0" />
+      <Item value="Changed" priority="0" />
+      <Item value="RaiseFailuresChanged`0" priority="0" />
+      <Item value="HasChanges`0" priority="0" />
+      <Item value="HasNewMaterialsConsumed`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SCOUT.WinForms.Core.FrontController">
+      <Item value="GetInstance`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.WinForms.Core.FrontController">
+      <Item value="RunCommand`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.InventoryItem">
+      <Item value="Shopfloorline" priority="4" />
+      <Item value="CurrentProcess" priority="1" />
+      <Item value="LotId" priority="5" />
+      <Item value="Part" priority="3" />
+      <Item value="DeductShipment`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.WinForms.Core.IOutputCommand`1">
+      <Item value="Output" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SCOUT.WinForms.Core.MaterialCommands">
+      <Item value="ConsumeRepairParts" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Materials.Messages.MaterialsPartConsumed">
+      <Item value="Part" priority="0" />
+      <Item value="Qty" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Bus.EventBus">
+      <Item value="Register`1" priority="0" />
+      <Item value="Raise`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Modules.Materials.MaterialsConsumptionTracker">
+      <Item value="Process`0" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DevExpress.Xpo.XPCollection`1">
+      <Item value="CollectionChanged" priority="1" />
+      <Item value="Add`0" priority="2" />
+      <Item value="Count" priority="5" />
+      <Item value="Where`1" priority="6" />
+      <Item value="FirstOrDefault`1" priority="1" />
+      <Item value="Contains`1" priority="0" />
+      <Item value="Components" priority="2" />
+      <Item value="ListChanged" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DevExpress.Xpo.XPCollectionChangedEventArgs">
+      <Item value="CollectionChangedType" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Modules.Materials.StationMaterialsConsumptionTracker">
+      <Item value="MonitorProcess`0" priority="1" />
+      <Item value="GetPartsToConsume`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SCOUT.Tests.Domain.Xpo">
+      <Item value="CreateXPObject`1" priority="4" />
+      <Item value="UnitOfWork`0" priority="6" />
+      <Item value="Destroy`0" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@NUnit.Framework.Assert">
+      <Item value="That`0" priority="7" />
+      <Item value="Throws`1" priority="0" />
+      <Item value="IsInstanceOf`1" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Modules.Materials.IPartsConsumptionView">
+      <Item value="SetState`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SCOUT.Core.Data.MaterialRepository">
+      <Item value="GetConsumableItemsByPart`0" priority="1" />
+      <Item value="GetConsumableItemByPart`0" priority="1" />
+      <Item value="GetMaterialsConsumed`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.PartReplacementService">
+      <Item value="Save`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.Shopfloorline">
+      <Item value="GetPartReplacementService`0" priority="1" />
+      <Item value="Id" priority="7" />
+      <Item value="UseMaterialsInventory" priority="0" />
+      <Item value="Label" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SCOUT.Core.Services.MaterialService">
+      <Item value="AdjustMaterialConsumableItem`0" priority="1" />
+      <Item value="WriteIssueOutTransaction`0" priority="0" />
+      <Item value="WriteConsumptionTransaction`0" priority="2" />
+      <Item value="ConsumeMaterial`0" priority="2" />
+      <Item value="UndoMaterialsConsumption`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Providers.Data.IRepository">
+      <Item value="Get`1" priority="12" />
+      <Item value="Save`0" priority="1" />
+      <Item value="UnitOfWork" priority="0" />
+      <Item value="Create`1" priority="0" />
+      <Item value="Find`1" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.MaterialConsumableItem">
+      <Item value="Part" priority="5" />
+      <Item value="Shopfloorline" priority="3" />
+      <Item value="DecreaseQty`0" priority="1" />
+      <Item value="ThrowIfNull`0" priority="0" />
+      <Item value="Qty" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.Part">
+      <Item value="Id" priority="11" />
+      <Item value="PartNumber" priority="5" />
+      <Item value="Session" priority="0" />
+      <Item value="ThrowIfNull`0" priority="0" />
+      <Item value="DisableMaterialsTracking" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Modules.Materials.MaterialsConsumableInventory">
+      <Item value="DecreaseItemQty`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SCOUT.Core.Modules.Materials.MaterialsConsumableInventory">
+      <Item value="ByShopfloorline`0" priority="0" />
+      <Item value="DefaultSearchExpression`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SCOUT.Core.Utils.ExecutionHelpers">
+      <Item value="ThrowIfNull`0" priority="4" />
+      <Item value="TryLoopOn`1" priority="1" />
+      <Item value="TryCatchMessage`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Utils.ExecutionLoop">
+      <Item value="TryLoopOn`1" priority="1" />
+      <Item value="ExecutionCount" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.ReplacementComponentFacts">
+      <Item value="PartIn" priority="9" />
+      <Item value="Repair" priority="1" />
+      <Item value="ConsumptionId" priority="0" />
+      <Item value="Shopfloorline" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.XpoUnitOfWork">
+      <Item value="ReloadChangedObjects`0" priority="0" />
+      <Item value="OnLockingException" priority="0" />
+      <Item value="CommitChanges`0" priority="0" />
+      <Item value="Dispose`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Mvc.LockingExceptionEventArgs">
+      <Item value="UnitOfWork" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.IUnitOfWork">
+      <Item value="ReloadChangedObjects`0" priority="2" />
+      <Item value="OnLockingException" priority="0" />
+      <Item value="Commit`0" priority="0" />
+      <Item value="GetObjectsToSave`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Modules.Shopfloor.ServiceMaterialsInventoryController">
+      <Item value="Consume`0" priority="2" />
+      <Item value="Undo`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.PartReplacementValidator">
+      <Item value="Validated`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SCOUT.Core.Data.PartReplacementService">
+      <Item value="Save`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SCOUT.Core.ExceptionHelpers">
+      <Item value="ShowMessageOnException`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Delegate">
+      <Item value="DynamicInvoke`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SCOUT.Core.Messaging.UserMessageType">
+      <Item value="Error" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AutoMapper.IMemberConfigurationExpression`1">
+      <Item value="Ignore`0" priority="1" />
+      <Item value="UseValue`0" priority="0" />
+      <Item value="MapFrom`1" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Providers.Data.XpoRepository">
+      <Item value="Get`1" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Moq.Mock`1">
+      <Item value="As`1" priority="0" />
+      <Item value="Object" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DevExpress.Xpo.UnitOfWork">
+      <Item value="GetObjects`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.IQueryable`1">
+      <Item value="FirstOrDefault`1" priority="1" />
+      <Item value="Where`1" priority="1" />
+      <Item value="ToList`1" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="Count`1" priority="5" />
+      <Item value="Equals`0" priority="0" />
+      <Item value="SingleOrDefault`1" priority="1" />
+      <Item value="Take`1" priority="0" />
+      <Item value="First`1" priority="1" />
+      <Item value="ToList`1" priority="1" />
+      <Item value="Sum`1" priority="0" />
+      <Item value="Select`2" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DevExpress.XtraGrid.Views.Grid.GridView">
+      <Item value="GetFocusedRow`0" priority="3" />
+      <Item value="DoubleClick" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DevExpress.XtraEditors.ButtonEdit">
+      <Item value="Enabled" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TModel">
+      <Item value="PropertyChanged" priority="0" />
+      <Item value="Changed" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.WinForms.Controls.ButtonStateController`1">
+      <Item value="AddDisableCondition`0" priority="1" />
+      <Item value="IsEnabled`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Tests.UI.TestModel">
+      <Item value="Name" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DevExpress.Xpo.ObjectChangeEventArgs">
+      <Item value="PropertyName" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.WinForms.Controls.ControlStateController`1">
+      <Item value="AddDisableCondition`0" priority="0" />
+      <Item value="SetState`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.VPObject">
+      <Item value="Session" priority="0" />
+      <Item value="Equals`0" priority="0" />
+      <Item value="HasChanges`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SCOUT.WinForms.Core.ViewLoader">
+      <Item value="Instance`0" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.WinForms.mainOrderForm">
+      <Item value="Closing" priority="0" />
+      <Item value="Closed" priority="0" />
+      <Item value="Disposed" priority="0" />
+      <Item value="FormClosed" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.WinForms.Views.Warehouse.Shipping.ShippingSession">
+      <Item value="UnitOfWork" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SCOUT.WinForms.Reports.ReportDirectory">
+      <Item value="ReportPath" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.WinForms.SearchForm">
+      <Item value="AcceptButton" priority="0" />
+      <Item value="LoadUserQuery`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.WinForms.Search.SearchDetail`1">
+      <Item value="MdiParent" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SCOUT.Core.Data.OrderType">
+      <Item value="PurchaseOrder" priority="0" />
+      <Item value="SalesOrder" priority="0" />
+      <Item value="ReturnNReplace" priority="0" />
+      <Item value="ADEX" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SCOUT.Core.Data.OrderTypeHelpers">
+      <Item value="GetOrderTypeFromString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SCOUT.Core.Services.OrderService">
+      <Item value="CreateOrderAsArg`0" priority="0" />
+      <Item value="GetShipQtyForLine`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.WinForms.Core.ViewLoader">
+      <Item value="CreateFormWithArgs`1" priority="2" />
+      <Item value="ShowForm`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DevExpress.XtraBars.ListItemClickEventArgs">
+      <Item value="Item" priority="2" />
+      <Item value="Index" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DevExpress.XtraBars.BarItem">
+      <Item value="Caption" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DevExpress.XtraBars.ItemClickEventArgs">
+      <Item value="Item" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DevExpress.XtraBars.BarListItem">
+      <Item value="Strings" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SCOUT.WinForms.Core.OrdersCommands">
+      <Item value="New_Template" priority="0" />
+      <Item value="New_FromTemplate" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.SalesOrder">
+      <Item value="Order" priority="1" />
+      <Item value="Activity" priority="1" />
+      <Item value="BillToAccount" priority="1" />
+      <Item value="BillToAddress" priority="1" />
+      <Item value="Contact" priority="1" />
+      <Item value="NewPacklistUponShipment" priority="1" />
+      <Item value="Notes" priority="1" />
+      <Item value="Organization" priority="1" />
+      <Item value="PaymentTerms" priority="1" />
+      <Item value="RequiredProgram" priority="1" />
+      <Item value="RequiredServiceRoute" priority="1" />
+      <Item value="SalesRep" priority="1" />
+      <Item value="SalesStatus" priority="1" />
+      <Item value="SalesTax" priority="1" />
+      <Item value="ShipmentDomainStatus" priority="1" />
+      <Item value="ShipMethod" priority="1" />
+      <Item value="ShipToAddress" priority="1" />
+      <Item value="Shopfloorline" priority="1" />
+      <Item value="TurnAroundTime" priority="1" />
+      <Item value="UseConfiguration" priority="1" />
+      <Item value="GetLineByPart`0" priority="0" />
+      <Item value="ExpectedQtyForPart`0" priority="0" />
+      <Item value="Session" priority="0" />
+      <Item value="GetShipmentLineByPart`0" priority="0" />
+      <Item value="GetCurrentPacklist`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.Order">
+      <Item value="IsTemplate" priority="7" />
+      <Item value="Error" priority="1" />
+      <Item value="OrderType" priority="1" />
+      <Item value="Contracts" priority="0" />
+      <Item value="GetContract`1" priority="3" />
+      <Item value="Session" priority="0" />
+      <Item value="CreatedFromTemplate" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DevExpress.XtraLayout.TabbedControlGroup">
+      <Item value="TabPages" priority="2" />
+      <Item value="Visibility" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DevExpress.XtraLayout.LayoutGroup">
+      <Item value="Visible" priority="0" />
+      <Item value="Visibility" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.PurchaseOrder">
+      <Item value="Order" priority="0" />
+      <Item value="Buyer" priority="2" />
+      <Item value="Contact" priority="1" />
+      <Item value="Notes" priority="1" />
+      <Item value="Organization" priority="1" />
+      <Item value="Program" priority="1" />
+      <Item value="RecDomain" priority="1" />
+      <Item value="ReturnType" priority="1" />
+      <Item value="RoutingRequired" priority="1" />
+      <Item value="ServiceRoute" priority="1" />
+      <Item value="SourceType" priority="1" />
+      <Item value="Shopfloorline" priority="1" />
+      <Item value="Status" priority="1" />
+      <Item value="WorkInstructions" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DevExpress.XtraBars.BarButtonItem">
+      <Item value="Visibility" priority="2" />
+      <Item value="Tag" priority="0" />
+      <Item value="ItemClick" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@DevExpress.XtraBars.BarItemVisibility">
+      <Item value="Never" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DevExpress.XtraLayout.LayoutControlItem">
+      <Item value="Visibility" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.BrokenRules">
+      <Item value="IsTrue`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="IsNullOrEmpty`0" priority="3" />
+      <Item value="Format`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Text.StringBuilder">
+      <Item value="Append`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.WinForms.InfoBox">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SCOUT.Core.Data.OrderRepository">
+      <Item value="GetOrderTemplates`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DevExpress.XtraEditors.SimpleButton">
+      <Item value="Click" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SCOUT.Core.Data.OrderFactory">
+      <Item value="CreateOrder`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.IArea">
+      <Item value="Label" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Modules.Shopfloor.AttributeSpecification">
+      <Item value="ValidationType" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.ShipmentFacts">
+      <Item value="SalesOrder" priority="13" />
+      <Item value="Item" priority="14" />
+      <Item value="ShipQty" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Messaging.UserMessageBuilder">
+      <Item value="AddMessage`0" priority="9" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.IShippingRule">
+      <Item value="IsBroken`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Messaging.IUserMessageBuilder">
+      <Item value="FlatContents" priority="0" />
+      <Item value="AddMessage`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.Handlers.ItemShipped">
+      <Item value="UpdateSerialInfoForShipment`0" priority="0" />
+      <Item value="UpdateUnitQtyFromShipment`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.Handlers.RemoveItemFromInventory">
+      <Item value="Remove`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Warehouse.Shipping.Handlers.ShipmentTransactionWriter">
+      <Item value="Write`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Modules.Warehouse.Shipping.Handlers.ShipmentRecordWriter">
+      <Item value="Write`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.SerializedUnit">
+      <Item value="EndIdent" priority="0" />
+      <Item value="ReturnEndDate" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.Shipment">
+      <Item value="ShipDate" priority="0" />
+      <Item value="Qty" priority="1" />
+      <Item value="Item" priority="0" />
+      <Item value="LineItem" priority="0" />
+      <Item value="Part" priority="0" />
+      <Item value="DepartureDomain" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.IMapper`2">
+      <Item value="MapFrom`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@StructureMap.ObjectFactory">
+      <Item value="Initialize`0" priority="1" />
+      <Item value="With`0" priority="0" />
+      <Item value="GetInstance`1" priority="3" />
+      <Item value="Configure`0" priority="0" />
+      <Item value="GetAllInstances`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:StructureMap.IInitializationExpression">
+      <Item value="For`0" priority="0" />
+      <Item value="ForConcreteType`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.SalesLineItem">
+      <Item value="Session" priority="0" />
+      <Item value="UpdateStatusFromShipment`0" priority="0" />
+      <Item value="ProcessedQty" priority="0" />
+      <Item value="UpdateStatusFromUnShipment`0" priority="0" />
+      <Item value="Quantity" priority="0" />
+      <Item value="Status" priority="1" />
+      <Item value="PartNumber" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.SalesLineItemSchedule">
+      <Item value="ScheduledDate" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="Now" priority="1" />
+      <Item value="Compare`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.ScheduledSalesLineItem">
+      <Item value="PartId" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:StructureMap.Configuration.DSL.Expressions.CreatePluginFamilyExpression`1">
+      <Item value="Use`0" priority="4" />
+      <Item value="Add`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:StructureMap.Pipeline.SmartInstance`1">
+      <Item value="SetProperty`0" priority="2" />
+      <Item value="Ctor`1" priority="6" />
+      <Item value="Name" priority="0" />
+      <Item value="Named`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.ShipmentScript">
+      <Item value="TransactionMapper" priority="3" />
+      <Item value="ShipmentMapper" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:StructureMap.Pipeline.SmartInstance`1+DependencyExpression`1">
+      <Item value="Is`1" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:StructureMap.ConfigurationExpression">
+      <Item value="AddRegistry`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@SCOUT.Core.IOC.BootstrapContainer">
+      <Item value="Initialize`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Providers.IContainerProvider">
+      <Item value="GetInstance`1" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.IShipmentScript">
+      <Item value="Run`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.OrderAllocationItem">
+      <Item value="SalesOrder" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Services.IShippingService">
+      <Item value="ShipInventoryItem`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.ILineStatusManager">
+      <Item value="UpdateStatusFromShipment`0" priority="0" />
+      <Item value="GetStatusAfterShipment`0" priority="0" />
+      <Item value="GetStatusAfterUnship`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.ILineItem">
+      <Item value="Quantity" priority="0" />
+      <Item value="ProcessedQty" priority="0" />
+      <Item value="OpenQty" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:SCOUT.Core.Data.IShippingOpenQtyManager">
+      <Item value="OpenQty`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Func`2">
+      <Item value="Invoke`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Sts.UI.Core.MVP.Binding.ScreenBinder`1">
+      <Item value="BindProperty`0" priority="1" />
+      <Item value="To`0" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

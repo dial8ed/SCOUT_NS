@@ -1,0 +1,165 @@
+using System;
+using System.Collections.Generic;
+using DevExpress.Data.Filtering;
+
+namespace SCOUT.Core.Data
+{
+    public interface IShipmentAllocation
+    {
+        ShipmentFacts MapAllocationToFacts(InventoryItem item);
+        ICollection<OrderAllocationItem> GetOrdersByPartNumber(IUnitOfWork uow, Shopfloorline shopfloorline, Part part);
+        string Id { get; }
+        string DisplayName { get; }
+        string TypeName { get; }
+        bool AutoAllocateItems { get; }
+        bool PrintShipmentLabel { get; }
+        object[] ShipmentLabelValues { get; }
+    }
+
+    public abstract class ShipmentAllocationMethodBase : IShipmentAllocation
+    {
+        public object[] ShipmentLabelValues { get; private set; }
+
+        public ShipmentFacts MapAllocationToFacts(InventoryItem item)
+        {
+            ShipmentFacts facts = null;
+
+            var criteria = GetAllocationCriteria(item);
+
+            OrderAllocationItem allocationItem =
+                Scout.Core.Data
+                    .Get<OrderAllocationItem>(item.Session)
+                    .ByCriteria(criteria);
+
+            if (allocationItem != null)
+            {
+                facts = new ShipmentFacts(
+                        allocationItem.SalesOrder,
+                        item,
+                        item.Qty,
+                        allocationItem.LineItemIdentifier,
+                        allocationItem                        
+                    );
+
+                ShipmentLabelValues = new object[] {allocationItem.LineItemIdentifier, item.PartNumber };
+            }
+
+            return facts;
+        }
+
+
+        protected virtual CriteriaOperator GetAllocationCriteria(InventoryItem item)
+        {
+            BinaryOperator op1 = new BinaryOperator("Shopfloorline", item.Shopfloorline);
+            BinaryOperator op2 = new BinaryOperator("AllocationMethod", Id);
+            BinaryOperator op3 = new BinaryOperator("Rank", 1);
+            BinaryOperator op4 = new BinaryOperator("Part", item.Part);
+
+            GroupOperator criteria = new GroupOperator(op1, op2, op3, op4);
+
+            return criteria;
+        }
+    
+        public ICollection<OrderAllocationItem> GetOrdersByPartNumber(IUnitOfWork uow, Shopfloorline shopfloorline, Part part)
+        {
+            BinaryOperator op1 = new BinaryOperator("Shopfloorline", shopfloorline);
+            BinaryOperator op2 = new BinaryOperator("AllocationMethod", Id);            
+            BinaryOperator op3 = new BinaryOperator("Part", part);
+
+            GroupOperator criteria = new GroupOperator(op1, op2, op3);
+            
+            return Scout.Core.Data
+                    .GetList<OrderAllocationItem>(uow)
+                    .ByCriteria(criteria);
+        }
+
+        public abstract string Id { get;}
+     
+        public abstract string DisplayName { get; }
+
+        public  string TypeName { get { return this.GetType().ToString(); } }
+
+        public abstract bool AutoAllocateItems { get; }
+
+        public virtual bool PrintShipmentLabel { get { return false; } }
+      
+    }
+
+    public class OldestOrderAllocation : ShipmentAllocationMethodBase
+    {
+        public override string Id
+        {
+            get { return "OldestOrder"; }
+        }
+
+        public override string DisplayName
+        {
+            get { return "Oldest Order"; }
+        }
+
+        public override bool AutoAllocateItems
+        {
+            get { return false; }
+        }
+    }
+
+
+    public class OldestOrderAutoAllocation : OldestOrderAllocation
+    {
+        public override bool AutoAllocateItems
+        {
+            get { return true; }
+        }
+    }
+
+    public class SameOrderAllocation : ShipmentAllocationMethodBase
+    {
+        public override string Id
+        {
+            get { return "SameOrder"; }
+        }
+
+        public override string DisplayName
+        {
+            get { return "Same Order"; }
+        }
+
+        public override bool AutoAllocateItems
+        {
+            get { return true; }
+        }
+
+        protected override CriteriaOperator GetAllocationCriteria(InventoryItem item)
+        {
+            var op1 = new BinaryOperator("LineItemIdentifier", item.LotId);
+            var op2 = new BinaryOperator("AllocationMethod", Id);
+            return new GroupOperator(op1, op2);
+        }
+    }
+
+    public class DellLpnAllocation: ShipmentAllocationMethodBase
+    {
+        public override string Id
+        {
+            get { return "DellLpn"; }
+        }
+
+        public override string DisplayName
+        {
+            get { return "Dell LPN"; }
+        }
+
+        public override bool AutoAllocateItems
+        {
+            get { return true; }
+        }
+
+        public override bool PrintShipmentLabel
+        {
+            get
+            {
+                return true;
+            }
+        }
+    }
+}

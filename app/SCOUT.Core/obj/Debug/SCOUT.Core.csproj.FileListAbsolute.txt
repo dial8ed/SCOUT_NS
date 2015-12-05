@@ -1,0 +1,35 @@
+F:\Source\SCOUT NS FRESH\app\SCOUT.Core\bin\Debug\SCOUT.Core.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.Core\bin\Debug\SCOUT.Core.pdb
+F:\Source\SCOUT NS FRESH\app\SCOUT.Core\bin\Debug\DevExpress.Data.v10.1.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.Core\bin\Debug\DevExpress.Xpo.v10.1.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.Core\bin\Debug\DevExpress.Data.v10.1.xml
+F:\Source\SCOUT NS FRESH\app\SCOUT.Core\bin\Debug\DevExpress.Xpo.v10.1.xml
+F:\Source\SCOUT NS FRESH\app\SCOUT.Core\obj\Debug\ResolveAssemblyReference.cache
+F:\Source\SCOUT NS FRESH\app\SCOUT.Core\obj\Debug\SCOUT.Core.dll.licenses
+F:\Source\SCOUT NS FRESH\app\SCOUT.Core\obj\Debug\SCOUT.Core.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.Core\obj\Debug\SCOUT.Core.pdb
+F:\Source\SCOUT NS\app\SCOUT.Core\bin\Debug\SCOUT.Core.dll
+F:\Source\SCOUT NS\app\SCOUT.Core\bin\Debug\SCOUT.Core.pdb
+F:\Source\SCOUT NS\app\SCOUT.Core\bin\Debug\DevExpress.Data.v10.1.dll
+F:\Source\SCOUT NS\app\SCOUT.Core\bin\Debug\DevExpress.Xpo.v10.1.dll
+F:\Source\SCOUT NS\app\SCOUT.Core\bin\Debug\DevExpress.Data.v10.1.xml
+F:\Source\SCOUT NS\app\SCOUT.Core\bin\Debug\DevExpress.Xpo.v10.1.xml
+F:\Source\SCOUT NS\app\SCOUT.Core\obj\Debug\ResolveAssemblyReference.cache
+F:\Source\SCOUT NS\app\SCOUT.Core\obj\Debug\SCOUT.Core.dll.licenses
+F:\Source\SCOUT NS\app\SCOUT.Core\obj\Debug\SCOUT.Core.dll
+F:\Source\SCOUT NS\app\SCOUT.Core\obj\Debug\SCOUT.Core.pdb
+F:\Source\SCOUT NS\app\SCOUT.Core\bin\Debug\DevExpress.Xpo.v10.1.Linq.dll
+F:\Source\SCOUT NS\app\SCOUT.Core\bin\Debug\DevExpress.Xpo.v10.1.Linq.xml
+F:\Source\SCOUT NS\app\SCOUT.Core\bin\Debug\AutoMapper.dll
+F:\Source\SCOUT NS\app\SCOUT.Core\bin\Debug\StructureMap.dll
+F:\Source\SCOUT NS\app\SCOUT.Core\bin\Debug\StructureMap.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Core\bin\Debug\SCOUT.Core.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Core\bin\Debug\SCOUT.Core.pdb
+H:\Development\Source\SCOUT NS\app\SCOUT.Core\bin\Debug\DevExpress.Data.v10.1.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Core\bin\Debug\DevExpress.Xpo.v10.1.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Core\bin\Debug\DevExpress.Xpo.v10.1.Linq.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Core\bin\Debug\StructureMap.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Core\obj\Debug\SCOUT.Core.csprojResolveAssemblyReference.cache
+H:\Development\Source\SCOUT NS\app\SCOUT.Core\obj\Debug\SCOUT.Core.dll.licenses
+H:\Development\Source\SCOUT NS\app\SCOUT.Core\obj\Debug\SCOUT.Core.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Core\obj\Debug\SCOUT.Core.pdb

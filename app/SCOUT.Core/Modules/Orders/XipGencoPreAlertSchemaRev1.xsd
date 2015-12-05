@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="XipGencoPreAlertSchemaRev1" targetNamespace="http://tempuri.org/XipGencoPreAlertSchemaRev1.xsd" elementFormDefault="qualified" xmlns="http://tempuri.org/XipGencoPreAlertSchemaRev1.xsd" xmlns:mstns="http://tempuri.org/XipGencoPreAlertSchemaRev1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="xip_genco_pre_alert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="DPS_x0023_" type="xs:string" />
+        <xs:element name="PPID" type="xs:string" />
+        <xs:element name="Date_x0020_Shipped" type="xs:string" />
+        <xs:element name="Time_x0020_Shipped" type="xs:string" />
+        <xs:element name="Ship_x0020_Code" type="xs:string" />
+        <xs:element name="Shipped_x0020_By" type="xs:string" />
+        <xs:element name="From_x0020_Stock_x0020_Room" type="xs:string" />
+        <xs:element name="Shipment_x0020_Type" type="xs:string" />
+        <xs:element name="Shipped_x0020_To" type="xs:string" />
+        <xs:element name="Packslip" type="xs:string" />
+        <xs:element name="Shipment_x0020_Reference_x0020_Number" type="xs:string" />
+        <xs:element name="RMA" type="xs:string" />
+        <xs:element name="Unit_x0020_Cost" type="xs:string" />
+        <xs:element name="F9_x0020_Comments" type="xs:string" />
+        <xs:element name="Part_x0020_Number" type="xs:string" />
+        <xs:element name="Stockroom" type="xs:string" />
+        <xs:element name="Service_x0020_Tag" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

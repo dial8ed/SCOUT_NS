@@ -1,0 +1,320 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
+using DevExpress.XtraLayout.Utils;
+using SCOUT.Core.Data;
+using SCOUT.Core.Messaging;
+using SCOUT.WinForms.Search;
+
+namespace SCOUT.WinForms.Views.Warehouse.Shipping
+{
+    public partial class ShippingSessionView : Form
+    {
+        public ShippingSessionView()
+        {
+            InitializeComponent();
+            Initialize();
+            WireEvents();
+        }
+
+        private ShippingSession Session { get; set; }
+
+        private void Initialize()
+        {
+            Session = new ShippingSession();
+            shopfloorlineLookUp.Properties.DataSource = Session.Shopfloorlines;
+        }
+
+        private void WireEvents()
+        {
+            shopfloorlineLookUp.EditValueChanged += shopfloorlineLookUp_EditValueChanged;
+            newPacklistButton.Click += newPacklistButton_Click;
+            unitIdentifierText.Validated += unitIdentifierText_Validated;
+            shippingConfigurationLookUp.EditValueChanged += shippingConfigurationLookUp_EditValueChanged;
+            Session.PacklistChanged += Session_PacklistChanged;
+            Session.ShopfloorlineChanged += Session_ShopfloorlineChanged;
+            Session.ConfigurationChanged += Session_ConfigurationChanged;
+            Session.InventoryItemChanged += Session_InventoryItemChanged;
+            Session.OrderChanged += Session_OrderChanged;
+            Session.ItemShipped += Session_ItemShipped;
+
+            packlistGroup.DoubleClick += (s, e) =>
+                                         packlistGroupContents.Visibility =
+                                         packlistGroupContents.Visibility == LayoutVisibility.Always
+                                             ? LayoutVisibility.Never
+                                             : LayoutVisibility.Always;
+
+            headerGroup.DoubleClick += (s, e) =>
+                                       headerGroupContents.Visibility =
+                                       headerGroupContents.Visibility == LayoutVisibility.Always
+                                           ? LayoutVisibility.Never
+                                           : LayoutVisibility.Always;
+
+            ordersGroup.DoubleClick += (s, e) =>
+                                       ordersGroupContents.Visibility =
+                                       ordersGroupContents.Visibility == LayoutVisibility.Always
+                                           ? LayoutVisibility.Never
+                                           : LayoutVisibility.Always;
+                       
+
+            shipmentsLayout.Visibility = LayoutVisibility.Never;           
+            packlistGroupContents.Visibility = LayoutVisibility.Never;
+            ordersGroupContents.Visibility = LayoutVisibility.Never;
+
+            searchOrdersButton.Click += searchButton_Click;
+            orderDetailsView.DoubleClick += orderDetailsView_DoubleClick;
+            clearSearchButton.Click += delegate { orderDetailsGrid.DataSource = null; };
+            printPacklistButton.Click += printPacklistButton_Click;
+            shipButton.Click += new EventHandler(shipButton_Click);
+        }
+
+        void shipButton_Click(object sender, EventArgs e)
+        {
+            GetAndShipInventoryItem();
+        }
+        
+        private void printPacklistButton_Click(object sender, EventArgs e)
+        {
+            if (Session.CurrentPacklist == null)
+                return;
+
+            PacklistPrinter printer = new PacklistPrinter();
+            printer.Print(Session.CurrentPacklist);      
+        }
+
+        private void Session_OrderChanged(OrderAllocationItem obj)
+        {
+            if (obj != null)
+            {
+                currentOrderText.Text = obj.OrderIdentifier;
+            }
+            else
+            {
+                currentOrderText.Text = "";
+            }
+        }
+
+        private void orderDetailsView_DoubleClick(object sender, EventArgs e)
+        {
+            var item = orderDetailsView.GetFocusedRow() as OrderAllocationItem;
+            if (item != null)
+                Session.ChangeOrder(item);
+        }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            SearchOrders();
+        }
+
+        private void SearchOrders()
+        {
+            if (Session.CurrentConfiguration != null && !string.IsNullOrEmpty(orderSearchText.Text))
+            {
+                ICollection<OrderAllocationItem> orders = 
+                    Session.SearchOrders(orderSearchText.Text);
+
+                orderDetailsGrid.DataSource = orders;
+                   
+                if(orders.Count == 0)
+                    Scout.Core.UserInteraction.Dialog.ShowMessage("No orders found", UserMessageType.Warning);
+            }
+        }
+
+        private void Session_ItemShipped(ShippingSession obj)
+        {
+            ClearFields();
+            packlistContentsGrid.DataSource = obj.CurrentPacklist.Shipments;
+            packlistQtyText.Text = obj.CurrentPacklist.Shipments.Count.ToString();
+            SearchOrders();
+        }
+
+        private void Session_InventoryItemChanged(InventoryItem obj)
+        {
+            if (obj != null)
+            {
+                qtyText.Text = obj.Qty.ToString();
+                if (obj.Qty == 1)
+                    Session.ShipInventoryItem(obj);
+
+                return;
+            }
+
+            qtyText.Text = "";
+            unitIdentifierText.Text = "";
+            unitIdentifierText.Focus();
+        }
+
+        private void Session_ConfigurationChanged(ShippingConfiguration obj)
+        {
+            // Reset Packlist
+            Session.ChangePacklist(null);
+
+            if (obj == null)
+            {
+                shipmentAllocationMethodText.Text = "";
+                shipMethodText.Text = "";
+                shipDomainText.Text = "";
+                shipToAddressText.Text = "";
+                shipmentsLayout.Visibility = LayoutVisibility.Never;
+                ordersGroupContents.Visibility = LayoutVisibility.Never;
+                packlistGroupContents.Visibility = LayoutVisibility.Never;
+            }
+            else
+            {
+                shipmentsLayout.Visibility = LayoutVisibility.Always;
+                packlistGroupContents.Visibility = LayoutVisibility.Always;
+                shipmentAllocationMethodText.Text = obj.ShipmentAllocationMethod;
+                shipMethodText.Text = obj.ShipMethod;
+                shipDomainText.Text = obj.ShipDomain.Label;
+                shipToAddressText.Text = obj.ShipToAddress;
+                autoAllocateShipmentsCheck.Checked = obj.ShipmentAllocationInstance.AutoAllocateItems;
+
+                if (obj.ShipmentAllocationInstance.AutoAllocateItems)
+                    ordersGroupContents.Visibility = LayoutVisibility.Never;
+                else
+                    ordersGroupContents.Visibility = LayoutVisibility.Always;
+            }
+        }
+
+        private void Session_ShopfloorlineChanged(Shopfloorline obj)
+        {
+            Session_ConfigurationChanged(null);
+            if (obj != null)
+            {
+                shippingConfigurationLookUp.Properties.DataSource = Session.ShippingConfigurations;
+            }
+        }
+
+        private void Session_PacklistChanged(Packlist packlist)
+        {
+            if (packlist == null)
+            {
+                packlistIdText.Text = "";
+                packlistQtyText.Text = "";
+                packlistContentsGrid.DataSource = null;
+                waybillText.Text = "";
+            }
+            else
+            {
+                packlistQtyText.Text = packlist.Shipments.Count.ToString();
+                packlistIdText.Text = packlist.PacklistId;
+                packlistContentsGrid.DataSource = packlist.Shipments;
+                waybillText.Text = packlist.Waybill;
+            }
+        }
+
+        private void shippingConfigurationLookUp_EditValueChanged(object sender, EventArgs e)
+        {
+            Session.ChangeConfiguration(shippingConfigurationLookUp.EditValue as ShippingConfiguration);
+        }
+
+        private void unitIdentifierText_Validated(object sender, EventArgs e)
+        {
+            GetAndShipInventoryItem();
+        }
+
+        private void GetAndShipInventoryItem()
+        {
+            string ident = unitIdentifierText.Text;
+            if (ident.Length > 0)
+            {
+                Session.GetInventoryItem(ident);
+            } 
+        }
+
+        private void ClearFields()
+        {
+            unitIdentifierText.Text = "";
+            qtyText.Text = "";
+            unitIdentifierText.Focus();
+        }
+
+        private void newPacklistButton_Click(object sender, EventArgs e)
+        {
+            Session.GetNewPacklist();
+            Scout.Core.UserInteraction.Dialog.ShowMessage("Packlist Created.", UserMessageType.Information);
+        }
+
+        private void shopfloorlineLookUp_EditValueChanged(object sender, EventArgs e)
+        {
+            var sfl = shopfloorlineLookUp.EditValue as Shopfloorline;
+            Session.ChangeShopfloorline(sfl);
+        }
+
+        private void searchPacklists2Button_Click(object sender, EventArgs e)
+        {
+            var searchDetail =
+                new SearchDetail<Packlist>()
+                    {
+                        OutputOnly = true,
+                        OnSelection = ChangePacklist,
+                        StoredProcedure = "srch_shipping_configuration_packlists",
+                        SearchText = "Shipping Configuration Packlists",
+                        IdColumn = "id",
+                        SearchButtons = new PacklistSearchButtons(),
+                        WindowState = FormWindowState.Normal,
+                        ShowModal = true,
+                        MdiParent = null,
+                        Session = Session.UnitOfWork
+                    };
+                                                     
+            var searchController 
+                = new SearchController<Packlist>();
+
+            searchController.SearchByDetail(searchDetail);
+                              
+        }
+
+        private void ChangePacklist(Packlist packlist)
+        {
+            if (packlist != null)
+            {
+                if (packlist.IsClosed)
+                {
+                    Scout.Core.UserInteraction.Dialog.ShowMessage("This packlist is closed.", UserMessageType.Error);
+                    return;
+                }
+
+                if (Scout.Core.UserInteraction.Dialog
+                        .AskQuestion("Would you like to change to this packlist?") == DialogResult.Yes)
+                {
+                    Session.ChangePacklist(packlist);                    
+                }
+            }            
+       }
+
+        private void unShipButton_Click(object sender, EventArgs e)
+        {
+            Shipment s = packlistContentsView.GetFocusedRow() as Shipment;
+            if (s != null)
+            {
+                Session.UndoShipments(new List<Shipment>() { s });
+            }
+        }
+
+        private void enterWaybillButton_Click(object sender, EventArgs e)
+        {
+            if (Session.CurrentPacklist == null)
+                return;
+
+            UserInputView inputView
+                = new UserInputView(s => Session.CurrentPacklist.Waybill = s, "Enter waybill", false);
+
+            inputView.ShowDialog(this);
+
+            Session_PacklistChanged(Session.CurrentPacklist);
+
+            Scout.Core.Data.Save(Session.UnitOfWork);
+        }
+
+        private void printLpnLabelButton_Click(object sender, EventArgs e)
+        {
+            var shipment = packlistContentsView.GetFocusedRow() as Shipment;
+            if(shipment != null 
+                && Session.CurrentConfiguration.ShipmentAllocationInstance.PrintShipmentLabel)
+            {
+                LabelPrinter.PrintDellLpnLabel(shipment.LineItemIdentifier, shipment.PartNumber);
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DellPreAlert_Rev1" targetNamespace="http://tempuri.org/DellPreAlert_Rev1.xsd" elementFormDefault="qualified" xmlns="http://tempuri.org/DellPreAlert_Rev1.xsd" xmlns:mstns="http://tempuri.org/DellPreAlert_Rev1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="prealert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="RA_x0023_" type="xs:string" />
+        <xs:element name="RTV_x0023_" type="xs:string" />
+        <xs:element name="PO_x0023_" type="xs:string" />
+        <xs:element name="SCN_x0020_LP" type="xs:string" />
+        <xs:element name="PPID" type="xs:string" />
+        <xs:element name="CARTON_x0020_ID" type="xs:string" />
+        <xs:element name="DPS_x0023_" type="xs:string" />
+        <xs:element name="PART_x0023_" type="xs:string" />
+        <xs:element name="SERIAL_x0023_" type="xs:string" />
+        <xs:element name="REASON_x0020_CODE" type="xs:string" />
+        <xs:element name="COST" type="xs:string" />
+        <xs:element name="PROBLEM_x0020_DES" type="xs:string" />
+        <xs:element name="SCAN_x0020_TIME" type="xs:dateTime" />
+        <xs:element name="QTY" type="xs:int" default="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

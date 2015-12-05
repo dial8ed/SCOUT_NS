@@ -1,0 +1,222 @@
+using System;
+using DevExpress.Xpo;
+using SCOUT.Core.Messaging;
+
+namespace SCOUT.Core.Data
+{
+    [Persistent("shipping_configurations")]
+    public class ShippingConfiguration : VPObject
+    {
+        private int m_id;
+        private string m_name;
+        private Shopfloorline m_shopfloorline;
+        private Domain m_shipDomain;
+        private int m_organizationId;
+        private Organization m_organization;
+        private string m_shipToAddres;
+        private PacklistAllocation m_packlistAllocationMethod = PacklistAllocation.SingleOrder;
+        private string m_shipmentAllocationType;
+        private string m_shipMethod;
+        private string m_shippingAccount;
+        private IShipmentAllocation m_shipmentAllocationInstance;
+        private string m_shopfloorlineProgram;
+        private bool m_active;
+
+        public ShippingConfiguration(Session session) : base(session)
+        {
+        }
+
+        [Persistent("id"), Key(AutoGenerate = true)]
+        public int Id
+        {
+            get { return m_id; }
+            set { SetPropertyValue("Id", ref m_id, value); }
+        }
+
+        [Persistent("name")]
+        public string Name
+        {
+            get { return m_name; }
+            set { SetPropertyValue("Name", ref m_name, value); }
+        }
+
+        [Persistent("shopfloorline_id")]
+        public Shopfloorline Shopfloorline
+        {
+            get { return m_shopfloorline; }
+            set { SetPropertyValue("Shopfloorline", ref m_shopfloorline, value); }
+        }
+
+        [Persistent("ship_domain_id")]
+        public Domain ShipDomain
+        {
+            get { return m_shipDomain; }
+            set { SetPropertyValue("ShipDomain", ref m_shipDomain, value); }
+        }
+
+        [Persistent("organization_id")]
+        public int OrganizationId
+        {
+            get { return m_organizationId; }
+            set
+            {
+                SetPropertyValue("OrganizationId", ref m_organizationId, value);
+
+                if (m_organizationId > 0)
+                    Customer = Organization.GetOrganization(m_organizationId);
+            }
+        }
+
+        [NonPersistent]
+        public Organization Customer
+        {
+            get { return m_organization; }
+            set
+            {
+                m_organization = value;
+                if (m_organization != null)
+                    m_organizationId = m_organization.Id;
+            }
+        }
+
+        [Persistent("shipment_allocation_type")]
+        public string ShipmentAllocationType
+        {
+            get { return m_shipmentAllocationType; }
+            set { SetPropertyValue("ShipmentAllocationType", ref m_shipmentAllocationType, value); }
+        }
+
+        [Persistent("ship_to_address")]
+        public string ShipToAddress
+        {
+            get { return m_shipToAddres; }
+            set { SetPropertyValue("ShipToAddress", ref m_shipToAddres, value); }
+        }
+
+        [Persistent("ship_method")]
+        public string ShipMethod
+        {
+            get { return m_shipMethod; }
+            set { SetPropertyValue("ShipMethod", ref m_shipMethod, value); }
+        }
+
+        [Persistent("shipping_account")]
+        public string ShippingAccount
+        {
+            get { return m_shippingAccount; }
+            set { SetPropertyValue("ShippingAccount", ref m_shippingAccount, value); }
+        }
+
+        [Persistent("packlist_allocation_method")]
+        public PacklistAllocation PacklistAllocationMethod
+        {
+            get { return m_packlistAllocationMethod; }
+            set { SetPropertyValue("PacklistAllocationMethod", ref m_packlistAllocationMethod, value); }
+        }
+
+        [Persistent("shopfloor_program")]
+        public string ShopfloorlineProgram
+        {
+            get { return m_shopfloorlineProgram; }
+            set { SetPropertyValue("ShopfloorlineProgram", ref m_shopfloorlineProgram, value); }
+        }
+
+        [Persistent("active")]
+        public bool Active
+        {
+            get { return m_active; }
+            set { SetPropertyValue("Active", ref m_active, value); }
+        }
+
+        [NonPersistent]
+        public IShipmentAllocation ShipmentAllocationInstance
+        {
+            get
+            {
+                if (m_shipmentAllocationInstance == null)
+                {
+                    m_shipmentAllocationInstance =
+                        Reflection.CreateInstanceOfType<IShipmentAllocation>(ShipmentAllocationType);                    
+                }
+                    
+
+                return m_shipmentAllocationInstance;
+            }            
+        }
+
+        [NonPersistent]
+        public string ShipmentAllocationMethod
+        {
+            get
+            {
+                string s = m_shipmentAllocationType;
+                
+                int lastPeriodIndex = s.LastIndexOf(char.Parse(".")) + 1;
+                
+                int typeNameLength = s.Length;
+
+                string rval;
+
+                rval = s.Substring(lastPeriodIndex, typeNameLength - lastPeriodIndex);
+                return rval;
+            }
+        }
+
+        protected override void ValidateRules(BrokenRules Verify)
+        {
+            if(m_shopfloorline.IsProgramRequired)
+                Verify.IsTrue(!string.IsNullOrEmpty(m_shopfloorlineProgram)
+                    ,"ProgramRequired"
+                    ,"Program Is Required."
+                    ,"ShopfloorlineProgram");
+            
+        }
+
+        // TODO: refactor this into a business rule class. Remove from data holder.
+        public bool UnitIsValidForThisConfiguration(InventoryItem item)
+        {
+            string error = "";
+
+            if(!item.Domain.Equals(ShipDomain))
+            {
+                error = "This unit is not in the " +
+                    ShipDomain.Label + "domain and cannot be shipped for this configuration."; 
+                ShowShippingError(error);
+                return false;
+            }
+
+            if(!UnitIsCorrectProgram(item))
+            {
+                error = "This unit must be under the " + m_shopfloorlineProgram + " to ship on this configuration.";
+                ShowShippingError(error);
+                return false;
+            }
+
+            return true;
+        }
+
+        private bool UnitIsCorrectProgram(InventoryItem item)
+        {
+            if (string.IsNullOrEmpty(m_shopfloorlineProgram)) return true;
+            return Strings.DelimitedListContains(m_shopfloorlineProgram, item.ShopfloorProgram);
+        }
+
+        private void ShowShippingError(string error)
+        {            
+            Scout.Core.UserInteraction.Dialog.ShowMessage(error, UserMessageType.Error);
+        }
+
+
+        public override string ToString()
+        {
+            return m_name;
+        }
+
+    }
+
+    public enum PacklistAllocation
+    {
+        SingleOrder,
+        MultipleOrders
+    }
+}

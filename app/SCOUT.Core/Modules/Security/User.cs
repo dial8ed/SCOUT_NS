@@ -1,0 +1,392 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Data.SqlClient;
+using SCOUT.Core.Data;
+
+namespace SCOUT.Core.Security
+{
+    public partial class UserSecurity
+    {
+        [SecurityDB]
+        public class User : Robot
+        {
+            #region Member Variables
+
+            private string m_login;
+            private string m_givenName;
+            private string m_familyName;
+            private bool m_forcePassChange = false;
+
+            private string m_pass;
+
+            private RobotList<Role> m_roles = null;
+
+            #endregion
+
+            #region Constructors
+
+            public User()
+            {
+            }
+
+            #endregion
+
+            #region Static
+
+            #region Get List
+
+            static public void FillGetSingleCommand(
+                SqlCommand cmd, object[] args)
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "usp_GetUser";
+
+                if (args.Length < 0)
+                    throw new ArgumentException("No username passed.");
+
+                cmd.Parameters.AddWithValue("@Username", args[0].ToString());
+            }
+
+            static public RobotList<User> GetUsers()
+            {
+                Query q = new StoredProc("usp_GetAllUsers");
+                q.CnnStr = Helpers.Config["DB:Security"];
+
+                RobotList<User> rval = new RobotList<User>(
+                    q.ExecuteList<User>());
+
+                rval.ApplySort("FullName", ListSortDirection.Ascending);
+
+                return rval;
+            }
+
+            #endregion
+
+            #region Get Single
+
+            static public User GetUser(string login)
+            {
+                Query q = new StoredProc("usp_GetUser");
+                q.CnnStr = Helpers.Config["DB:Security"];
+                q.Parameters.AddWithValue("@Username", login);
+
+                return q.ExecuteSingle<User>();
+            }
+
+            #endregion
+
+            #endregion
+
+            #region Properties
+
+            #region Overrides
+
+            public override bool  IsDirty
+            {
+                get 
+                { 
+                    bool rval = base.IsDirty;
+
+                    if (!rval && (m_roles != null))
+                        rval = m_roles.IsDirty;
+
+                    return rval;
+                }
+            }
+
+            #endregion
+
+            public string Login
+            {
+                get { return m_login; }
+                set
+                {
+                    if (IsNew)
+                        m_login = value;
+                    else
+                    {
+                        throw new Exception("You cannot change the user " +
+                                            "name after it has already been set.");
+                    }
+                }
+            }
+
+            public string Password
+            {
+                get { return m_pass; }
+                set 
+                { 
+                    m_pass = value;
+                    MarkDirty("Password");
+                }
+            }
+
+            [Obsolete("Use FamilyName")]
+            public string LastName
+            {
+                get { return FamilyName; }
+                set { FamilyName = value; }
+            }
+
+            [Obsolete("Use GivenName")]
+            public string FirstName
+            {
+                get { return GivenName; }
+                set { GivenName = value; }
+            }
+
+            public string FamilyName
+            {
+                get { return m_familyName; }
+                set
+                {
+                    m_familyName = value;
+                    MarkDirty("FamilyName");
+                }
+            }
+
+            public string GivenName
+            {
+                get { return m_givenName; }
+                set
+                {
+                    m_givenName = value;
+                    MarkDirty("GivenName");
+                }
+            }
+
+            public string FullName
+            {
+                get
+                {
+                    /* 
+                     * This isn't correct in all cases, but the .Net framework
+                     * doesn't seem to provide any way of determining the 
+                     * orderning of proper names in a given language.
+                     */
+
+                    return String.Format("{1}, {0}", GivenName, FamilyName);
+                }
+            }
+
+            public bool ForcePassChange
+            {
+                get { return m_forcePassChange; }
+                set
+                {
+                    if (m_forcePassChange != value)
+                    {
+                        m_forcePassChange = value;
+                        MarkDirty("ForcePassChange");
+                    }
+                }
+            }
+
+            public RobotList<Role> Roles
+            {
+                get
+                {
+                    LoadRoles();
+                    return m_roles;
+                }
+            }
+
+            public string MachineName
+            {
+                get
+                {
+                    return System.Environment.MachineName;                   
+                }               
+            }
+
+            #endregion
+
+            #region Helpers
+
+            private void LoadRoles()
+            {
+                if (m_roles != null)
+                    return;
+
+                m_roles = new RobotList<Role>();
+
+                // No roles to load on new users.
+                if (IsNew)
+                    return;
+
+                Query q = new StoredProc("usp_GetUsersRoles");
+                q.CnnStr = Helpers.Config["DB:Security"];
+                q.Parameters.AddWithValue("@Username", Login);
+
+                IList<int> roles = q.ExecuteList<int>();
+
+                foreach (int role in roles)
+                {
+                    Role r = UserSecurity.Roles.Find(Role.ById, role);
+
+                    if (r != null)
+                        m_roles.Add(r);
+                }
+            }
+
+            #endregion
+
+            #region Robot Overrides
+
+            protected override void ValidateRules(BrokenRules Verify)
+            {
+                Verify.IsTrue(!string.IsNullOrEmpty(m_pass), "NOPASS",
+                               "A password is required.",
+                               "Password");
+            }
+
+            protected override void SaveSubItems(SqlTransaction tr)
+            {
+                base.SaveSubItems(tr);
+                SqlCommand cmd;
+
+                // Don't update roles if they aren't loaded yet.
+                if (m_roles == null)
+                    return;
+
+                // Remove the old roles.
+                cmd = tr.Connection.CreateCommand();
+                cmd.Transaction = tr;
+
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "usp_DeleteAllUsersRoles";
+
+                cmd.Parameters.AddWithValue("@Username", Login);
+
+                cmd.ExecuteNonQuery();
+                
+                // Add all of the new roles.
+                foreach (Role r in Roles)
+                {
+                    cmd = tr.Connection.CreateCommand();
+                    cmd.Transaction = tr;
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "usp_AddUserRole";
+
+                    cmd.Parameters.AddWithValue("@Username", Login);
+                    cmd.Parameters.AddWithValue("@RoleId", r.Id);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+
+            protected override void DeleteSubItems(SqlTransaction tr)
+            {
+                base.DeleteSubItems(tr);
+
+                SqlCommand cmd = tr.Connection.CreateCommand();
+                cmd.Transaction = tr;
+
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "usp_DeleteAllUsersRoles";
+
+                cmd.Parameters.AddWithValue("@Username", Login);
+
+                cmd.ExecuteNonQuery();
+            }
+
+            protected override void FillSaveCmd(SqlCommand cmd)
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "usp_SaveUser";
+
+                cmd.Parameters.AddWithValue("@username", m_login);
+                cmd.Parameters.AddWithValue("@lastname", m_familyName);
+                cmd.Parameters.AddWithValue("@firstname", m_givenName);
+                cmd.Parameters.AddWithValue("@password", m_pass);
+                cmd.Parameters.AddWithValue("@forcePassChange", 
+                                            m_forcePassChange);
+            }
+
+            protected override void FillDeleteCmd(SqlCommand cmd)
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "usp_DeleteUser";
+
+                cmd.Parameters.AddWithValue("@username", m_login);
+            }
+
+            protected void LoadPassword(SafeDataReader dr)
+            {
+               
+
+            }
+
+            protected override void Load(SafeDataReader dr)
+            {
+                string test = dr["Username"].ToString();
+                m_login = dr["UserName"].ToString().Trim();
+                m_familyName = dr["LastName"].ToString().Trim();
+                m_givenName = dr["FirstName"].ToString().Trim();
+                m_forcePassChange = bool.Parse(dr["ForcePassChange"].ToString());
+                m_pass = dr["Password"].ToString();                
+            }
+
+            #endregion
+
+            /// <summary>
+            /// Checks to see if the user can perform the requested action.
+            /// </summary>
+            /// <param name="Action">The action we're checking for.</param>
+            /// <returns>True if the user can perform the action, 
+            /// false if not.</returns>
+            public bool CanPerform(Action Action)
+            {
+                foreach (Role r in Roles)
+                {
+                    if (r.CanPerform(Action))
+                        return true;
+                }
+
+                return false;
+            }
+        }
+
+        #region Current User
+
+        static private User s_currUser = new User() { FirstName = "Justin", LastName = "Dial", Login = "jdial" };
+
+        static public User CurrentUser 
+        {
+            get { return 
+                    s_currUser; }
+            set
+            {
+                if (s_currUser != null)
+                {
+                    throw new Exception("Cannot set the current " +
+                                        "user more than once!");
+                }
+
+                s_currUser = value;
+            }
+        }
+
+        #endregion
+
+        #region All Users
+
+        static private RobotList<User> s_users = null;
+
+        static public RobotList<User> Users
+        {
+            get
+            {
+                if (s_users == null)
+                    s_users = User.GetUsers();
+
+                return s_users;
+            }
+        }
+
+        #endregion
+    }
+}

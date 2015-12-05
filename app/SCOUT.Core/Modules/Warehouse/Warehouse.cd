@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Interface Name="SCOUT.Core.Warehouse.IAreaService">
+    <Position X="3" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABIAAAAAAABAAAAAACIACIAAEAAgAAAQAAAAAA=</HashCode>
+      <FileName>Warehouse\IAreaService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SCOUT.Core.ICaptureService">
+    <Position X="8.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ECAAAAAAAAAEAAAAABAAAAAAAACAABAAAAACgAAAEAA=</HashCode>
+      <FileName>Warehouse\ICaptureService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SCOUT.Core.ICaptureData">
+    <Position X="5.5" Y="0.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ABCAAAAAAABAAAAAAAAAACBAAAAAAAAAAAAAAABAAIA=</HashCode>
+      <FileName>Warehouse\ICaptureService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SCOUT.Core.Warehouse.IInventoryService">
+    <Position X="5.5" Y="3.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ACAIACAAAhAAEBkAAAAIggAiAAAAoAAAAACAAAAQgIA=</HashCode>
+      <FileName>Warehouse\IInventoryService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SCOUT.Core.IReceivingService">
+    <Position X="3" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAACAAAAAIAAAAkAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Warehouse\IReceivingService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SCOUT.Core.Warehouse.IShippingService">
+    <Position X="0.5" Y="3" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAABAAQAAAAAAAAABAAABAAAAAEAAA=</HashCode>
+      <FileName>Warehouse\IShippingService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SCOUT.Core.Controllers.IToteService">
+    <Position X="8" Y="4" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Warehouse\IToteService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SCOUT.Core.Warehouse.IWarehouseModule">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AADAAAAAAAAAAAAAAAAAAAQAAACAAAAAAAAAAgIAAAA=</HashCode>
+      <FileName>Warehouse\IWarehouseModule.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

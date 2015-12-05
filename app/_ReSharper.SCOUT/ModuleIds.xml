@@ -1,0 +1,8 @@
+<Modules>
+  <Module PersistentId="d:Miscellaneous Files" ModuleId="System.Windows.Forms" />
+  <Module PersistentId="6A3859D0-FC3B-4912-BFFC-D29F2B98E5EB" ModuleId="SCOUT.Tests" />
+  <Module PersistentId="544F72BF-44E9-4147-B208-852813387E3B" ModuleId="SCOUT.Core" />
+  <Module PersistentId="FC451411-61A5-4474-96A0-D56E70A5783D" ModuleId="SCOUT.WinForms" />
+  <Module PersistentId="1EF379F7-E8B6-413C-9851-99E9791954BE" ModuleId="SCOUT.Data" />
+  <Module PersistentId="8C4E4486-6DA0-40F5-BBC3-F7C51A885E46" ModuleId="Sts.UI.Core.MVP" />
+</Modules>

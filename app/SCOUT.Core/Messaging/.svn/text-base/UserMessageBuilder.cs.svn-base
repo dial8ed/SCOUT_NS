@@ -1,0 +1,67 @@
+using System.Collections.Generic;
+using System.Text;
+
+namespace SCOUT.Core.Messaging
+{
+    public class UserMessageBuilder
+    {
+        private List<UserMessage> m_messages;
+
+        /// <summary>
+        /// .ctor
+        /// </summary>
+        public UserMessageBuilder()
+        {
+            m_messages = new List<UserMessage>();
+        }
+
+        /// <summary>
+        /// .ctor
+        /// </summary>
+        /// <param name="message">Single message for the builder</param>
+        /// <param name="type"></param>
+        public UserMessageBuilder(string message, UserMessageType type) : this()
+        {
+            m_messages.Add(new UserMessage(message, type));
+        }
+
+        protected List<UserMessage> Contents
+        {
+            get { return m_messages; }
+        }
+
+        /// <summary>
+        /// A flattened list of messages
+        /// </summary>
+        public string FlatContents
+        {
+            get 
+            {
+                return string.Concat(new object[] { m_messages.ToArray() });
+            }
+        }
+
+        /// <summary>
+        /// The number of messages in the list
+        /// </summary>
+        public int Length
+        {
+            get { return m_messages.Count; }
+        }
+
+        /// <summary>
+        /// Add a message to the list
+        /// </summary>
+        /// <param name="message">The message to add</param>
+        /// <param name="type">The type of user message</param>
+        public void AddMessage(string message, UserMessageType type)
+        {
+            m_messages.Add(new UserMessage(message, type));
+        }
+
+        public override string ToString()
+        {
+            return string.Concat(new object[]{m_messages.ToArray()});
+        }
+    }
+}

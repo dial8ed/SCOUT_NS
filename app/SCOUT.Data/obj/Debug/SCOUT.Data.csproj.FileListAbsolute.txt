@@ -1,0 +1,61 @@
+F:\Source\SCOUT NS FRESH\app\SCOUT.Data\bin\Debug\SCOUT.Data.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.Data\bin\Debug\SCOUT.Data.pdb
+F:\Source\SCOUT NS FRESH\app\SCOUT.Data\bin\Debug\FluentNHibernate.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.Data\bin\Debug\NHibernate.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.Data\bin\Debug\SCOUT.Core.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.Data\bin\Debug\Iesi.Collections.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.Data\bin\Debug\Antlr3.Runtime.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.Data\bin\Debug\log4net.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.Data\bin\Debug\SCOUT.Core.pdb
+F:\Source\SCOUT NS FRESH\app\SCOUT.Data\bin\Debug\FluentNHibernate.pdb
+F:\Source\SCOUT NS FRESH\app\SCOUT.Data\bin\Debug\FluentNHibernate.xml
+F:\Source\SCOUT NS FRESH\app\SCOUT.Data\bin\Debug\NHibernate.xml
+F:\Source\SCOUT NS FRESH\app\SCOUT.Data\bin\Debug\Iesi.Collections.xml
+F:\Source\SCOUT NS FRESH\app\SCOUT.Data\bin\Debug\log4net.xml
+F:\Source\SCOUT NS FRESH\app\SCOUT.Data\obj\Debug\ResolveAssemblyReference.cache
+F:\Source\SCOUT NS FRESH\app\SCOUT.Data\obj\Debug\SCOUT.Data.dll
+F:\Source\SCOUT NS FRESH\app\SCOUT.Data\obj\Debug\SCOUT.Data.pdb
+F:\Source\SCOUT NS\app\SCOUT.Data\bin\Debug\SCOUT.Data.dll
+F:\Source\SCOUT NS\app\SCOUT.Data\bin\Debug\SCOUT.Data.pdb
+F:\Source\SCOUT NS\app\SCOUT.Data\bin\Debug\FluentNHibernate.dll
+F:\Source\SCOUT NS\app\SCOUT.Data\bin\Debug\NHibernate.dll
+F:\Source\SCOUT NS\app\SCOUT.Data\bin\Debug\SCOUT.Core.dll
+F:\Source\SCOUT NS\app\SCOUT.Data\bin\Debug\Iesi.Collections.dll
+F:\Source\SCOUT NS\app\SCOUT.Data\bin\Debug\Antlr3.Runtime.dll
+F:\Source\SCOUT NS\app\SCOUT.Data\bin\Debug\log4net.dll
+F:\Source\SCOUT NS\app\SCOUT.Data\bin\Debug\SCOUT.Core.pdb
+F:\Source\SCOUT NS\app\SCOUT.Data\bin\Debug\FluentNHibernate.pdb
+F:\Source\SCOUT NS\app\SCOUT.Data\bin\Debug\FluentNHibernate.xml
+F:\Source\SCOUT NS\app\SCOUT.Data\bin\Debug\NHibernate.xml
+F:\Source\SCOUT NS\app\SCOUT.Data\bin\Debug\Iesi.Collections.xml
+F:\Source\SCOUT NS\app\SCOUT.Data\bin\Debug\log4net.xml
+F:\Source\SCOUT NS\app\SCOUT.Data\obj\Debug\ResolveAssemblyReference.cache
+F:\Source\SCOUT NS\app\SCOUT.Data\obj\Debug\SCOUT.Data.dll
+F:\Source\SCOUT NS\app\SCOUT.Data\obj\Debug\SCOUT.Data.pdb
+F:\Source\SCOUT NS\app\SCOUT.Data\bin\Debug\AutoMapper.dll
+F:\Source\SCOUT NS\app\SCOUT.Data\bin\Debug\StructureMap.dll
+F:\Source\SCOUT NS\app\SCOUT.Data\bin\Debug\StructureMap.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Data\bin\Debug\SCOUT.Data.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Data\bin\Debug\SCOUT.Data.pdb
+H:\Development\Source\SCOUT NS\app\SCOUT.Data\bin\Debug\DevExpress.Xpo.v10.1.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Data\bin\Debug\SCOUT.Core.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Data\bin\Debug\DevExpress.Data.v10.1.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Data\bin\Debug\AutoMapper.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Data\bin\Debug\DevExpress.Xpo.v10.1.Linq.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Data\bin\Debug\StructureMap.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Data\bin\Debug\Iesi.Collections.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Data\bin\Debug\Antlr3.Runtime.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Data\bin\Debug\log4net.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Data\bin\Debug\SCOUT.Core.pdb
+H:\Development\Source\SCOUT NS\app\SCOUT.Data\bin\Debug\DevExpress.Xpo.v10.1.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Data\bin\Debug\FluentNHibernate.pdb
+H:\Development\Source\SCOUT NS\app\SCOUT.Data\bin\Debug\FluentNHibernate.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Data\bin\Debug\NHibernate.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Data\bin\Debug\DevExpress.Data.v10.1.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Data\bin\Debug\DevExpress.Xpo.v10.1.Linq.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Data\bin\Debug\StructureMap.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Data\bin\Debug\Iesi.Collections.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Data\bin\Debug\log4net.xml
+H:\Development\Source\SCOUT NS\app\SCOUT.Data\obj\Debug\SCOUT.Data.csprojResolveAssemblyReference.cache
+H:\Development\Source\SCOUT NS\app\SCOUT.Data\obj\Debug\SCOUT.Data.dll
+H:\Development\Source\SCOUT NS\app\SCOUT.Data\obj\Debug\SCOUT.Data.pdb

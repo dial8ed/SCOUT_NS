@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ShippingConfigurationPacklistDataset" targetNamespace="http://tempuri.org/ShippingConfigurationPacklistDataset.xsd" xmlns:mstns="http://tempuri.org/ShippingConfigurationPacklistDataset.xsd" xmlns="http://tempuri.org/ShippingConfigurationPacklistDataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SQLSRV08_DEV_CONNECTION" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SQLSRV08_DEV_CONNECTION (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SCOUT.WinForms.Properties.Settings.GlobalReference.Default.SQLSRV08_DEV_CONNECTION" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="STS_SCOUTConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="STS_SCOUTConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SCOUT.WinForms.Properties.Settings.GlobalReference.Default.STS_SCOUTConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_shipping_configuration_packlist_detailsTableAdapter" GeneratorDataComponentClassName="vw_shipping_configuration_packlist_detailsTableAdapter" Name="vw_shipping_configuration_packlist_details" UserDataComponentName="vw_shipping_configuration_packlist_detailsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SQLSRV08_DEV_CONNECTION (Settings)" DbObjectName="DEV_SCOUT.dbo.vw_shipping_configuration_packlist_details" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT packlist_id, po, rma, part_no, description, qty FROM dbo.vw_shipping_configuration_packlist_details</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="packlist_id" DataSetColumn="packlist_id" />
+              <Mapping SourceColumn="po" DataSetColumn="po" />
+              <Mapping SourceColumn="rma" DataSetColumn="rma" />
+              <Mapping SourceColumn="part_no" DataSetColumn="part_no" />
+              <Mapping SourceColumn="description" DataSetColumn="description" />
+              <Mapping SourceColumn="qty" DataSetColumn="qty" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vw_shipping_configuration_packlist_headersTableAdapter" GeneratorDataComponentClassName="vw_shipping_configuration_packlist_headersTableAdapter" Name="vw_shipping_configuration_packlist_headers" UserDataComponentName="vw_shipping_configuration_packlist_headersTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="STS_SCOUTConnectionString1 (Settings)" DbObjectName="STS_SCOUT.dbo.vw_shipping_configuration_packlist_headers" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT packlist_id, ship_date, ship_to_address, waybill, scrap_control_number FROM dbo.vw_shipping_configuration_packlist_headers</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="packlist_id" DataSetColumn="packlist_id" />
+              <Mapping SourceColumn="ship_date" DataSetColumn="ship_date" />
+              <Mapping SourceColumn="ship_to_address" DataSetColumn="ship_to_address" />
+              <Mapping SourceColumn="waybill" DataSetColumn="waybill" />
+              <Mapping SourceColumn="scrap_control_number" DataSetColumn="scrap_control_number" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ShippingConfigurationPacklistDataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ShippingConfigurationPacklistDataset" msprop:Generator_UserDSName="ShippingConfigurationPacklistDataset">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vw_shipping_configuration_packlist_details" msprop:Generator_TableClassName="vw_shipping_configuration_packlist_detailsDataTable" msprop:Generator_TableVarName="tablevw_shipping_configuration_packlist_details" msprop:Generator_TablePropName="vw_shipping_configuration_packlist_details" msprop:Generator_RowDeletingName="vw_shipping_configuration_packlist_detailsRowDeleting" msprop:Generator_UserTableName="vw_shipping_configuration_packlist_details" msprop:Generator_RowChangingName="vw_shipping_configuration_packlist_detailsRowChanging" msprop:Generator_RowEvHandlerName="vw_shipping_configuration_packlist_detailsRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_shipping_configuration_packlist_detailsRowDeleted" msprop:Generator_RowEvArgName="vw_shipping_configuration_packlist_detailsRowChangeEvent" msprop:Generator_RowChangedName="vw_shipping_configuration_packlist_detailsRowChanged" msprop:Generator_RowClassName="vw_shipping_configuration_packlist_detailsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="packlist_id" msprop:Generator_ColumnVarNameInTable="columnpacklist_id" msprop:Generator_ColumnPropNameInRow="packlist_id" msprop:Generator_ColumnPropNameInTable="packlist_idColumn" msprop:Generator_UserColumnName="packlist_id" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="po" msprop:Generator_ColumnVarNameInTable="columnpo" msprop:Generator_ColumnPropNameInRow="po" msprop:Generator_ColumnPropNameInTable="poColumn" msprop:Generator_UserColumnName="po" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="rma" msprop:Generator_ColumnVarNameInTable="columnrma" msprop:Generator_ColumnPropNameInRow="rma" msprop:Generator_ColumnPropNameInTable="rmaColumn" msprop:Generator_UserColumnName="rma" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="part_no" msprop:Generator_ColumnVarNameInTable="columnpart_no" msprop:Generator_ColumnPropNameInRow="part_no" msprop:Generator_ColumnPropNameInTable="part_noColumn" msprop:Generator_UserColumnName="part_no">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="64" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="description" msprop:Generator_ColumnVarNameInTable="columndescription" msprop:Generator_ColumnPropNameInRow="description" msprop:Generator_ColumnPropNameInTable="descriptionColumn" msprop:Generator_UserColumnName="description">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="128" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="qty" msprop:Generator_ColumnVarNameInTable="columnqty" msprop:Generator_ColumnPropNameInRow="qty" msprop:Generator_ColumnPropNameInTable="qtyColumn" msprop:Generator_UserColumnName="qty" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vw_shipping_configuration_packlist_headers" msprop:Generator_TableClassName="vw_shipping_configuration_packlist_headersDataTable" msprop:Generator_TableVarName="tablevw_shipping_configuration_packlist_headers" msprop:Generator_TablePropName="vw_shipping_configuration_packlist_headers" msprop:Generator_RowDeletingName="vw_shipping_configuration_packlist_headersRowDeleting" msprop:Generator_UserTableName="vw_shipping_configuration_packlist_headers" msprop:Generator_RowChangingName="vw_shipping_configuration_packlist_headersRowChanging" msprop:Generator_RowEvHandlerName="vw_shipping_configuration_packlist_headersRowChangeEventHandler" msprop:Generator_RowDeletedName="vw_shipping_configuration_packlist_headersRowDeleted" msprop:Generator_RowEvArgName="vw_shipping_configuration_packlist_headersRowChangeEvent" msprop:Generator_RowChangedName="vw_shipping_configuration_packlist_headersRowChanged" msprop:Generator_RowClassName="vw_shipping_configuration_packlist_headersRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="packlist_id" msprop:Generator_ColumnVarNameInTable="columnpacklist_id" msprop:Generator_ColumnPropNameInRow="packlist_id" msprop:Generator_ColumnPropNameInTable="packlist_idColumn" msprop:Generator_UserColumnName="packlist_id" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ship_date" msprop:Generator_ColumnVarNameInTable="columnship_date" msprop:Generator_ColumnPropNameInRow="ship_date" msprop:Generator_ColumnPropNameInTable="ship_dateColumn" msprop:Generator_UserColumnName="ship_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ship_to_address" msprop:Generator_ColumnVarNameInTable="columnship_to_address" msprop:Generator_ColumnPropNameInRow="ship_to_address" msprop:Generator_ColumnPropNameInTable="ship_to_addressColumn" msprop:Generator_UserColumnName="ship_to_address" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="waybill" msprop:Generator_ColumnVarNameInTable="columnwaybill" msprop:Generator_ColumnPropNameInRow="waybill" msprop:Generator_ColumnPropNameInTable="waybillColumn" msprop:Generator_UserColumnName="waybill" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="scrap_control_number" msprop:Generator_ColumnVarNameInTable="columnscrap_control_number" msprop:Generator_ColumnPropNameInRow="scrap_control_number" msprop:Generator_ColumnPropNameInTable="scrap_control_numberColumn" msprop:Generator_UserColumnName="scrap_control_number" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,105 @@
+10
+
+dir
+0
+svn://sts-srv2/repository/SCOUT/trunk/app/SCOUT.Core/Modules/Warehouse/Shipping/Rules
+svn://sts-srv2/repository
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2a31e9eb-b62d-7f4c-b1e0-338eb6ace5f4
+
+DomainIsShippable.cs
+file
+
+
+
+add
+
+ExceedsLotQty.cs
+file
+
+
+
+add
+
+UnitCompletedRequiredServiceRoute.cs
+file
+
+
+
+add
+
+UnitIsInTheCorrectShippingDomain.cs
+file
+
+
+
+add
+
+UnitIsOnHold.cs
+file
+
+
+
+add
+
+UnitIsOnTheCorrectShopfloorline.cs
+file
+
+
+
+add
+
+ExceedsExpectedQty.cs
+file
+
+
+
+add
+
+UnitHasCorrectShopfloorProgram.cs
+file
+
+
+
+add
+
+UnitHasFinishedProcessing.cs
+file
+
+
+
+add
+
+PartIsExpected.cs
+file
+
+
+
+add
+
+LineItemIsShippable.cs
+file
+
+
+
+add
+

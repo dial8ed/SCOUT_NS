@@ -1,0 +1,225 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DevExpress.Xpo.v10.1.Linq</name>
+    </assembly>
+    <members>
+        <member name="T:DevExpress.Xpo.XPQuery`1">
+
+            <summary>
+                <para>Represents a query that allows the construction of LINQ queries for persistent objects.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Xpo.XPQuery`1.#ctor(DevExpress.Xpo.Metadata.XPDictionary)">
+            <summary>
+                <para>Creates an instance of the XPQuery@lt;T@gt; class with the specified settings.
+</para>
+            </summary>
+            <param name="dictionary">
+		The <see cref="T:DevExpress.Xpo.Metadata.XPDictionary"/> class descendant's instance which provides metadata on persistent objects in a data store.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.XPQuery`1.#ctor(DevExpress.Xpo.Session)">
+            <summary>
+                <para>Creates an instance of the XPQuery@lt;T@gt; class with the specified settings.
+</para>
+            </summary>
+            <param name="session">
+		The <see cref="T:DevExpress.Xpo.Session"/> class instance which is used to retrieve persistent objects in LINQ queries.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.XPQuery`1.Clone">
+            <summary>
+                <para>Clones the current query.
+</para>
+            </summary>
+            <returns>An <see cref="T:DevExpress.Xpo.XPQuery`1"/> object which represents a clone of the current query.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.XPQuery`1.Deserialize(DevExpress.Xpo.Metadata.XPDictionary,System.String)">
+            <summary>
+                <para>Creates an instance of the <see cref="T:DevExpress.Xpo.XPQuery`1"/> class from its string representation.
+</para>
+            </summary>
+            <param name="dictionary">
+		The <see cref="T:DevExpress.Xpo.Metadata.XPDictionary"/> class descendant's instance which provides metadata on persistent objects in a data store.
+
+            </param>
+            <param name="data">
+		The string representation of the query, obtained via the <see cref="M:DevExpress.Xpo.XPQueryBase.Serialize"/> method.
+
+            </param>
+            <returns>An instance of the <see cref="T:DevExpress.Xpo.XPQuery`1"/> class.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.XPQuery`1.Deserialize(DevExpress.Xpo.Session,System.String)">
+            <summary>
+                <para>Creates an instance of the <see cref="T:DevExpress.Xpo.XPQuery`1"/> class from its string representation.
+</para>
+            </summary>
+            <param name="session">
+		The <see cref="T:DevExpress.Xpo.Session"/> class instance which is used to retrieve persistent objects in LINQ queries.
+
+            </param>
+            <param name="data">
+		The string representation of the query, obtained via the <see cref="M:DevExpress.Xpo.XPQueryBase.Serialize"/> method.
+
+            </param>
+            <returns>An instance of the <see cref="T:DevExpress.Xpo.XPQuery`1"/> class.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.XPQuery`1.TransformExpression(DevExpress.Xpo.Session,System.Linq.Expressions.Expression`1)">
+            <summary>
+                <para>Converts a lambda expression into an instance of the <see cref="T:DevExpress.Data.Filtering.CriteriaOperator"/> class descendant.
+</para>
+            </summary>
+            <param name="session">
+		A <see cref="T:DevExpress.Xpo.Session"/> class instance whose <see cref="P:DevExpress.Xpo.Session.Dictionary"/> and <see cref="P:DevExpress.Xpo.Session.TypesManager"/> are used in the construction of the criteria operator.
+
+            </param>
+            <param name="expression">
+		A lambda expression.
+
+            </param>
+            <returns>An instance of the <b>CriteriaOperator</b> class descendant that represents the lambda expression.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.XPQuery`1.TransformExpression(System.Linq.Expressions.Expression`1)">
+            <summary>
+                <para>Converts a lambda expression into an instance of the <see cref="T:DevExpress.Data.Filtering.CriteriaOperator"/> class descendant.
+</para>
+            </summary>
+            <param name="expression">
+		A lambda expression.
+
+            </param>
+            <returns>An instance of the <b>CriteriaOperator</b> class descendant that represents the lambda expression.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.XPQuery`1.TransformExpression(DevExpress.Xpo.Session,System.Linq.Expressions.Expression`1,DevExpress.Xpo.CustomCriteriaCollection)">
+            <summary>
+                <para>Intended for internal use.
+</para>
+            </summary>
+            <param name="session">
+		@nbsp;
+
+            </param>
+            <param name="expression">
+		@nbsp;
+
+            </param>
+            <param name="customCriteriaCollection">
+		@nbsp;
+
+            </param>
+            <returns>@nbsp;
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.XPQuery`1.TransformExpression(System.Linq.Expressions.Expression`1,DevExpress.Xpo.CustomCriteriaCollection)">
+            <summary>
+                <para>Intended for internal use.
+</para>
+            </summary>
+            <param name="expression">
+		@nbsp;
+
+            </param>
+            <param name="customCriteriaCollection">
+		@nbsp;
+
+            </param>
+            <returns>@nbsp;
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.XPQuery`1.WithCustomCriteria(DevExpress.Xpo.ICustomCriteriaOperatorQueryable)">
+            <summary>
+                <para>Intended for internal use.
+</para>
+            </summary>
+            <param name="customCriteria">
+		@nbsp;
+
+            </param>
+            <returns>@nbsp;
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.XPQuery`1.WithCustomCriteria(DevExpress.Xpo.CustomCriteriaCollection)">
+            <summary>
+                <para>Intended for internal use.
+</para>
+            </summary>
+            <param name="customCriteriaCollection">
+		@nbsp;
+
+            </param>
+            <returns>@nbsp;
+</returns>
+
+
+        </member>
+        <member name="T:DevExpress.Xpo.XPQueryBase">
+
+            <summary>
+                <para>Serves as the  base class for the <see cref="T:DevExpress.Xpo.XPQuery`1"/> class. Intended for internal use. 
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.Xpo.XPQueryBase.Dictionary">
+            <summary>
+                <para>Gets or sets the <see cref="T:DevExpress.Xpo.Metadata.XPDictionary"/> class descendant's instance which provides metadata on persistent objects in a data store.
+</para>
+            </summary>
+            <value>The <see cref="T:DevExpress.Xpo.Metadata.XPDictionary"/> class descendant's instance.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Xpo.XPQueryBase.Serialize">
+            <summary>
+                <para>Converts the current XPQueryBase class instance to string representation.
+</para>
+            </summary>
+            <returns>A <b>string</b> value that represents the query.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.Xpo.XPQueryBase.Session">
+            <summary>
+                <para>Gets or sets the session that is used to retrieve persistent objects in queries.
+
+</para>
+            </summary>
+            <value>The <see cref="T:DevExpress.Xpo.Session"/> class instance.
+</value>
+
+
+        </member>
+    </members>
+</doc>

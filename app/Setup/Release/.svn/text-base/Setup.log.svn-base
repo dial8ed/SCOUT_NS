@@ -1,0 +1,16 @@
+﻿Build started 4/21/2010 3:25:40 PM.
+     1>Project "F:\Source\SCOUT NS - VS2010\Setup\Setup.vcxproj" on node 2 (build target(s)).
+     1>PrepareForBuild:
+         Creating directory "F:\Source\SCOUT NS - VS2010\Release\".
+       InitializeBuildStatus:
+         Creating "Release\Setup.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       CustomBuild:
+         Building Setup.exe
+         'makensis' is not recognized as an internal or external command,
+         operable program or batch file.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppCommon.targets(151,5): error MSB6006: "cmd.exe" exited with code 9009.
+     1>Done Building Project "F:\Source\SCOUT NS - VS2010\Setup\Setup.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.28

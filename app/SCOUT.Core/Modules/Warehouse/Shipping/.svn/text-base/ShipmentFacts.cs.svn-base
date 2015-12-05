@@ -1,0 +1,25 @@
+namespace SCOUT.Core.Data
+{
+    public class ShipmentFacts
+    {
+        public ShipmentFacts(SalesOrder salesOrder, InventoryItem item, int shipQty, string lineItemIdentifier, OrderAllocationItem allocationItem)
+        {
+            SalesOrder = salesOrder;
+            Item = item;
+            ShipQty = shipQty;
+            LineItemIdentifier = lineItemIdentifier;
+            AllocationItem = allocationItem;
+        }
+
+        public SalesOrder SalesOrder { get; private set; }
+
+        public InventoryItem Item { get; private set; }
+
+        public int ShipQty { get; private set; }
+
+        public string LineItemIdentifier { get; private set; }
+
+        public OrderAllocationItem AllocationItem { get; set; }
+
+    }
+}

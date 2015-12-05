@@ -1,0 +1,258 @@
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
+using SCOUT.Core.Data;
+using SCOUT.Core.Messaging;
+using SCOUT.Core.Modules.Orders;
+using SCOUT.Core.Services;
+using SCOUT.Core.Utils;
+
+namespace SCOUT.WinForms.Views.Warehouse.Shipping
+{
+    public class ShippingSession
+    {
+        private IUnitOfWork m_uow;
+        public ICollection<Shopfloorline> Shopfloorlines { get; private set; }
+        public ICollection<Packlist> SessionPacklists { get; private set;}
+        public ICollection<ShippingConfiguration> ShippingConfigurations { get; private set; }
+
+        public Packlist CurrentPacklist { get; private set; }
+        public OrderAllocationItem CurrentOrder { get; private set;}
+        public InventoryItem CurrentInventoryItem { get; private set;}   
+        public Shopfloorline CurrentShopfloorline { get; private set; }
+        public ShippingConfiguration CurrentConfiguration { get; private set; }
+       
+        public delegate void ChangedEventHandler<T>(T obj);
+
+        public event ChangedEventHandler<Shopfloorline> ShopfloorlineChanged;
+        public event ChangedEventHandler<OrderAllocationItem> OrderChanged;
+        public event ChangedEventHandler<Packlist> PacklistChanged;
+        public event ChangedEventHandler<ShippingConfiguration> ConfigurationChanged;
+        public event ChangedEventHandler<InventoryItem> InventoryItemChanged;
+        public event ChangedEventHandler<ShippingSession> ItemShipped;
+
+        public ShippingSession()
+        {
+            m_uow = Scout.Core.Data.GetUnitOfWork();
+            Shopfloorlines = Scout.Core.Service<IAreaService>().GetAllShopfloorlines(m_uow);
+
+            this.ItemShipped += ShippingSession_ItemShipped;
+        }
+
+        void ShippingSession_ItemShipped(ShippingSession obj)
+        {
+            IShipmentAllocation allocationMethod = CurrentConfiguration.ShipmentAllocationInstance;
+
+            if(allocationMethod.PrintShipmentLabel)
+            {
+                //TODO: EWWWWWWWWW. Clean this junk up
+                string lpn = allocationMethod.ShipmentLabelValues[0].ToString();
+                string partNumber = allocationMethod.ShipmentLabelValues[1].ToString();                
+                LabelPrinter.PrintDellLpnLabel(lpn, partNumber);
+            }            
+
+            if(CurrentConfiguration.ShipmentAllocationInstance.AutoAllocateItems)
+            {                
+                ChangeOrder(null);
+            }
+
+        }
+
+        public void GetNewPacklist()
+        {
+            Packlist packlist = new Packlist(m_uow as XpoUnitOfWork);
+            packlist.PacklistId = IDs.Generate(char.Parse("P"));
+            packlist.ShipDate = DateTime.Now;
+            packlist.ShipToAddress = CurrentConfiguration.ShipToAddress;
+            ChangePacklist(packlist);                        
+        }
+
+        public Packlist ChangePacklist(Packlist packlist)
+        {
+            // Delete empty packlists
+            if(CurrentPacklist != null && !CurrentPacklist.IsDeleted)
+            {
+                if(CurrentPacklist.Shipments.Count == 0)
+                    CurrentPacklist.Delete();
+            }
+
+            // Verify append to packlist that has already been printed
+            if(packlist != null)
+            if(packlist.PrintDate != DateTime.MinValue)
+            {
+                if(Scout.Core.UserInteraction.Dialog
+                    .AskQuestion("This packlist has already been printed. Do you still want to append to it?") 
+                    == DialogResult.No)
+                {
+                    return CurrentPacklist;
+                }                 
+            }
+
+            // Set current packlist
+            CurrentPacklist = packlist;
+                      
+            if(PacklistChanged != null)
+            {
+                PacklistChanged(CurrentPacklist);
+            }
+
+            return CurrentPacklist;
+        }
+
+        public Order ChangeOrder(OrderAllocationItem order)
+        {
+            CurrentOrder = order;
+            
+            if(OrderChanged != null)
+                OrderChanged(CurrentOrder);
+
+            if (CurrentOrder == null) return null;
+
+            return CurrentOrder.SalesOrder.Order;
+        }
+        
+        public Shopfloorline ChangeShopfloorline(Shopfloorline sfl)
+        {
+            CurrentShopfloorline = sfl;
+
+            ShippingConfigurations = 
+                    Scout.Core.Module<IOrderModule>()
+                        .Data.GetShippingConfigurations(m_uow, sfl);
+
+            if (ShopfloorlineChanged != null)
+                ShopfloorlineChanged(CurrentShopfloorline);
+
+            return CurrentShopfloorline;
+        }
+
+        public ICollection<OrderAllocationItem> SearchOrders(string partNumber)
+        {
+            Part part = PartService.GetPartByPartNumber(m_uow, partNumber);
+
+            return CurrentConfiguration.ShipmentAllocationInstance
+                .GetOrdersByPartNumber(m_uow, CurrentShopfloorline, part);               
+        }
+
+        public void ChangeConfiguration(ShippingConfiguration shippingConfiguration)
+        {
+            CurrentConfiguration = shippingConfiguration;
+
+            if (ConfigurationChanged != null)
+                ConfigurationChanged(CurrentConfiguration);            
+        }
+
+        public void ShipInventoryItem(InventoryItem item)
+        {
+            if (!ItemIsValidForShipment(CurrentInventoryItem)) return;
+
+            ShipmentFacts facts = GetShipmentFacts();
+
+            if (facts == null) return;
+
+            CurrentPacklist.ShippingConfiguration = CurrentConfiguration;
+
+            CurrentOrder.SalesOrder.AssignedPacklist = CurrentPacklist;
+            
+            if(Scout.Core.Modules.Warehouse.Shipping.SaveShipment(facts))
+            {
+                if (ItemShipped != null)
+                    ItemShipped(this);
+            }            
+        }
+
+        private ShipmentFacts GetShipmentFacts()
+        {
+            ShipmentFacts facts;
+            if (CurrentConfiguration.ShipmentAllocationInstance.AutoAllocateItems)
+            {
+                facts = CurrentConfiguration.ShipmentAllocationInstance.MapAllocationToFacts(CurrentInventoryItem);
+                if (facts == null)
+                {
+                    Scout.Core.UserInteraction.Dialog.ShowMessage(
+                        "A order to auto allocate this unit to could not be found.", UserMessageType.Error);
+                    return null;
+                }
+
+                ChangeOrder(facts.AllocationItem);
+            }
+            else
+                facts = new ShipmentFacts(CurrentOrder.SalesOrder, CurrentInventoryItem, 1, "", null);
+
+            return facts;            
+        }
+
+        private bool ItemIsValidForShipment(InventoryItem item)
+        {
+            string error = "";
+
+            if(!CurrentConfiguration.ShipmentAllocationInstance.AutoAllocateItems && CurrentOrder == null)
+            {
+                error = "Select a order to ship this unit against.";
+                ShowMessage(error, UserMessageType.Error);
+                return false;
+            }   
+
+            if(CurrentPacklist == null)
+            {
+                error = "Select a packlist for this shipment.";
+                ShowMessage(error, UserMessageType.Error);
+                return false;
+            }
+
+            if(!item.Domain.Equals(CurrentConfiguration.ShipDomain))
+            {
+                error = "This unit must be in the " + CurrentConfiguration.ShipDomain + " domain.";
+                ShowMessage(error, UserMessageType.Error);
+                return false;
+            }
+
+            if(!string.IsNullOrEmpty(CurrentConfiguration.ShopfloorlineProgram))
+            {
+                if (!item.ShopfloorProgram.Equals(CurrentConfiguration.ShopfloorlineProgram))
+                {
+                    error = "This unit must be under the " + CurrentConfiguration.ShopfloorlineProgram + " program.";
+                    ShowMessage(error, UserMessageType.Error);
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        private void ShowMessage(string message, UserMessageType messageType)
+        {            
+            Scout.Core.UserInteraction.Dialog.ShowMessage(message, messageType);
+        }
+
+        public bool GetInventoryItem(string ident)
+        {
+            InventoryLocator locator = new InventoryLocator();
+            InventoryItem item = locator.LocateOrWarn(m_uow, ident);
+           
+            SetCurrentInventoryItem(item);
+
+            return true;
+        }
+
+        private void SetCurrentInventoryItem(InventoryItem item)
+        {           
+            CurrentInventoryItem = item;
+
+            if (InventoryItemChanged != null)
+                InventoryItemChanged(CurrentInventoryItem);
+        }
+       
+
+        public ICollection<Packlist> GetPacklistsByConfiguration()
+        {
+            return OrderService.GetPacklistsByConfiguration(m_uow, CurrentConfiguration);
+        }
+
+        public void UndoShipments(List<Shipment> shipments)
+        {
+            Scout.Core.Service<IShippingService>().UndoShipments(m_uow,shipments);
+        }
+
+        public IUnitOfWork UnitOfWork { get { return m_uow; } }
+    }
+}
